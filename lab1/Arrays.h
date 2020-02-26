@@ -1,7 +1,7 @@
 #pragma once
 #include "InsertionSort.h"
 #include "PrintArray.h"
-#include <iostream>
+#include <iostream> //TODO: одна пустая строка максимум
 
 
 //ex 1.1.2.1
@@ -15,7 +15,7 @@ void Arrays1()
 
 	std::cout << "\nSorted array is\n";
 	PrintArray(array, 10, ' ');
-}
+} //TODO: пустые строки
 
 
 //ex 1.1.2.2
@@ -35,16 +35,16 @@ void Arrays2()
 		{
 			++count;
 		}
-	}
+	} //TODO: пустая строка после закрывающейся фигурной
 	std::cout << "\nElements of array more than " << searchingValue <<
 		" is " << count << '\n';
-}
+} //TODO: пустые строки
 
 
 //ex 1.1.2.3
 void PrintSymbols(char* symbols, int size)
 {
-	__int8 minAscii = 'a';
+	__int8 minAscii = 'a'; //TODO: почему не просто char?
 	__int8 maxAscii = 'z';
 	for (int i = 0; i < 8; ++i)
 	{
@@ -53,7 +53,7 @@ void PrintSymbols(char* symbols, int size)
 			std::cout << symbols[i] << ' ';
 		}
 	}
-}
+} //TODO: пустые строки
 
 
 void Arrays3()
@@ -70,7 +70,7 @@ void Arrays3()
 	std::cout << "\nLetters [a-z]\n";
 	PrintSymbols(symbols, 8);
 	std::cout << '\n';
-}
+}//TODO: пустые строки
 
 
 void ArraysMenu()

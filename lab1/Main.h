@@ -7,14 +7,14 @@
 
 enum Commands
 {
-	ARRAYS,
-	FUNCTIONS,
-	POINTERS,
-	DYNAMIC_MEMORY,
-	EXIT
+	ARRAYS, //TODO: Заглавная буква большая, остальные маленькие
+	FUNCTIONS, //TODO: тоже самое
+	POINTERS, //TODO: тоже самое
+	DYNAMIC_MEMORY, //TODO: тоже самое, без нижнего подчеркивания, каждое новое слово с заглавной
+	EXIT //TODO: тоже самое
 };
 
-
+//TODO: имхо, эту функцию надо было в main.cpp поместить. К чему она здесь одна болтается?
 void PrintMainMenu()
 {
 	std::cout << "\n\t0) Массивы\n"

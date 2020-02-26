@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include <iostream> //TODO: во всем файле - поудалять лишние пустые строки
 
 
 //ex 1.1.3.1
@@ -15,6 +15,7 @@ double GetPower(double base, int exponent)
 	}
 	else
 	{
+		//TODO: лучше вызывать эту же функцию с обратным знаком для степени
 		for (int i = 0; i > exponent; --i)
 		{
 			power *= (1 / base);
@@ -27,6 +28,7 @@ double GetPower(double base, int exponent)
 
 void Functions1()
 {
+	//TODO: зачем базу и степень прописывать как вещественные числа, если их можно прописать в строке? Читаемость будет выше
 	std::cout << '\n' << 2.0 << " ^ " << 5 << " = " << GetPower(2.0, 5) <<
 		'\n' << 3.0 << " ^ " << 4 << " = " << GetPower(3.0, 4) <<
 		'\n' << -2.0 << " ^ " << 5 << " = " << GetPower(-2.0, 5) << '\n';
@@ -52,14 +54,14 @@ void Functions2()
 
 
 //ex 1.1.3.3
-void RoundToTens(int& value)
+void RoundToTens(int& value) //TODO: с отрицательными работает?
 {
 	if ((value % 10) < 5)
 	{
 		value = (value / 10) * 10;
 	}
 	else
-	{
+	{ //TODO: перемудрил
 		value += (10 - value % 10);
 	}
 }
