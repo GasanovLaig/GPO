@@ -13,31 +13,31 @@ int main()
 		std::cin >> command;
 		switch (command)
 		{
-			case ARRAYS:
+			case Arrays:
 			{
 				ArraysMenu();
 				system("pause");
 				break;
 			}
-			case FUNCTIONS:
+			case Functions:
 			{
 				FunctionsMenu();
 				system("pause");
 				break;
 			}
-			case POINTERS:
+			case Pointers:
 			{
 				PointersMenu();
 				system("pause");
 				break;
 			}
-			case DYNAMIC_MEMORY:
+			case DynamicMemory:
 			{
 				DynamicMemoryMenu();
 				system("pause");
 				break;
 			}
-			case EXIT:
+			case Exit:
 			{
 				return 0;
 			}
