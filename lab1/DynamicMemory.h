@@ -5,7 +5,6 @@
 #include <iostream>
 #include <ctime> //TODO: пустые строки
 
-
 //ex 1.1.5.1
 void DynamicMemory1()
 {
@@ -15,7 +14,6 @@ void DynamicMemory1()
 	std::cout << '\n'; //TODO: чтобы постоянно не писать std лучше подключить неймспейс
 	delete[] array;
 } //TODO: пустые строки
-
 
 //ex 1.1.5.2
 void DynamicMemory2()
@@ -27,7 +25,6 @@ void DynamicMemory2()
 	std::cout << '\n';
 	delete[] array;
 } //TODO: пустые строки
-
 
 //ex 1.1.5.3
 void DynamicMemory3()
@@ -50,7 +47,6 @@ void DynamicMemory3()
 	delete[] array;
 } //TODO: пустые строки
 
-
 //ex 1.1.5.4
 void DynamicMemory4()
 {
@@ -67,7 +63,6 @@ void DynamicMemory4()
 	delete[] array;
 } //TODO: пустые строки
 
-
 //ex 1.1.5.5
 int GetIndex(int* array, int size, int searchingValue)
 {
@@ -79,7 +74,6 @@ int GetIndex(int* array, int size, int searchingValue)
 		}
 	}
 } //TODO: пустые строки
-
 
 void DynamicMemory5()
 {
@@ -94,7 +88,6 @@ void DynamicMemory5()
 		" is " << GetIndex(array, 10, searchingValue) << '\n';
 	delete[] array;
 } //TODO: пустые строки
-
 
 //1.1.5.6
 void DynamicMemory6()
@@ -111,7 +104,6 @@ void DynamicMemory6()
 	delete[] symbols;
 } //TODO: пустые строки
 
-
 //ex 1.1.5.7
 int* MakeRandomArray(int arraySize)
 {
@@ -124,7 +116,6 @@ int* MakeRandomArray(int arraySize)
 
 	return array;
 }
-
 
 void DynamicMemory7()
 {
@@ -142,7 +133,6 @@ void DynamicMemory7()
 	std::cout << '\n';
 }
 
-
 //ex 1.1.5.8
 int* ReadArray(int size)
 {
@@ -154,7 +144,6 @@ int* ReadArray(int size)
 
 	return values;
 }
-
 
 int CountPositivValues(int* values, int size)
 {
@@ -170,7 +159,6 @@ int CountPositivValues(int* values, int size)
 	return count;
 }
 
-
 void DynamicMemory8()
 {
 	int size = 15;
@@ -183,7 +171,6 @@ void DynamicMemory8()
 	std::cout << "\nCount is " << CountPositivValues(values, size);
 	delete[] values;
 }
-
 
 void DynamicMemoryMenu()
 {
