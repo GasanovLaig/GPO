@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 
-
 template <typename T>
 void PrintArray(T* array, int size, char delimiter)
 {
