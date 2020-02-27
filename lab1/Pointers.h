@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 
-
 //ex 1.1.4.1
 void Pointers1()
 {
@@ -16,7 +15,6 @@ void Pointers1()
 	bool d = true;
 	std::cout << "\nAdress of d: " << &d << '\n';
 }
-
 
 //ex 1.1.4.2
 void Pointers2()
@@ -37,7 +35,6 @@ void Pointers2()
 	std::cout << '\n';
 }
 
-
 //ex 1.1.4.3
 void Pointers3()
 {
@@ -51,7 +48,6 @@ void Pointers3()
 	std::cout << "\nValue of a: " << a << '\n';
 }
 
-
 //ex 1.1.4.4
 void Foo4(double a)
 {
@@ -61,7 +57,6 @@ void Foo4(double a)
 	a = 15.0;
 	std::cout << "\nNew value of a in Foo(): " << a << '\n';
 }
-
 
 void Pointers4()
 {
@@ -74,7 +69,6 @@ void Pointers4()
 	std::cout << "\nValue of a in main(): " << a << '\n';
 }
 
-
 //ex 1.1.4.5
 void Foo5(double& a)
 {
@@ -84,7 +78,6 @@ void Foo5(double& a)
 	a = 15.0;
 	std::cout << "\nNew value of a in Foo(): " << a << '\n';
 }
-
 
 void Pointers5()
 {
@@ -96,7 +89,6 @@ void Pointers5()
 
 	std::cout << "\nValue of a in main(): " << a << '\n';
 }
-
 
 //ex 1.1.4.6
 void Pointers6()
@@ -113,7 +105,6 @@ void Pointers6()
 		"\nValue by pointer address: " << *pointer << '\n';
 }
 
-
 //ex 1.1.4.7
 void Pointers7()
 {
@@ -123,7 +114,6 @@ void Pointers7()
 		"\n3)Операция разыменования - это унарный оператор,"
 		"т.е.функция принимающая один операнд(параметр).\n";
 }
-
 
 //ex 1.1.4.8
 void Foo8(double* a)
@@ -135,7 +125,6 @@ void Foo8(double* a)
 	*a = 15.0;
 	std::cout << "\nValue in pointer address: " << *a << '\n';
 }
-
 
 void Pointers8()
 {
@@ -150,7 +139,6 @@ void Pointers8()
 
 	std::cout << "\nValue of \'value\' in main(): " << value << '\n';
 }
-
 
 void PointersMenu()
 {
