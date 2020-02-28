@@ -1,6 +1,5 @@
 #include "Main.h"
-//TODO: где солюшн? добавить
-//TODO: где проект? добавить
+
 int main()
 {
 	setlocale(LC_ALL, "ru");

@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream> //TODO: большой одной пустой строки делать не надо
+#include <iostream>
 
 //ex 1.1.1.1
 void BreakPoints1()
@@ -10,7 +10,7 @@ void BreakPoints1()
 	{
 		sum += add * i;
 		add *= 1.1;
-	} //TODO: после закрывающейся скобки одну пустую строку
+	}
 
 	std::cout << "Total sum is " << sum << '\n';
 	//i == 0 -> sum == 0.0
@@ -23,8 +23,7 @@ void BreakPoints1()
 	//i == 7 -> sum == 45.692335700000022
 	//i == 8 -> sum == 62.841046180000035
 	//i == 9 -> sum == 84.062575399000053
-} //TODO: пустые строки
-
+}
 
 //ex 1.1.1.2
 void BreakPoints2()

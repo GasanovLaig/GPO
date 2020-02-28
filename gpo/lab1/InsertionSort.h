@@ -2,7 +2,7 @@
 
 template <typename T>
 void InsertionSort(T* array, int size)
-{//TODO: ищи ошибку в коде
+{
 	T temporary;
 	for (int i = 0; i < size; ++i)
 	{

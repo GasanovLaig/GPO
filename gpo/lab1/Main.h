@@ -6,15 +6,13 @@
 
 enum Commands
 {
-	Arrays, //TODO: Заглавная буква большая, остальные маленькие
-	Functions, //TODO: тоже самое
-	Pointers, //TODO: тоже самое
-	DynamicMemory, //TODO: тоже самое, без нижнего подчеркивания, каждое новое слово с заглавной
-	Exit //TODO: тоже самое
+	Arrays,
+	Functions,
+	Pointers,
+	DynamicMemory,
+	Exit
 };
 
-//TODO: имхо, эту функцию надо было в main.cpp поместить. К чему она здесь одна болтается?
-//Это Main.h, в Main.cpp она тоже ни к чему
 void PrintMainMenu()
 {
 	std::cout << "\n\t0) Массивы\n"

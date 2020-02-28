@@ -3,7 +3,7 @@
 #include "PrintArray.h"
 #include "Arrays.h"
 #include <iostream>
-#include <ctime> //TODO: пустые строки
+#include <ctime>
 
 //ex 1.1.5.1
 void DynamicMemory1()
@@ -11,9 +11,9 @@ void DynamicMemory1()
 	double* array = new double[8]{ 1.0, 15.0, -8.2, -3.5, 12.6, 38.4, -0.5, 4.5 };
 	std::cout << "\nSource array is\n";
 	PrintArray(array, 8, ' ');
-	std::cout << '\n'; //TODO: чтобы постоянно не писать std лучше подключить неймспейс
+	std::cout << '\n';
 	delete[] array;
-} //TODO: пустые строки
+}
 
 //ex 1.1.5.2
 void DynamicMemory2()
@@ -24,7 +24,7 @@ void DynamicMemory2()
 	PrintArray(array, 8, ' ');
 	std::cout << '\n';
 	delete[] array;
-} //TODO: пустые строки
+}
 
 //ex 1.1.5.3
 void DynamicMemory3()
@@ -45,7 +45,7 @@ void DynamicMemory3()
 	PrintArray(array, n, ' ');
 	std::cout << '\n';
 	delete[] array;
-} //TODO: пустые строки
+}
 
 //ex 1.1.5.4
 void DynamicMemory4()
@@ -61,7 +61,7 @@ void DynamicMemory4()
 	PrintArray(array, 10, ' ');
 	std::cout << '\n';
 	delete[] array;
-} //TODO: пустые строки
+}
 
 //ex 1.1.5.5
 int GetIndex(int* array, int size, int searchingValue)
@@ -73,7 +73,7 @@ int GetIndex(int* array, int size, int searchingValue)
 			return i;
 		}
 	}
-} //TODO: пустые строки
+}
 
 void DynamicMemory5()
 {
@@ -87,7 +87,7 @@ void DynamicMemory5()
 	std::cout << "\nIndex of searching value " << searchingValue <<
 		" is " << GetIndex(array, 10, searchingValue) << '\n';
 	delete[] array;
-} //TODO: пустые строки
+}
 
 //1.1.5.6
 void DynamicMemory6()
@@ -102,7 +102,7 @@ void DynamicMemory6()
 	std::cout << '\n';
 
 	delete[] symbols;
-} //TODO: пустые строки
+}
 
 //ex 1.1.5.7
 int* MakeRandomArray(int arraySize)
