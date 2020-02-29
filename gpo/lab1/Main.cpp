@@ -8,7 +8,7 @@ int main()
 	{
 		system("cls");
 		PrintMainMenu();
-		std::cout << "\nÂâåäèòå íîìåð êîìàíäû: ";
+		std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹: ";
 		std::cin >> command;
 		switch (command)
 		{

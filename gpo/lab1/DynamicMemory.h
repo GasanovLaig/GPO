@@ -174,34 +174,34 @@ void DynamicMemory8()
 
 void DynamicMemoryMenu()
 {
-	std::cout << "\nÏÅÐÂÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐŸÐ•Ð Ð’ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory2();
 	system("pause");
 	system("cls");
-	std::cout << "\nÂÒÎÐÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐ’Ð¢ÐžÐ ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory2();
 	system("pause");
 	system("cls");
-	std::cout << "\nÒÐÅÒÜÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐ¢Ð Ð•Ð¢Ð¬Ð• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory3();
 	system("pause");
 	system("cls");
-	std::cout << "\n×ÅÒÂÅÐÒÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐ§Ð•Ð¢Ð’Ð•Ð Ð¢ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory4();
 	system("pause");
 	system("cls");
-	std::cout << "\nÏßÒÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐŸÐ¯Ð¢ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory5();
 	system("pause");
 	system("cls");
-	std::cout << "\nØÅÑÒÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐ¨Ð•Ð¡Ð¢ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory6();
 	system("pause");
 	system("cls");
-	std::cout << "\nÑÅÄÜÌÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐ¡Ð•Ð”Ð¬ÐœÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory7();
 	system("pause");
 	system("cls");
-	std::cout << "\nÂÎÑÜÌÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐ’ÐžÐ¡Ð¬ÐœÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	DynamicMemory8();
 }

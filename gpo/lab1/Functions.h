@@ -76,14 +76,14 @@ void Functions3()
 
 void FunctionsMenu()
 {
-	std::cout << "\nÏÅÐÂÎÅ ÇÀÄÀÍÈÅ\n";
+	std::cout << "\nÐŸÐ•Ð Ð’ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•\n";
 	Functions1();
 	system("pause");
 	system("cls");
-	std::cout << "\nÂÒÎÐÎÅ ÇÀÄÀÍÈÅ";
+	std::cout << "\nÐ’Ð¢ÐžÐ ÐžÐ• Ð—ÐÐ”ÐÐÐ˜Ð•";
 	Functions2();
 	system("pause");
 	system("cls");
-	std::cout << "\nÒÐÅÒÜÅ ÇÀÄÀÍÈÅ";
+	std::cout << "\nÐ¢Ð Ð•Ð¢Ð¬Ð• Ð—ÐÐ”ÐÐÐ˜Ð•";
 	Functions3();
 }
