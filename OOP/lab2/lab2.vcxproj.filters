@@ -13,15 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Tasks">
+      <UniqueIdentifier>{e887dbd1-6c86-413e-9695-5451e82c8e1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task">
+      <UniqueIdentifier>{a7c24ba1-3ac5-4a51-b5b3-3495b3993027}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Task221.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Task223.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="OutPutFormatting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task227.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Task221.h">
+    <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutPutFormatting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Task221.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Task222.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Task223.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Task227.h">
+      <Filter>Header Files\Tasks</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

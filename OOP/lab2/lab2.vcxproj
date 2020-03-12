@@ -139,9 +139,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OutPutFormatting.cpp" />
+    <ClCompile Include="Task221.cpp" />
+    <ClCompile Include="Task223.cpp" />
+    <ClCompile Include="Task227.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="OutPutFormatting.h" />
     <ClInclude Include="Task221.h" />
+    <ClInclude Include="Task222.h" />
+    <ClInclude Include="Task223.h" />
+    <ClInclude Include="Task227.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
