@@ -37,6 +37,7 @@ int main()
 	OutPutFormatting();
 	cout << "\nÇàäàíèå 2.2.7 ÔÓÍÊÖÈÈ-ÊÎÍÑÒÐÓÊÒÎÐÛ\n";
 	DemoCircle();
+	DemoMakeAndCopyFunctions();
 
 	system("pause");
 	return 0;

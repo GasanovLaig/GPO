@@ -27,3 +27,5 @@ Flight* CopyFlight(const std::string& from,
 Movie* CopyMovie(const std::string& name, int duration,
 	int releaseYear, const std::string& genre, double rating);
 Time* CopyTime(int hours, int minutes, int seconds);
+
+void DemoMakeAndCopyFunctions();

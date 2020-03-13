@@ -102,3 +102,21 @@ Time* CopyTime(int hours, int minutes, int seconds)
 	Time* t = new Time{ hours, minutes, seconds };
 	return t;
 }
+
+void DemoMakeAndCopyFunctions()
+{
+	Task::Rectangle* r = MakeRectangle(0.0, 0.0, "black");
+	Flight* f = MakeFlight("A", "B", 3600);
+	Movie* m = MakeMovie("M", 128, 2020, "fantastic", 10.0);
+	Time* t = MakeTime(23, 59, 59);
+
+	Task::Rectangle* copiedRectangle = CopyRectangle(r);
+	Flight* copiedFilm = CopyFlight(f);
+	Movie* copiedMovie = CopyMovie(m);
+	Time* copiedTime = CopyTime(t);
+
+	delete t;
+	delete m;
+	delete f;
+	delete r;
+}
