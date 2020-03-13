@@ -71,6 +71,7 @@ Movie* MakeMovie(const std::string& name, int duration, int releaseYear,
 Time* MakeTime(int hours, int minutes, int seconds)
 {
 	Time* t = new Time{ hours, minutes, seconds };
+	return t;
 }
 
 Task::Rectangle* CopyRectangle(const Task::Rectangle* rectangle)
