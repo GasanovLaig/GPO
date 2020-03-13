@@ -42,9 +42,6 @@ void DemoCircle()
 	Circle* copiedCircle2 = CopyCircle(circle2);
 	Circle* copiedCircle3 = CopyCircle(circle3);
 
-	delete copiedCircle1;
-	delete copiedCircle2;
-	delete copiedCircle3;
 	delete circle1;
 	delete circle2;
 	delete circle3;
