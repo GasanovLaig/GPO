@@ -48,4 +48,57 @@ void DemoCircle()
 	delete circle1;
 	delete circle2;
 	delete circle3;
-};
+}
+
+Task::Rectangle* MakeRectangle(double length, double width,
+	const std::string& color)
+{
+	Task::Rectangle* r = new Task::Rectangle{ length, width, color };
+	return r;
+}
+
+Flight* MakeFlight(const std::string& from, const std::string& to,
+	int duration)
+{
+	Flight* f = new Flight{ from, to, duration };
+	return f;
+}
+
+Movie* MakeMovie(const std::string& name, int duration, int releaseYear,
+	const std::string& genre, double rating)
+{
+	Movie* m = new Movie{ name, duration, releaseYear, genre, rating };
+	return m;
+}
+
+Time* MakeTime(int hours, int minutes, int seconds)
+{
+	Time* t = new Time{ hours, minutes, seconds };
+}
+
+Task::Rectangle* CopyRectangle(double length, double width,
+	const std::string& color)
+{
+	Task::Rectangle* r = new Task::Rectangle{ length, width, color };
+	return r;
+}
+
+Flight* CopyFlight(const std::string& from,
+	const std::string& to, int duration)
+{
+	Flight* f = new Flight{ from, to, duration };
+	return f;
+}
+
+Movie* CopyMovie(const std::string& name, int duration,
+	int releaseYear, const std::string& genre, double rating)
+{
+	Movie* m = new Movie{ name, duration, releaseYear, genre, rating };
+	return m;
+}
+
+Time* CopyTime(int hours, int minutes, int seconds)
+{
+	Time* t = new Time{ hours, minutes, seconds };
+	return t;
+}
