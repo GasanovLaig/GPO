@@ -36,6 +36,9 @@
     <ClCompile Include="Task227.cpp">
       <Filter>Source Files\Task</Filter>
     </ClCompile>
+    <ClCompile Include="Task228Enums.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files\Tasks</Filter>
     </ClInclude>
     <ClInclude Include="Task227.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Task228Enums.h">
       <Filter>Header Files\Tasks</Filter>
     </ClInclude>
   </ItemGroup>
