@@ -31,7 +31,7 @@ struct Movie
 struct Time
 {
 	int Hours;
-	int Minuts;
+	int Minutes;
 	int Seconds;
 };
 
