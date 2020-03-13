@@ -20,12 +20,9 @@ Movie* MakeMovie(const std::string& name, int duration, int releaseYear,
 Time* MakeTime(int hours, int minutes, int seconds);
 
 //ex 2.2.7.3 Для структур Rectangle, Flight, Movie, Time создать функции копирования
-Task::Rectangle* CopyRectangle(double length, double width,
-	const std::string& color);
-Flight* CopyFlight(const std::string& from,
-	const std::string& to,	int duration);
-Movie* CopyMovie(const std::string& name, int duration,
-	int releaseYear, const std::string& genre, double rating);
-Time* CopyTime(int hours, int minutes, int seconds);
+Task::Rectangle* CopyRectangle(const Task::Rectangle* rectangle);
+Flight* CopyFlight(const Flight* flight);
+Movie* CopyMovie(const Movie* movie);
+Time* CopyTime(const Time* time);
 
 void DemoMakeAndCopyFunctions();

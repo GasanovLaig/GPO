@@ -76,30 +76,53 @@ Time* MakeTime(int hours, int minutes, int seconds)
 	Time* t = new Time{ hours, minutes, seconds };
 }
 
-Task::Rectangle* CopyRectangle(double length, double width,
-	const std::string& color)
+Task::Rectangle* CopyRectangle(const Task::Rectangle* rectangle)
 {
-	Task::Rectangle* r = new Task::Rectangle{ length, width, color };
+	Task::Rectangle* r = new Task::Rectangle
+	{
+		rectangle->Length,
+		rectangle->Width,
+		rectangle->Color
+	};
+
 	return r;
 }
 
-Flight* CopyFlight(const std::string& from,
-	const std::string& to, int duration)
+Flight* CopyFlight(const Flight* flight)
 {
-	Flight* f = new Flight{ from, to, duration };
+	Flight* f = new Flight
+	{
+		flight->From,
+		flight->To,
+		flight->Duration
+	};
+
 	return f;
 }
 
-Movie* CopyMovie(const std::string& name, int duration,
-	int releaseYear, const std::string& genre, double rating)
+Movie* CopyMovie(const Movie* movie)
 {
-	Movie* m = new Movie{ name, duration, releaseYear, genre, rating };
+	Movie* m = new Movie
+	{
+		movie->Name,
+		movie->Duration,
+		movie->ReleaseYear,
+		movie->Genre,
+		movie->Rating
+	};
+
 	return m;
 }
 
-Time* CopyTime(int hours, int minutes, int seconds)
+Time* CopyTime(const Time* time)
 {
-	Time* t = new Time{ hours, minutes, seconds };
+	Time* t = new Time
+	{
+		time->Hours,
+		time->Minutes,
+		time->Seconds
+	};
+
 	return t;
 }
 
