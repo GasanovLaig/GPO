@@ -125,18 +125,18 @@ Time* CopyTime(const Time* time)
 
 void DemoMakeAndCopyFunctions()
 {
-	Task::Rectangle* r = MakeRectangle(0.0, 0.0, "black");
-	Flight* f = MakeFlight("A", "B", 3600);
-	Movie* m = MakeMovie("M", 128, 2020, "fantastic", 10.0);
-	Time* t = MakeTime(23, 59, 59);
+	Task::Rectangle* rectangle = MakeRectangle(0.0, 0.0, "black");
+	Flight* flight = MakeFlight("A", "B", 3600);
+	Movie* movie = MakeMovie("M", 128, 2020, "fantastic", 10.0);
+	Time* time = MakeTime(23, 59, 59);
 
-	Task::Rectangle* copiedRectangle = CopyRectangle(r);
-	Flight* copiedFilm = CopyFlight(f);
-	Movie* copiedMovie = CopyMovie(m);
-	Time* copiedTime = CopyTime(t);
+	Task::Rectangle* copiedRectangle = CopyRectangle(rectangle);
+	Flight* copiedFilm = CopyFlight(flight);
+	Movie* copiedMovie = CopyMovie(movie);
+	Time* copiedTime = CopyTime(time);
 
-	delete t;
-	delete m;
-	delete f;
-	delete r;
+	delete time;
+	delete movie;
+	delete flight;
+	delete rectangle;
 }
