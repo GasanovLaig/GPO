@@ -144,6 +144,7 @@
     <ClCompile Include="Task223.cpp" />
     <ClCompile Include="Task227.cpp" />
     <ClCompile Include="Task228Enums.cpp" />
+    <ClCompile Include="Task229.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="Task223.h" />
     <ClInclude Include="Task227.h" />
     <ClInclude Include="Task228Enums.h" />
+    <ClInclude Include="Task229.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
