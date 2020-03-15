@@ -7,13 +7,13 @@ using namespace std;
 
 void DemoRectangle()
 {
-	Task::Rectangle r1{ 20.1, 4.25, "Grey" };
+	Task222::Rectangle r1{ 20.1, 4.25, "Grey" };
 	cout << "\nRectangle is (Length, Width, Color) " << r1.Length <<
 		"; " << r1.Width << "; " << r1.Color << '\n';
 	OutPutFormatting();
 
 	cout << "\nВведите длину прямоуголника: ";
-	Task::Rectangle r2;
+	Task222::Rectangle r2;
 	cin >> r2.Length;
 	cout << "\nВведите ширину прямоуголника: ";
 	cin >> r2.Width;
@@ -23,7 +23,7 @@ void DemoRectangle()
 		r2.Length << 'x' << r2.Width << " цвет " << r2.Color << '\n';
 
 	OutPutFormatting();
-	Task::Rectangle rectangles[3]
+	Task222::Rectangle rectangles[3]
 	{
 		{1, 2, "red"},
 		{3, 4, "black"},
@@ -38,7 +38,7 @@ void DemoRectangle()
 			rectangles[i].Color << '\n';
 	}
 
-	Task::Rectangle* pointer1 = &r1;
+	Task222::Rectangle* pointer1 = &r1;
 	cout << "\nПервый прямоугольник длиной - " << pointer1->Length <<
 		", шириной - " << pointer1->Width <<
 		", цветом - " << pointer1->Color << '\n';
@@ -47,7 +47,7 @@ void DemoRectangle()
 	pointer1->Width = 21;
 	pointer1->Color = "Purple";
 
-	Task::Rectangle* pointer2 = pointer1;
+	Task222::Rectangle* pointer2 = pointer1;
 	cout << "\nАдрес в 1-ом указателе: " << pointer1 <<
 		"\nАдрес во 2-ом указателе r5: " << pointer2 << '\n';
 
@@ -240,14 +240,14 @@ void WrongPointers()
 	//toM = f;
 }
 
-void WhriteRectangle(const Task::Rectangle& rectangle)
+void WhriteRectangle(const Task222::Rectangle& rectangle)
 {
 	cout << "\nПрямоугольник с длиной - " << rectangle.Length <<
 		", шириной - " << rectangle.Width <<
 		", цветом - " << rectangle.Color << '\n';
 }
 
-void ReadRectangle(Task::Rectangle& rectangle)
+void ReadRectangle(Task222::Rectangle& rectangle)
 {
 	cout << "\nВведите длину, ширину, и цвет прямоугольника:";
 	cin >> rectangle.Length >>
@@ -257,7 +257,7 @@ void ReadRectangle(Task::Rectangle& rectangle)
 
 void DemoReadAndWhriteRectangles()
 {
-	Task::Rectangle rectangles[5];
+	Task222::Rectangle rectangles[5];
 	for (int i = 0; i < 5; ++i)
 	{
 		ReadRectangle(rectangles[i]);
@@ -269,7 +269,7 @@ void DemoReadAndWhriteRectangles()
 	}
 }
 
-void Exchange(Task::Rectangle& rectangle1, Task::Rectangle& rectangle2)
+void Exchange(Task222::Rectangle& rectangle1, Task222::Rectangle& rectangle2)
 {
 	double temporary = rectangle1.Length;
 	rectangle1.Length = rectangle2.Length;
@@ -284,7 +284,7 @@ void Exchange(Task::Rectangle& rectangle1, Task::Rectangle& rectangle2)
 	rectangle2.Color = tempLine;
 }
 
-void FindRectangle(const Task::Rectangle* rectangles, size_t size)
+void FindRectangle(const Task222::Rectangle* rectangles, size_t size)
 {
 	double maxLength = rectangles[0].Length;
 	size_t index = 0;
@@ -301,7 +301,7 @@ void FindRectangle(const Task::Rectangle* rectangles, size_t size)
 		rectangles[index].Length << 'x' << rectangles[index].Width << '\n';
 }
 
-void FindMaxRectangle(const Task::Rectangle* rectangles, size_t size)
+void FindMaxRectangle(const Task222::Rectangle* rectangles, size_t size)
 {
 	long double maxArea = (rectangles[0].Length * rectangles[0].Width);
 	size_t index = 0;

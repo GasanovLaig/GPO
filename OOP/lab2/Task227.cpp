@@ -47,10 +47,10 @@ void DemoCircle()
 	delete circle3;
 }
 
-Task::Rectangle* MakeRectangle(double length, double width,
+Task222::Rectangle* MakeRectangle(double length, double width,
 	const std::string& color)
 {
-	Task::Rectangle* r = new Task::Rectangle{ length, width, color };
+	Task222::Rectangle* r = new Task222::Rectangle{ length, width, color };
 	return r;
 }
 
@@ -74,9 +74,9 @@ Time* MakeTime(int hours, int minutes, int seconds)
 	return t;
 }
 
-Task::Rectangle* CopyRectangle(const Task::Rectangle* rectangle)
+Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
 {
-	Task::Rectangle* r = new Task::Rectangle
+	Task222::Rectangle* r = new Task222::Rectangle
 	{
 		rectangle->Length,
 		rectangle->Width,
@@ -126,12 +126,12 @@ Time* CopyTime(const Time* time)
 
 void DemoMakeAndCopyFunctions()
 {
-	Task::Rectangle* rectangle = MakeRectangle(0.0, 0.0, "black");
+	Task222::Rectangle* rectangle = MakeRectangle(0.0, 0.0, "black");
 	Flight* flight = MakeFlight("A", "B", 3600);
 	Movie* movie = MakeMovie("M", 128, 2020, Action, 10.0);
 	Time* time = MakeTime(23, 59, 59);
 
-	Task::Rectangle* copiedRectangle = CopyRectangle(rectangle);
+	Task222::Rectangle* copiedRectangle = CopyRectangle(rectangle);
 	Flight* copiedFilm = CopyFlight(flight);
 	Movie* copiedMovie = CopyMovie(movie);
 	Time* copiedTime = CopyTime(time);

@@ -3,7 +3,7 @@
 #include "Task228Enums.h"
 
 //ex 2.2.2.1
-namespace Task
+namespace Task222
 {
 	struct Rectangle
 	{
