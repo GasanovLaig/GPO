@@ -7,20 +7,21 @@ using namespace std;
 
 void DemoRectangle()
 {
-	Task222::Rectangle r1{ 20.1, 4.25, "Grey" };
-	cout << "\nRectangle is (Length, Width, Color) " << r1.Length <<
-		"; " << r1.Width << "; " << r1.Color << '\n';
+	Task222::Rectangle rectangle1{ 20.1, 4.25, "Grey" };
+	cout << "\nRectangle is (Length, Width, Color) " << rectangle1.Length <<
+		"; " << rectangle1.Width << "; " << rectangle1.Color << '\n';
 	OutPutFormatting();
 
 	cout << "\nВведите длину прямоуголника: ";
-	Task222::Rectangle r2;
-	cin >> r2.Length;
+	Task222::Rectangle rectangle2;
+	cin >> rectangle2.Length;
 	cout << "\nВведите ширину прямоуголника: ";
-	cin >> r2.Width;
+	cin >> rectangle2.Width;
 	cout << "\nВведите цвет прямоуголника: ";
-	cin >> r2.Color;
+	cin >> rectangle2.Color;
 	cout << "\nРазмеры прямоуголника: " <<
-		r2.Length << 'x' << r2.Width << " цвет " << r2.Color << '\n';
+		rectangle2.Length << 'x' << rectangle2.Width <<
+		" цвет " << rectangle2.Color << '\n';
 
 	OutPutFormatting();
 	Task222::Rectangle rectangles[3]
@@ -38,7 +39,7 @@ void DemoRectangle()
 			rectangles[i].Color << '\n';
 	}
 
-	Task222::Rectangle* pointer1 = &r1;
+	Task222::Rectangle* pointer1 = &rectangle1;
 	cout << "\nПервый прямоугольник длиной - " << pointer1->Length <<
 		", шириной - " << pointer1->Width <<
 		", цветом - " << pointer1->Color << '\n';
@@ -55,13 +56,15 @@ void DemoRectangle()
 	//ex 2.2.5.4
 	cout << "\nЗадание 2.2.5.4 функция Exchange(Rectangle& r1, Rectanlge& r2)" <<
 		"\nПервый прямоуголник имеет размерность: " <<
-		r1.Length << 'x' << r1.Width <<
+		rectangle1.Length << 'x' << rectangle1.Width <<
 		"\nВторой прямоуголник имеет размерность: " <<
-		r2.Length << 'x' << r2.Width << '\n';
-	Exchange(r1, r2);
+		rectangle2.Length << 'x' << rectangle2.Width << '\n';
+	Exchange(rectangle1, rectangle2);
 	cout << "\nПосле перестановки полей 1-го и 2-го прямоугольников: " <<
-		"\n1-ый имеет размерность " << r1.Length << 'x' << r1.Width <<
-		"\n2-ой имеет размерность " << r2.Length << 'x' << r2.Width << '\n';
+		"\n1-ый имеет размерность " <<
+		rectangle1.Length << 'x' << rectangle1.Width <<
+		"\n2-ой имеет размерность " <<
+		rectangle2.Length << 'x' << rectangle2.Width << '\n';
 
 	OutPutFormatting();
 	//ex 2.2.5.5
@@ -78,20 +81,20 @@ void DemoRectangle()
 
 void DemoFlight()
 {
-	Flight f1{ "Tomsk", "Bern", 2147483 };
-	cout << "\nFlight is (From, To, Duration) " << f1.From << "; " <<
-		f1.To << "; " << f1.Duration << '\n';
+	Flight film1{ "Tomsk", "Bern", 2147483 };
+	cout << "\nFlight is (From, To, Duration) " << film1.From << "; " <<
+		film1.To << "; " << film1.Duration << '\n';
 
 	OutPutFormatting();
 	cout << "\nВведите пункт отправления: ";
-	Flight f2;
-	cin >> f2.From;
+	Flight film2;
+	cin >> film2.From;
 	cout << "\nВведите пункт прибытия: ";
-	cin >> f2.To;
+	cin >> film2.To;
 	cout << "\nВремя в полете (в мин): ";
-	cin >> f2.Duration;
-	cout << "\nВаш рейс: " << f2.From << " - " <<
-		f2.To << " в полете " << f2.Duration << '\n';
+	cin >> film2.Duration;
+	cout << "\nВаш рейс: " << film2.From << " - " <<
+		film2.To << " в полете " << film2.Duration << '\n';
 
 	OutPutFormatting();
 	Flight flights[3]
@@ -109,7 +112,7 @@ void DemoFlight()
 	}
 
 	OutPutFormatting();
-	Flight* pointer1 = &f1;
+	Flight* pointer1 = &film1;
 	cout << "\nПервый рейс: " << pointer1->From << " - " << pointer1->To <<
 		" c продолжительностью в " << pointer1->Duration << '\n';
 
@@ -124,29 +127,29 @@ void DemoFlight()
 
 void DemoMovie()
 {
-	Movie m1{ "За пропастью во ржи", 106, 2017, Drama, 6.7 };
+	Movie movie1{ "За пропастью во ржи", 106, 2017, Drama, 6.7 };
 	cout << "\nMovie is (Name, Duration, ReleaseYear, Genre, Rating) " <<
-		m1.Name << "; " << m1.Duration << "; " << m1.ReleaseYear << "; " <<
-		m1.Rating << '\n';
+		movie1.Name << "; " << movie1.Duration << "; " << movie1.ReleaseYear <<
+		"; " <<	movie1.Rating << '\n';
 
 	OutPutFormatting();
 	cout << "\nВведите название фильма:	";
-	Movie m2;
-	cin >> m2.Name;
+	Movie movie2;
+	cin >> movie2.Name;
 	cout << "\nВведите продолжительность фильма: ";
-	cin >> m2.Duration;
+	cin >> movie2.Duration;
 	cout << "\nВведите год выпуска: ";
-	cin >> m2.ReleaseYear;
+	cin >> movie2.ReleaseYear;
 	cout << "\nВведите жанр фильма: ";
 	int genre;
 	cin >> genre;
-	m2.Genre = static_cast<MovieGenre>(genre);
+	movie2.Genre = static_cast<MovieGenre>(genre);
 	cout << "\nВведите рейтинг фильма: ";
-	cin >> m2.Rating;
+	cin >> movie2.Rating;
 
 	cout << "\nФильм: (Name, Duration, ReleaseYear, Genre, Rating) " <<
-		m2.Name << "; " << m2.Duration << "; " <<
-		m2.ReleaseYear << "; " << m2.Rating << '\n';
+		movie2.Name << "; " << movie2.Duration << "; " <<
+		movie2.ReleaseYear << "; " << movie2.Rating << '\n';
 
 	OutPutFormatting();
 	Movie movies[3]
@@ -165,7 +168,7 @@ void DemoMovie()
 	}
 
 	OutPutFormatting();
-	Movie* pointer1 = &m1;
+	Movie* pointer1 = &movie1;
 	cout << "\nПервый фильм (Name, Duration, ReleaseYear,"
 		"Genre, Rating): " << pointer1->Name << "; " << pointer1->Duration <<
 		"; " << pointer1->ReleaseYear << "; " << pointer1->Genre << "; " <<
@@ -184,21 +187,21 @@ void DemoMovie()
 
 void DemoTime()
 {
-	Time t1{ 1, 30, 00 };
-	cout << "\nTime is (Hours, Minutes, Seconds) " << t1.Hours <<
-		"; " << t1.Minutes << "; " << t1.Seconds << '\n';
+	Time time1{ 1, 30, 00 };
+	cout << "\nTime is (Hours, Minutes, Seconds) " << time1.Hours <<
+		"; " << time1.Minutes << "; " << time1.Seconds << '\n';
 
 	OutPutFormatting();
 	cout << "\nВведите кол-во часов: ";
-	Time t2;
-	cin >> t2.Hours;
+	Time time2;
+	cin >> time2.Hours;
 	cout << "\nВведите кол-во минут: ";
-	cin >> t2.Minutes;
+	cin >> time2.Minutes;
 	cout << "\nВведите кол-во секунд: ";
-	cin >> t2.Seconds;
+	cin >> time2.Seconds;
 
-	cout << "\nВремя: " << t2.Hours << ':' << t2.Minutes <<
-		':' << t2.Seconds << '\n';
+	cout << "\nВремя: " << time2.Hours << ':' << time2.Minutes <<
+		':' << time2.Seconds << '\n';
 
 	OutPutFormatting();
 	Time times[3]
@@ -211,13 +214,15 @@ void DemoTime()
 	for (int i = 0; i < 3; ++i)
 	{
 		cout << "\nВремя " << i << " (Hours,  Minutes, Seconds) " <<
-			times[i].Hours << ':' << times[i].Minutes << ':' << times[i].Seconds << '\n';
+			times[i].Hours << ':' << times[i].Minutes <<
+			':' << times[i].Seconds << '\n';
 	}
 
 	OutPutFormatting();
-	Time* pointer1 = &t1;
+	Time* pointer1 = &time1;
 	cout << "\nВремя в первом задании (Hours,  Minutes, Seconds): " <<
-		pointer1->Hours << ':' << pointer1->Minutes << ':' << pointer1->Seconds << '\n';
+		pointer1->Hours << ':' << pointer1->Minutes <<
+		':' << pointer1->Seconds << '\n';
 
 	pointer1->Hours = 0;
 	pointer1->Minutes = 0;
