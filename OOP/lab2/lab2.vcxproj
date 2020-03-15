@@ -140,8 +140,8 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="OutPutFormatting.cpp" />
-    <ClCompile Include="Task221.cpp" />
-    <ClCompile Include="Task223.cpp" />
+    <ClCompile Include="Task221Exceptions.cpp" />
+    <ClCompile Include="Task223Structs.cpp" />
     <ClCompile Include="Task227.cpp" />
     <ClCompile Include="Task228Enums.cpp" />
     <ClCompile Include="Task229.cpp" />
@@ -149,8 +149,8 @@
   <ItemGroup>
     <ClInclude Include="Main.h" />
     <ClInclude Include="OutPutFormatting.h" />
-    <ClInclude Include="Task221.h" />
-    <ClInclude Include="Task222.h" />
+    <ClInclude Include="Task221Exceptions.h" />
+    <ClInclude Include="Task222Structs.h" />
     <ClInclude Include="Task223.h" />
     <ClInclude Include="Task227.h" />
     <ClInclude Include="Task228Enums.h" />

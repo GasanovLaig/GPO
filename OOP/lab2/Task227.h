@@ -1,7 +1,7 @@
 //‘”Õ ÷»»- ŒÕ—“–” “Œ–€
 #pragma once
 #include <string>
-#include "Task222.h"
+#include "Task222Structs.h"
 
 struct Circle;
 

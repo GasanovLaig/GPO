@@ -24,12 +24,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Task221.cpp">
-      <Filter>Source Files\Task</Filter>
-    </ClCompile>
-    <ClCompile Include="Task223.cpp">
-      <Filter>Source Files\Task</Filter>
-    </ClCompile>
     <ClCompile Include="OutPutFormatting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -42,6 +36,12 @@
     <ClCompile Include="Task229.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Task221Exceptions.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Task223Structs.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -49,12 +49,6 @@
     </ClInclude>
     <ClInclude Include="OutPutFormatting.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Task221.h">
-      <Filter>Header Files\Tasks</Filter>
-    </ClInclude>
-    <ClInclude Include="Task222.h">
-      <Filter>Header Files\Tasks</Filter>
     </ClInclude>
     <ClInclude Include="Task223.h">
       <Filter>Header Files\Tasks</Filter>
@@ -66,6 +60,12 @@
       <Filter>Header Files\Tasks</Filter>
     </ClInclude>
     <ClInclude Include="Task229.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Task221Exceptions.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Task222Structs.h">
       <Filter>Header Files\Tasks</Filter>
     </ClInclude>
   </ItemGroup>

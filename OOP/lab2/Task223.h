@@ -1,5 +1,5 @@
 #pragma once
-#include "Task222.h"
+#include "Task222Structs.h"
 #include <string>
 
 void DemoRectangle();
