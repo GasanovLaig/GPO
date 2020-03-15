@@ -140,7 +140,9 @@ void DemoMovie()
 	cin >> movie2.Duration;
 	cout << "\n¬ведите год выпуска: ";
 	cin >> movie2.ReleaseYear;
-	cout << "\n¬ведите жанр фильма: ";
+	cout << "\n¬ведите жанр фильма:\n"
+		"0 - Comedy, 1 - Drama, 2 - Thriller, 3 - Action,"
+		"4 - Horror, 5 - Blockbuster\n";
 	int genre;
 	cin >> genre;
 	movie2.Genre = static_cast<MovieGenre>(genre);

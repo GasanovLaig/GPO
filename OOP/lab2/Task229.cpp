@@ -42,7 +42,9 @@ void DemoMoviesByGenre()
 			", " << movies[i].Rating << ");\n";
 	}
 
-	cout << "\nВведите жанр фильма: ";
+	cout << "\nВведите жанр фильма:\n"
+		"0 - Comedy, 1 - Drama, 2 - Thriller, 3 - Action,"
+		"4 - Horror, 5 - Blockbuster\n";
 	int genre;
 	cin >> genre;
 	cout << "\nКол-во фильмов этого жанра: " <<

@@ -33,7 +33,6 @@ enum MovieGenre
 	Blockbuster
 };
 
-//ex 2.2.8.2
 enum FormOfEducation
 {
 	FullTime,
