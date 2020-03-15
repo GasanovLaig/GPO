@@ -61,8 +61,8 @@ Flight* MakeFlight(const std::string& from, const std::string& to,
 	return f;
 }
 
-Movie* MakeMovie(const std::string& name, int duration, int releaseYear,
-	const std::string& genre, double rating)
+Movie* MakeMovie(const std::string& name, int duration,
+ int releaseYear, MovieGenre genre, double rating)
 {
 	Movie* m = new Movie{ name, duration, releaseYear, genre, rating };
 	return m;
@@ -128,7 +128,7 @@ void DemoMakeAndCopyFunctions()
 {
 	Task::Rectangle* rectangle = MakeRectangle(0.0, 0.0, "black");
 	Flight* flight = MakeFlight("A", "B", 3600);
-	Movie* movie = MakeMovie("M", 128, 2020, "fantastic", 10.0);
+	Movie* movie = MakeMovie("M", 128, 2020, Action, 10.0);
 	Time* time = MakeTime(23, 59, 59);
 
 	Task::Rectangle* copiedRectangle = CopyRectangle(rectangle);

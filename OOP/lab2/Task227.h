@@ -15,8 +15,8 @@ Task::Rectangle* MakeRectangle(double length, double width,
 	const std::string& color);
 Flight* MakeFlight(const std::string& from,
 	const std::string& to, int duration);
-Movie* MakeMovie(const std::string& name, int duration, int releaseYear,
-	const std::string& genre, double rating);
+Movie* MakeMovie(const std::string& name, int duration,
+ int releaseYear, MovieGenre genre, double rating);
 Time* MakeTime(int hours, int minutes, int seconds);
 
 //ex 2.2.7.3 Для структур Rectangle, Flight, Movie, Time создать функции копирования

@@ -1,6 +1,7 @@
 #include "Task223.h"
 
 #include <iostream>
+#include "Task228Enums.h"
 #include "OutPutFormatting.h"
 using namespace std;
 
@@ -123,7 +124,7 @@ void DemoFlight()
 
 void DemoMovie()
 {
-	Movie m1{ "За пропастью во ржи", 106, 2017, "Biography", 6.7 };
+	Movie m1{ "За пропастью во ржи", 106, 2017, Drama, 6.7 };
 	cout << "\nMovie is (Name, Duration, ReleaseYear, Genre, Rating) " <<
 		m1.Name << "; " << m1.Duration << "; " << m1.ReleaseYear << "; " <<
 		m1.Rating << '\n';
@@ -137,7 +138,9 @@ void DemoMovie()
 	cout << "\nВведите год выпуска: ";
 	cin >> m2.ReleaseYear;
 	cout << "\nВведите жанр фильма: ";
-	cin >> m2.Genre;
+	int genre;
+	cin >> genre;
+	m2.Genre = static_cast<MovieGenre>(genre);
 	cout << "\nВведите рейтинг фильма: ";
 	cin >> m2.Rating;
 
@@ -148,9 +151,9 @@ void DemoMovie()
 	OutPutFormatting();
 	Movie movies[3]
 	{
-		{"К звездам", 123, 2019, "fantastic", 6.382},
-		{"Марсианин", 200, 2020, "fantastic", 5.0},
-		{"Власть", 128, 2021, "biography", 8.19}
+		{"К звездам", 123, 2019, Drama, 6.382},
+		{"Марсианин", 200, 2020, Thriller, 5.0},
+		{"Власть", 128, 2021, Action, 8.19}
 	};
 
 	for (int i = 0; i < 3; ++i)
@@ -171,7 +174,7 @@ void DemoMovie()
 	pointer1->Name = "Поезд в Пусан";
 	pointer1->Duration = 128;
 	pointer1->ReleaseYear = 2015;
-	pointer1->Genre = "horrors";
+	pointer1->Genre = Horror;
 	pointer1->Rating = 7.2;
 
 	Movie* pointer = pointer1;

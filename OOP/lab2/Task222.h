@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Task228Enums.h"
 
 //ex 2.2.2.1
 namespace Task
@@ -24,7 +25,7 @@ struct Movie
 	std::string Name;
 	int Duration;
 	int ReleaseYear;
-	std::string Genre;
+	MovieGenre Genre;
 	double Rating;
 };
 
