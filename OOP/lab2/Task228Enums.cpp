@@ -8,7 +8,7 @@ void DemoEnums()
 	//ex 2.2.8.3
 	Color color = Blues;
 	DayOfWeek day = Sunday;
-	Genre genre = Drama;
+	MovieGenre genre = Drama;
 	FormOfEducation form = ParTime;
 	ManufacturerOfSmartphones manufaturer = Huawei;
 	Season season = Summer;
@@ -18,7 +18,7 @@ void DemoEnums()
 	DayOfWeek days[6]{ Monday, Sunday, Monday, Sunday, Monday, Sunday };
 	ManufacturerOfSmartphones manufacturers[6]{ Apple, Meizu, Huawei, Samsung,
 		Huawei,	Huawei };
-	Genre genres[6]{ Comedy, Drama, Thriller, Comedy, Horror, Action };
+	MovieGenre genres[6]{ Comedy, Drama, Thriller, Comedy, Horror, Action };
 	Season seasons[6]{ Summer, Winter, Summer, Winter, Summer, Winter };
 
 	//ex 2.2.8.6

@@ -23,7 +23,7 @@ enum DayOfWeek
 	Sunday
 };
 
-enum Genre
+enum MovieGenre
 {
 	Comedy,
 	Drama,
