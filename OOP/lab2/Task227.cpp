@@ -5,13 +5,6 @@
 using namespace std;
 
 // TODO: объявление структур должно быть в h-файлах
-struct Circle
-{
-	double X;
-	double Y;
-	double Radius;
-	string Color;
-};
 
 //ex 2.2.7.1 Äëÿ ñòðóêòóðû Circle ñîçäàòü ôóíêöèþ-êîíñòðóêòîð MakeCircle()
 Circle* MakeCircle(double x, double y, double radius, const std::string& color)

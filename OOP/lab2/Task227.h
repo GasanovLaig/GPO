@@ -3,7 +3,13 @@
 #include <string>
 #include "Task222Structs.h"
 
-struct Circle;
+struct Circle
+{
+	double X;
+	double Y;
+	double Radius;
+	string Color;
+};
 
 // TODO: раскидать функции по соответствующим файлам структур
 //ex 2.2.7.1 Äëÿ ñòðóêòóðû Circle ñîçäàòü ôóíêöèþ-êîíñòðóêòîð MakeCircle()
