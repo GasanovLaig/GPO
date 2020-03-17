@@ -15,14 +15,9 @@ Circle* MakeCircle(double x, double y, double radius, const std::string& color)
 
 Circle* CopyCircle(const Circle* circle)
 {
-	Circle* copy = new Circle
-	{// TODO: заменить на использование функции-конструктора (когда в следующей лабе появятся сеттеры, то этот подход позволит создавать объекты в обход сеттеров - потенциальная ошибка
-		circle->X,
-		circle->Y,
-		circle->Radius,
-		circle->Color
-	};
-
+	Circle* copy = MakeCircle(circle->X, circle->Y,
+		circle->Radius, circle->Color);
+	// TODO: заменить на использование функции-конструктора (когда в следующей лабе появятся сеттеры, то этот подход позволит создавать объекты в обход сеттеров - потенциальная ошибка
 	return copy;
 }
 
@@ -72,54 +67,30 @@ Time* MakeTime(int hours, int minutes, int seconds)
 Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
 {
 	// TODO: заменить на вызов функции конструктора
-	Task222::Rectangle* r = new Task222::Rectangle
-	{
-		rectangle->Length,
-		rectangle->Width,
-		rectangle->Color
-	};
-
+	Task222::Rectangle* r = MakeRectangle(rectangle->Length,
+		rectangle->Width, rectangle->Color);
 	return r;
 }
 
 Flight* CopyFlight(const Flight* flight)
 {
 	// TODO: заменить на вызов функции-конструктора
-	Flight* f = new Flight
-	{
-		flight->From,
-		flight->To,
-		flight->Duration
-	};
-
+	Flight* f = MakeFlight(flight->From, flight->To, flight->Duration);
 	return f;
 }
 
 Movie* CopyMovie(const Movie* movie)
 {
 	// TODO: заменить на использование функции-конструктора
-	Movie* m = new Movie
-	{
-		movie->Name,
-		movie->Duration,
-		movie->ReleaseYear,
-		movie->Genre,
-		movie->Rating
-	};
-
+	Movie* m = MakeMovie(movie->Name, movie->Duration, 
+		movie->ReleaseYear, movie->Genre, movie->Rating);
 	return m;
 }
 
 Time* CopyTime(const Time* time)
 {
 	// TODO: заменить на использование функции-конструктора
-	Time* t = new Time
-	{
-		time->Hours,
-		time->Minutes,
-		time->Seconds
-	};
-
+	Time* t = MakeTime(time->Hours, time->Minutes, time->Seconds);
 	return t;
 }
 
