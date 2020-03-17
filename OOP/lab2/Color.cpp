@@ -14,11 +14,12 @@ void DemoEnums()
 {
 	//ex 2.2.8.3
 	Color color = Blues;
-	DayOfWeek day = Sunday;
-	MovieGenre genre = Drama;
+	DayOfWeek weekDay = Sunday;
+	MovieGenre movieGenre = Drama;
 	FormOfEducation formOfEducation = ParTime;
 	// TODO: грам ошибка
-	ManufacturerOfSmartphones manufaturer = Huawei;
+	// manufaturer -> smarphoneManufacturer
+	ManufacturerOfSmartphones smartphoneManufacturer = Huawei;
 	Season season = Summer;
 
 	//ex 2.2.8.4
