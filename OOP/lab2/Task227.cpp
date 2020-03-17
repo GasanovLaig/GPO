@@ -34,6 +34,9 @@ void DemoCircle()
 	delete circle1;
 	delete circle2;
 	delete circle3;
+	delete copiedCircle1;
+	delete copiedCircle2;
+	delete copiedCircle3;
 	// TODO: освободить память от копий
 }
 
