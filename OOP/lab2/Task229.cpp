@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 // TODO: почему именно этот файл не в папке Task?
+// Это случайно.
 size_t CountMoviesByGenre(const Movie* movies, size_t size,
 	MovieGenre findedGenre)
 {
