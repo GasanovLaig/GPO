@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Task">
       <UniqueIdentifier>{a7c24ba1-3ac5-4a51-b5b3-3495b3993027}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Tasks\Enums">
+      <UniqueIdentifier>{f1c0f0c3-110b-44bd-8ea3-70958fe1e0f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,13 +36,13 @@
     <ClCompile Include="Task228Enums.cpp">
       <Filter>Source Files\Task</Filter>
     </ClCompile>
-    <ClCompile Include="Task229.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Task221Exceptions.cpp">
       <Filter>Source Files\Task</Filter>
     </ClCompile>
     <ClCompile Include="Task223Structs.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Task229.cpp">
       <Filter>Source Files\Task</Filter>
     </ClCompile>
   </ItemGroup>
@@ -67,6 +70,24 @@
     </ClInclude>
     <ClInclude Include="Task222Structs.h">
       <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="DayOfWeek.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="MovieGenre.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="FormOfEducation.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="ManufacturerOfSmartphones.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Season.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

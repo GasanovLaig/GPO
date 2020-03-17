@@ -147,8 +147,14 @@
     <ClCompile Include="Task229.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="DayOfWeek.h" />
+    <ClInclude Include="FormOfEducation.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="ManufacturerOfSmartphones.h" />
+    <ClInclude Include="MovieGenre.h" />
     <ClInclude Include="OutPutFormatting.h" />
+    <ClInclude Include="Season.h" />
     <ClInclude Include="Task221Exceptions.h" />
     <ClInclude Include="Task222Structs.h" />
     <ClInclude Include="Task223.h" />

@@ -1,63 +1,12 @@
 ﻿#pragma once
+#include "Color.h"
+#include "DayOfWeek.h"
+#include "FormOfEducation.h"
+#include "ManufacturerOfSmartphones.h"
+#include "MovieGenre.h"
+#include "Season.h"
 
 // TODO: каждое перечисление в своём файле
-//ex 2.2.8.1
-enum Color
-{
-	Red,
-	Orange,
-	Yellow,
-	Green,
-	Blue,
-	Blues,
-	Purple
-};
-
-enum DayOfWeek
-{
-	Monday,
-	Thrusday,
-	Wednesday,
-	Thursday,
-	Friday,
-	Saturday,
-	Sunday
-};
-
-enum MovieGenre
-{
-	Comedy,
-	Drama,
-	Thriller,
-	Action,
-	Horror,
-	Blockbuster
-};
-
-enum FormOfEducation
-{
-	FullTime,
-	ParTime,
-	Evening,
-	Remote
-};
-
-enum ManufacturerOfSmartphones
-{
-	Apple,
-	Huawei,
-	Meizu,
-	Xiaomi,
-	Samsung
-};
-
-enum Season
-{
-	Winter,
-	Spring,
-	Summer,
-	Autumn
-};
 
 //ex 2.2.8.3, ex 2.2.8.4
 void DemoEnums();
