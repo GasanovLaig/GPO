@@ -1,4 +1,9 @@
-﻿#include "Task228Enums.h"
+﻿#include "Color.h"
+#include "DayOfWeek.h"
+#include "MovieGenre.h"
+#include "ManufacturerOfSmartphones.h"
+#include "FormOfEducation.h"
+#include "Season.h"
 #include <iostream>
 #include "OutPutFormatting.h"
 using namespace std;
@@ -24,7 +29,7 @@ void DemoEnums()
 
 	//ex 2.2.8.6
 	WhriteColor(ReadColor());
-	
+
 	//ex 2.2.8.7
 	OutPutFormatting();
 	Color colors2[6]{ Red, Blues, Yellow, Red, Yellow, Green };
@@ -53,41 +58,41 @@ void WhriteColor(Color color)
 {
 	switch (color)
 	{
-		case Red:
-		{
-			cout << "\nÊðàñíûé öâåò\n";
-			break;
-		}
-		case Orange:
-		{
-			cout << "\nÎðàíæåâûé öâåò\n";
-			break;
-		}
-		case Yellow:
-		{
-			cout << "\nÆåëòûé öâåò\n";
-			break;
-		}
-		case Green:
-		{
-			cout << "\nÇåëåíûé öâåò\n";
-			break;
-		}
-		case Blue:
-		{
-			cout << "\nÃîëóáîé öâåò\n";
-			break;
-		}
-		case Blues:
-		{
-			cout << "\nÑèíèé öâåò\n";
-			break;
-		}
-		case Purple:
-		{
-			cout << "\nÔèîëåòîâûé öâåò\n";
-			break;
-		}
+	case Red:
+	{
+		cout << "\nÊðàñíûé öâåò\n";
+		break;
+	}
+	case Orange:
+	{
+		cout << "\nÎðàíæåâûé öâåò\n";
+		break;
+	}
+	case Yellow:
+	{
+		cout << "\nÆåëòûé öâåò\n";
+		break;
+	}
+	case Green:
+	{
+		cout << "\nÇåëåíûé öâåò\n";
+		break;
+	}
+	case Blue:
+	{
+		cout << "\nÃîëóáîé öâåò\n";
+		break;
+	}
+	case Blues:
+	{
+		cout << "\nÑèíèé öâåò\n";
+		break;
+	}
+	case Purple:
+	{
+		cout << "\nÔèîëåòîâûé öâåò\n";
+		break;
+	}
 	}
 }
 
@@ -101,38 +106,38 @@ Color ReadColor()
 
 	switch (color)
 	{
-		case Red:
-		{
-			return Red;
-		}
-		case Orange:
-		{
-			return Orange;
-		}
-		case Yellow:
-		{
-			return Yellow;
-		}
-		case Green:
-		{
-			return Green;
-		}
-		case Blue:
-		{
-			return Blue;
-		}
-		case Blues:
-		{
-			return Blues;
-		}
-		case Purple:
-		{
-			return Purple;
-		}
-		default:
-		{
-			return Red;
-		}
+	case Red:
+	{
+		return Red;
+	}
+	case Orange:
+	{
+		return Orange;
+	}
+	case Yellow:
+	{
+		return Yellow;
+	}
+	case Green:
+	{
+		return Green;
+	}
+	case Blue:
+	{
+		return Blue;
+	}
+	case Blues:
+	{
+		return Blues;
+	}
+	case Purple:
+	{
+		return Purple;
+	}
+	default:
+	{
+		return Red;
+	}
 	}
 }
 

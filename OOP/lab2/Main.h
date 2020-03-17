@@ -1,10 +1,12 @@
 #pragma once
-#include <iostream>
-#include "Task221Exceptions.h"
-#include "Task222Structs.h"
-#include "Task223.h"
-#include "Task227.h"
-#include "Task228Enums.h"
-#include "Task229.h"
+#include "Exceptions.h"
+#include "Rectangle.h"
+#include "Flight.h"
+#include "Movie.h"
+#include "Time.h"
+#include "Circle.h"
+#include "Color.h"
+
 #include "OutPutFormatting.h"
+#include <iostream>
 using namespace std;

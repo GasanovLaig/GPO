@@ -1,14 +1,17 @@
 ﻿//ÔÓÍÊÖÈÈ-ÊÎÍÑÒÐÓÊÒÎÐÛ
 #pragma once
 #include <string>
-#include "Task222Structs.h"
+#include "Rectangle.h"
+#include "Flight.h"
+#include "Movie.h"
+#include "Time.h"
 
 struct Circle
 {
 	double X;
 	double Y;
 	double Radius;
-	string Color;
+	std::string Color;
 };
 
 // TODO: раскидать функции по соответствующим файлам структур

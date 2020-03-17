@@ -138,29 +138,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Flight.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Movie.cpp" />
     <ClCompile Include="OutPutFormatting.cpp" />
-    <ClCompile Include="Task221Exceptions.cpp" />
-    <ClCompile Include="Task223Structs.cpp" />
-    <ClCompile Include="Task227.cpp" />
-    <ClCompile Include="Task228Enums.cpp" />
-    <ClCompile Include="Task229.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Exceptions.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Contact.h" />
     <ClInclude Include="DayOfWeek.h" />
+    <ClInclude Include="Discipline.h" />
+    <ClInclude Include="Flight.h" />
     <ClInclude Include="FormOfEducation.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="ManufacturerOfSmartphones.h" />
+    <ClInclude Include="Movie.h" />
     <ClInclude Include="MovieGenre.h" />
+    <ClInclude Include="Music.h" />
     <ClInclude Include="OutPutFormatting.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Season.h" />
-    <ClInclude Include="Task221Exceptions.h" />
-    <ClInclude Include="Task222Structs.h" />
-    <ClInclude Include="Task223.h" />
-    <ClInclude Include="Task227.h" />
-    <ClInclude Include="Task228Enums.h" />
-    <ClInclude Include="Task229.h" />
+    <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
