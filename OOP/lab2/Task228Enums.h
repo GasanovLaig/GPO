@@ -1,5 +1,6 @@
-#pragma once
+﻿#pragma once
 
+// TODO: каждое перечисление в своём файле
 //ex 2.2.8.1
 enum Color
 {

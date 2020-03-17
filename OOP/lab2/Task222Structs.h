@@ -1,10 +1,11 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include "Task228Enums.h"
 
 //ex 2.2.2.1
 namespace Task222
 {
+	// TODO: каждая структура должна быть в своём файле
 	struct Rectangle
 	{
 		double Length;
@@ -15,6 +16,7 @@ namespace Task222
 
 struct Flight
 {
+	// TODO: подключи пространство имен, что не писать везде std
 	std::string From;
 	std::string To;
 	int Duration;
@@ -52,9 +54,10 @@ struct Music
 	int Duration;
 };
 
+// TODO: грам ошибка в названии?
 struct Dicipline
 {
 	std::string Name;
-	__int8 Term;
+	__int8 Term; // TODO: Mark
 	int Hours;
 };

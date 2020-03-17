@@ -1,4 +1,4 @@
-#include "Task228Enums.h"
+ï»¿#include "Task228Enums.h"
 #include <iostream>
 #include "OutPutFormatting.h"
 using namespace std;
@@ -10,6 +10,7 @@ void DemoEnums()
 	DayOfWeek day = Sunday;
 	MovieGenre genre = Drama;
 	FormOfEducation form = ParTime;
+	// TODO: Ð³Ñ€Ð°Ð¼ Ð¾ÑˆÐ¸Ð±ÐºÐ°
 	ManufacturerOfSmartphones manufaturer = Huawei;
 	Season season = Summer;
 
@@ -27,24 +28,24 @@ void DemoEnums()
 	//ex 2.2.8.7
 	OutPutFormatting();
 	Color colors2[6]{ Red, Blues, Yellow, Red, Yellow, Green };
-	cout << "\n Èñõîäíûé ìàññèâ:\n";
+	cout << "\n ÃˆÃ±ÃµÃ®Ã¤Ã­Ã»Ã© Ã¬Ã Ã±Ã±Ã¨Ã¢:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{
 		WhriteColor(colors2[i]);
 	}
 
-	cout << "\nÊîë-âî êðàñíûõ öâåòîâ: " << CountRed(colors2, 6);
+	cout << "\nÃŠÃ®Ã«-Ã¢Ã® ÃªÃ°Ã Ã±Ã­Ã»Ãµ Ã¶Ã¢Ã¥Ã²Ã®Ã¢: " << CountRed(colors2, 6);
 
 	//ex 2.2.8.8
 	OutPutFormatting();
-	cout << "\n Èñõîäíûé ìàññèâ:\n";
+	cout << "\n ÃˆÃ±ÃµÃ®Ã¤Ã­Ã»Ã© Ã¬Ã Ã±Ã±Ã¨Ã¢:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{
 		WhriteColor(colors2[i]);
 	}
-	cout << "\nÊîë-âî êðàñíûõ öâåòîâ: " << CountColor(colors2, 6, Red);
-	cout << "\nÊîë-âî ñèíèõ öâåòîâ: " << CountColor(colors2, 6, Blues);
-	cout << "\nÊîë-âî ñèíèõ ôèîëåòîâûõ: " << CountColor(colors2, 6, Purple);
+	cout << "\nÃŠÃ®Ã«-Ã¢Ã® ÃªÃ°Ã Ã±Ã­Ã»Ãµ Ã¶Ã¢Ã¥Ã²Ã®Ã¢: " << CountColor(colors2, 6, Red);
+	cout << "\nÃŠÃ®Ã«-Ã¢Ã® Ã±Ã¨Ã­Ã¨Ãµ Ã¶Ã¢Ã¥Ã²Ã®Ã¢: " << CountColor(colors2, 6, Blues);
+	cout << "\nÃŠÃ®Ã«-Ã¢Ã® Ã±Ã¨Ã­Ã¨Ãµ Ã´Ã¨Ã®Ã«Ã¥Ã²Ã®Ã¢Ã»Ãµ: " << CountColor(colors2, 6, Purple);
 }
 
 //ex 2.2.8.5
@@ -54,37 +55,37 @@ void WhriteColor(Color color)
 	{
 		case Red:
 		{
-			cout << "\nÊðàñíûé öâåò\n";
+			cout << "\nÃŠÃ°Ã Ã±Ã­Ã»Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 		case Orange:
 		{
-			cout << "\nÎðàíæåâûé öâåò\n";
+			cout << "\nÃŽÃ°Ã Ã­Ã¦Ã¥Ã¢Ã»Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 		case Yellow:
 		{
-			cout << "\nÆåëòûé öâåò\n";
+			cout << "\nÃ†Ã¥Ã«Ã²Ã»Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 		case Green:
 		{
-			cout << "\nÇåëåíûé öâåò\n";
+			cout << "\nÃ‡Ã¥Ã«Ã¥Ã­Ã»Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 		case Blue:
 		{
-			cout << "\nÃîëóáîé öâåò\n";
+			cout << "\nÃƒÃ®Ã«Ã³Ã¡Ã®Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 		case Blues:
 		{
-			cout << "\nÑèíèé öâåò\n";
+			cout << "\nÃ‘Ã¨Ã­Ã¨Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 		case Purple:
 		{
-			cout << "\nÔèîëåòîâûé öâåò\n";
+			cout << "\nÃ”Ã¨Ã®Ã«Ã¥Ã²Ã®Ã¢Ã»Ã© Ã¶Ã¢Ã¥Ã²\n";
 			break;
 		}
 	}
@@ -93,8 +94,8 @@ void WhriteColor(Color color)
 //ex 2.2.8.6
 Color ReadColor()
 {
-	cout << "\nÂâåäèòå ÷èñëî îò 0 äî 6 (0 – êðàñíûé, 1 – îðàíæåâûé,"
-		"2 – æåëòûé, 3 – çåëåíûé, 4 – ãîëóáîé, 5 – ñèíèé, 6 – ôèîëåòîâûé):\n";
+	cout << "\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã®Ã² 0 Ã¤Ã® 6 (0 â€“ ÃªÃ°Ã Ã±Ã­Ã»Ã©, 1 â€“ Ã®Ã°Ã Ã­Ã¦Ã¥Ã¢Ã»Ã©,"
+		"2 â€“ Ã¦Ã¥Ã«Ã²Ã»Ã©, 3 â€“ Ã§Ã¥Ã«Ã¥Ã­Ã»Ã©, 4 â€“ Ã£Ã®Ã«Ã³Ã¡Ã®Ã©, 5 â€“ Ã±Ã¨Ã­Ã¨Ã©, 6 â€“ Ã´Ã¨Ã®Ã«Ã¥Ã²Ã®Ã¢Ã»Ã©):\n";
 	__int8 color;
 	cin >> color;
 

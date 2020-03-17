@@ -1,7 +1,8 @@
-#pragma once
+﻿#pragma once
 #include "Task222Structs.h"
 #include <string>
 
+// TODO: каждая структура в своём файле, функции связанные только с ней - там же
 void DemoRectangle();
 void DemoFlight();
 void DemoMovie();
@@ -9,6 +10,7 @@ void DemoTime();
 //ex 2.2.2.4
 void WrongPointers();
 //ex2.2.5.1
+// TODO: грам ошибка
 void WhriteRectangle(const Task222::Rectangle& rectangle);
 //ex2.2.5.2
 void ReadRectangle(Task222::Rectangle& rectangle);

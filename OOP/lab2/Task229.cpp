@@ -1,7 +1,7 @@
-#include "Task229.h"
+Ôªø#include "Task229.h"
 #include <iostream>
 using namespace std;
-
+// TODO: –ø–æ—á–µ–º—É –∏–º–µ–Ω–Ω–æ —ç—Ç–æ—Ç —Ñ–∞–π–ª –Ω–µ –≤ –ø–∞–ø–∫–µ Task?
 size_t CountMoviesByGenre(const Movie* movies, size_t size,
 	MovieGenre findedGenre)
 {
@@ -33,7 +33,7 @@ void DemoMoviesByGenre()
 		{"J", 90, 2018, Drama, 7.14}
 	};
 
-	cout << "\n»ÒıÓ‰Ì˚È Ï‡ÒÒË‚ (Name, Duration, ReleaseYear,"
+	cout << "\n√à√±√µ√Æ√§√≠√ª√© √¨√†√±√±√®√¢ (Name, Duration, ReleaseYear,"
 		"Genre, Rating):\n";
 	for (int i = 0; i < 10; ++i)
 	{
@@ -42,15 +42,15 @@ void DemoMoviesByGenre()
 			", " << movies[i].Rating << ");\n";
 	}
 
-	cout << "\n¬‚Â‰ËÚÂ Ê‡Ì ÙËÎ¸Ï‡:\n"
+	cout << "\n√Ç√¢√•√§√®√≤√• √¶√†√≠√∞ √¥√®√´√º√¨√†:\n"
 		"0 - Comedy, 1 - Drama, 2 - Thriller, 3 - Action,"
 		"4 - Horror, 5 - Blockbuster\n";
 	int genre;
 	cin >> genre;
-	cout << "\n ÓÎ-‚Ó ÙËÎ¸ÏÓ‚ ˝ÚÓ„Ó Ê‡Ì‡: " <<
+	cout << "\n√ä√Æ√´-√¢√Æ √¥√®√´√º√¨√Æ√¢ √Ω√≤√Æ√£√Æ √¶√†√≠√∞√†: " <<
 		CountMoviesByGenre(movies, 10, static_cast<MovieGenre>(genre));
 
-	cout << "\nÕ‡Á‚‡ÌËÂ ÙËÎ¸Ï‡ Ò Ì‡Ë·ÓÎ¸¯˚Ï ÂÈÚËÌ„ÓÏ ˝ÚÓ„Ó Ê‡Ì‡: " <<
+	cout << "\n√ç√†√ß√¢√†√≠√®√• √¥√®√´√º√¨√† √± √≠√†√®√°√Æ√´√º√∏√ª√¨ √∞√•√©√≤√®√≠√£√Æ√¨ √Ω√≤√Æ√£√Æ √¶√†√≠√∞√†: " <<
 		FindBestGenreMovie(movies, 10, static_cast<MovieGenre>(genre))->Name;
 
 	delete[] movies;

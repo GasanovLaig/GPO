@@ -1,4 +1,4 @@
-#include "Task223.h"
+Ôªø#include "Task223.h"
 
 #include <iostream>
 #include "Task228Enums.h"
@@ -11,17 +11,17 @@ void DemoRectangle()
 	cout << "\nRectangle is (Length, Width, Color) " << rectangle1.Length <<
 		"; " << rectangle1.Width << "; " << rectangle1.Color << '\n';
 	OutPutFormatting();
-
-	cout << "\n¬‚Â‰ËÚÂ ‰ÎËÌÛ ÔˇÏÓÛ„ÓÎÌËÍ‡: ";
+	// TODO: –≤—Å–µ —Ä—É—Å—Å–∫–∏–µ —Å–∏–º–≤–æ–ª—ã –∑–∞—à–∞–∫–∞–ª–µ–Ω—ã - —É—Å—Ç–∞–Ω–∞–≤–ª–∏–≤–∞–ª Unicode? –ü–µ—Ä–µ—Å–æ—Ö—Ä–∞–Ω—è–ª —Ñ–∞–π–ª—ã?
+	cout << "\n√Ç√¢√•√§√®√≤√• √§√´√®√≠√≥ √Ø√∞√ø√¨√Æ√≥√£√Æ√´√≠√®√™√†: ";
 	Task222::Rectangle rectangle2;
 	cin >> rectangle2.Length;
-	cout << "\n¬‚Â‰ËÚÂ ¯ËËÌÛ ÔˇÏÓÛ„ÓÎÌËÍ‡: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √∏√®√∞√®√≠√≥ √Ø√∞√ø√¨√Æ√≥√£√Æ√´√≠√®√™√†: ";
 	cin >> rectangle2.Width;
-	cout << "\n¬‚Â‰ËÚÂ ˆ‚ÂÚ ÔˇÏÓÛ„ÓÎÌËÍ‡: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √∂√¢√•√≤ √Ø√∞√ø√¨√Æ√≥√£√Æ√´√≠√®√™√†: ";
 	cin >> rectangle2.Color;
-	cout << "\n–‡ÁÏÂ˚ ÔˇÏÓÛ„ÓÎÌËÍ‡: " <<
+	cout << "\n√ê√†√ß√¨√•√∞√ª √Ø√∞√ø√¨√Æ√≥√£√Æ√´√≠√®√™√†: " <<
 		rectangle2.Length << 'x' << rectangle2.Width <<
-		" ˆ‚ÂÚ " << rectangle2.Color << '\n';
+		" √∂√¢√•√≤ " << rectangle2.Color << '\n';
 
 	OutPutFormatting();
 	Task222::Rectangle rectangles[3]
@@ -33,48 +33,48 @@ void DemoRectangle()
 
 	for (int i = 0; i < 3; ++i)
 	{
-		cout << "\nœˇÏÓÛ„ÓÎ¸ÌËÍ " << i << " (Length, Width, Color) " <<
+		cout << "\n√è√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™ " << i << " (Length, Width, Color) " <<
 			rectangles[i].Length << "; " <<
 			rectangles[i].Width << "; " <<
 			rectangles[i].Color << '\n';
 	}
 
 	Task222::Rectangle* pointer1 = &rectangle1;
-	cout << "\nœÂ‚˚È ÔˇÏÓÛ„ÓÎ¸ÌËÍ ‰ÎËÌÓÈ - " << pointer1->Length <<
-		", ¯ËËÌÓÈ - " << pointer1->Width <<
-		", ˆ‚ÂÚÓÏ - " << pointer1->Color << '\n';
+	cout << "\n√è√•√∞√¢√ª√© √Ø√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™ √§√´√®√≠√Æ√© - " << pointer1->Length <<
+		", √∏√®√∞√®√≠√Æ√© - " << pointer1->Width <<
+		", √∂√¢√•√≤√Æ√¨ - " << pointer1->Color << '\n';
 
 	pointer1->Length = 3.14;
 	pointer1->Width = 21;
 	pointer1->Color = "Purple";
 
 	Task222::Rectangle* pointer2 = pointer1;
-	cout << "\n¿‰ÂÒ ‚ 1-ÓÏ ÛÍ‡Á‡ÚÂÎÂ: " << pointer1 <<
-		"\n¿‰ÂÒ ‚Ó 2-ÓÏ ÛÍ‡Á‡ÚÂÎÂ r5: " << pointer2 << '\n';
+	cout << "\n√Ä√§√∞√•√± √¢ 1-√Æ√¨ √≥√™√†√ß√†√≤√•√´√•: " << pointer1 <<
+		"\n√Ä√§√∞√•√± √¢√Æ 2-√Æ√¨ √≥√™√†√ß√†√≤√•√´√• r5: " << pointer2 << '\n';
 
 	OutPutFormatting();
 	//ex 2.2.5.4
-	cout << "\n«‡‰‡ÌËÂ 2.2.5.4 ÙÛÌÍˆËˇ Exchange(Rectangle& r1, Rectanlge& r2)" <<
-		"\nœÂ‚˚È ÔˇÏÓÛ„ÓÎÌËÍ ËÏÂÂÚ ‡ÁÏÂÌÓÒÚ¸: " <<
+	cout << "\n√á√†√§√†√≠√®√• 2.2.5.4 √¥√≥√≠√™√∂√®√ø Exchange(Rectangle& r1, Rectanlge& r2)" <<
+		"\n√è√•√∞√¢√ª√© √Ø√∞√ø√¨√Æ√≥√£√Æ√´√≠√®√™ √®√¨√•√•√≤ √∞√†√ß√¨√•√∞√≠√Æ√±√≤√º: " <<
 		rectangle1.Length << 'x' << rectangle1.Width <<
-		"\n¬ÚÓÓÈ ÔˇÏÓÛ„ÓÎÌËÍ ËÏÂÂÚ ‡ÁÏÂÌÓÒÚ¸: " <<
+		"\n√Ç√≤√Æ√∞√Æ√© √Ø√∞√ø√¨√Æ√≥√£√Æ√´√≠√®√™ √®√¨√•√•√≤ √∞√†√ß√¨√•√∞√≠√Æ√±√≤√º: " <<
 		rectangle2.Length << 'x' << rectangle2.Width << '\n';
 	Exchange(rectangle1, rectangle2);
-	cout << "\nœÓÒÎÂ ÔÂÂÒÚ‡ÌÓ‚ÍË ÔÓÎÂÈ 1-„Ó Ë 2-„Ó ÔˇÏÓÛ„ÓÎ¸ÌËÍÓ‚: " <<
-		"\n1-˚È ËÏÂÂÚ ‡ÁÏÂÌÓÒÚ¸ " <<
+	cout << "\n√è√Æ√±√´√• √Ø√•√∞√•√±√≤√†√≠√Æ√¢√™√® √Ø√Æ√´√•√© 1-√£√Æ √® 2-√£√Æ √Ø√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™√Æ√¢: " <<
+		"\n1-√ª√© √®√¨√•√•√≤ √∞√†√ß√¨√•√∞√≠√Æ√±√≤√º " <<
 		rectangle1.Length << 'x' << rectangle1.Width <<
-		"\n2-ÓÈ ËÏÂÂÚ ‡ÁÏÂÌÓÒÚ¸ " <<
+		"\n2-√Æ√© √®√¨√•√•√≤ √∞√†√ß√¨√•√∞√≠√Æ√±√≤√º " <<
 		rectangle2.Length << 'x' << rectangle2.Width << '\n';
 
 	OutPutFormatting();
 	//ex 2.2.5.5
-	cout << "\n«‡‰‡ÌËÂ 2.2.5.5 " <<
-		"Ì‡ÔËÒ‡Ú¸ ÙÛÌÍˆË˛ void FindRectangle(Rectangle* r, int count)";
+	cout << "\n√á√†√§√†√≠√®√• 2.2.5.5 " <<
+		"√≠√†√Ø√®√±√†√≤√º √¥√≥√≠√™√∂√®√æ void FindRectangle(Rectangle* r, int count)";
 	FindRectangle(rectangles, 3);
 
 	OutPutFormatting();
 	//ex 2.2.5.6
-	cout << "\n«‡‰‡ÌËÂ 2.2.5.6 " << "Ì‡ÔËÒ‡Ú¸ ÙÛÌÍˆË˛" <<
+	cout << "\n√á√†√§√†√≠√®√• 2.2.5.6 " << "√≠√†√Ø√®√±√†√≤√º √¥√≥√≠√™√∂√®√æ" <<
 		"void FindRectangle(Rectangle* rectangles, int count)";
 	FindMaxRectangle(rectangles, 3);
 }
@@ -86,15 +86,15 @@ void DemoFlight()
 		film1.To << "; " << film1.Duration << '\n';
 
 	OutPutFormatting();
-	cout << "\n¬‚Â‰ËÚÂ ÔÛÌÍÚ ÓÚÔ‡‚ÎÂÌËˇ: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √Ø√≥√≠√™√≤ √Æ√≤√Ø√∞√†√¢√´√•√≠√®√ø: ";
 	Flight film2;
 	cin >> film2.From;
-	cout << "\n¬‚Â‰ËÚÂ ÔÛÌÍÚ ÔË·˚ÚËˇ: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √Ø√≥√≠√™√≤ √Ø√∞√®√°√ª√≤√®√ø: ";
 	cin >> film2.To;
-	cout << "\n¬ÂÏˇ ‚ ÔÓÎÂÚÂ (‚ ÏËÌ): ";
+	cout << "\n√Ç√∞√•√¨√ø √¢ √Ø√Æ√´√•√≤√• (√¢ √¨√®√≠): ";
 	cin >> film2.Duration;
-	cout << "\n¬‡¯ ÂÈÒ: " << film2.From << " - " <<
-		film2.To << " ‚ ÔÓÎÂÚÂ " << film2.Duration << '\n';
+	cout << "\n√Ç√†√∏ √∞√•√©√±: " << film2.From << " - " <<
+		film2.To << " √¢ √Ø√Æ√´√•√≤√• " << film2.Duration << '\n';
 
 	OutPutFormatting();
 	Flight flights[3]
@@ -107,63 +107,63 @@ void DemoFlight()
 	for (int i = 0; i < 3; ++i)
 	{
 		cout << "\nFlight " << i << " is " << flights[i].From <<
-			" - " << flights[i].To << " Ò ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ¸˛ " <<
+			" - " << flights[i].To << " √± √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√º√æ " <<
 			flights[i].Duration << '\n';
 	}
 
 	OutPutFormatting();
 	Flight* pointer1 = &film1;
-	cout << "\nœÂ‚˚È ÂÈÒ: " << pointer1->From << " - " << pointer1->To <<
-		" c ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ¸˛ ‚ " << pointer1->Duration << '\n';
+	cout << "\n√è√•√∞√¢√ª√© √∞√•√©√±: " << pointer1->From << " - " << pointer1->To <<
+		" c √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√º√æ √¢ " << pointer1->Duration << '\n';
 
 	pointer1->From = "Tomsk";
 	pointer1->To = "Krasnodar";
 	pointer1->Duration = 512;
 
 	Flight* pointer2 = pointer1;
-	cout << "\n¿‰ÂÒ ‚ 1-ÓÏ ÛÍ‡Á‡ÚÂÎÂ: " << pointer1 <<
-		"\n¿‰ÂÒ ‚Ó 2-ÓÏ ÛÍ‡Á‡ÚÂÎÂ f5: " << pointer2 << '\n';
+	cout << "\n√Ä√§√∞√•√± √¢ 1-√Æ√¨ √≥√™√†√ß√†√≤√•√´√•: " << pointer1 <<
+		"\n√Ä√§√∞√•√± √¢√Æ 2-√Æ√¨ √≥√™√†√ß√†√≤√•√´√• f5: " << pointer2 << '\n';
 }
 
 void DemoMovie()
 {
-	Movie movie1{ "«‡ ÔÓÔ‡ÒÚ¸˛ ‚Ó ÊË", 106, 2017, Drama, 6.7 };
+	Movie movie1{ "√á√† √Ø√∞√Æ√Ø√†√±√≤√º√æ √¢√Æ √∞√¶√®", 106, 2017, Drama, 6.7 };
 	cout << "\nMovie is (Name, Duration, ReleaseYear, Genre, Rating) " <<
 		movie1.Name << "; " << movie1.Duration << "; " << movie1.ReleaseYear <<
 		"; " <<	movie1.Rating << '\n';
 
 	OutPutFormatting();
-	cout << "\n¬‚Â‰ËÚÂ Ì‡Á‚‡ÌËÂ ÙËÎ¸Ï‡:	";
+	cout << "\n√Ç√¢√•√§√®√≤√• √≠√†√ß√¢√†√≠√®√• √¥√®√´√º√¨√†:	";
 	Movie movie2;
 	cin >> movie2.Name;
-	cout << "\n¬‚Â‰ËÚÂ ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ¸ ÙËÎ¸Ï‡: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√º √¥√®√´√º√¨√†: ";
 	cin >> movie2.Duration;
-	cout << "\n¬‚Â‰ËÚÂ „Ó‰ ‚˚ÔÛÒÍ‡: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √£√Æ√§ √¢√ª√Ø√≥√±√™√†: ";
 	cin >> movie2.ReleaseYear;
-	cout << "\n¬‚Â‰ËÚÂ Ê‡Ì ÙËÎ¸Ï‡:\n"
+	cout << "\n√Ç√¢√•√§√®√≤√• √¶√†√≠√∞ √¥√®√´√º√¨√†:\n"
 		"0 - Comedy, 1 - Drama, 2 - Thriller, 3 - Action,"
 		"4 - Horror, 5 - Blockbuster\n";
 	int genre;
 	cin >> genre;
 	movie2.Genre = static_cast<MovieGenre>(genre);
-	cout << "\n¬‚Â‰ËÚÂ ÂÈÚËÌ„ ÙËÎ¸Ï‡: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √∞√•√©√≤√®√≠√£ √¥√®√´√º√¨√†: ";
 	cin >> movie2.Rating;
 
-	cout << "\n‘ËÎ¸Ï: (Name, Duration, ReleaseYear, Genre, Rating) " <<
+	cout << "\n√î√®√´√º√¨: (Name, Duration, ReleaseYear, Genre, Rating) " <<
 		movie2.Name << "; " << movie2.Duration << "; " <<
 		movie2.ReleaseYear << "; " << movie2.Rating << '\n';
 
 	OutPutFormatting();
 	Movie movies[3]
 	{
-		{"  Á‚ÂÁ‰‡Ï", 123, 2019, Drama, 6.382},
-		{"Ã‡ÒË‡ÌËÌ", 200, 2020, Thriller, 5.0},
-		{"¬Î‡ÒÚ¸", 128, 2021, Action, 8.19}
+		{"√ä √ß√¢√•√ß√§√†√¨", 123, 2019, Drama, 6.382},
+		{"√å√†√∞√±√®√†√≠√®√≠", 200, 2020, Thriller, 5.0},
+		{"√Ç√´√†√±√≤√º", 128, 2021, Action, 8.19}
 	};
 
 	for (int i = 0; i < 3; ++i)
 	{
-		cout << "\n‘ËÎ¸Ï (Name, Duration, ReleaseYear, Genre, Rating) " <<
+		cout << "\n√î√®√´√º√¨ (Name, Duration, ReleaseYear, Genre, Rating) " <<
 			i << ' ' << movies[3].Name << "; " << movies[3].Duration <<
 			"; " << movies[3].ReleaseYear << "; " <<
 			movies[3].Genre << "; " << movies[3].Rating << '\n';
@@ -171,20 +171,20 @@ void DemoMovie()
 
 	OutPutFormatting();
 	Movie* pointer1 = &movie1;
-	cout << "\nœÂ‚˚È ÙËÎ¸Ï (Name, Duration, ReleaseYear,"
+	cout << "\n√è√•√∞√¢√ª√© √¥√®√´√º√¨ (Name, Duration, ReleaseYear,"
 		"Genre, Rating): " << pointer1->Name << "; " << pointer1->Duration <<
 		"; " << pointer1->ReleaseYear << "; " << pointer1->Genre << "; " <<
 		pointer1->Rating << '\n';
 
-	pointer1->Name = "œÓÂÁ‰ ‚ œÛÒ‡Ì";
+	pointer1->Name = "√è√Æ√•√ß√§ √¢ √è√≥√±√†√≠";
 	pointer1->Duration = 128;
 	pointer1->ReleaseYear = 2015;
 	pointer1->Genre = Horror;
 	pointer1->Rating = 7.2;
 
 	Movie* pointer = pointer1;
-	cout << "\n¿‰ÂÒ ‚ 1-ÓÏ ÛÍ‡Á‡ÚÂÎÂ: " << pointer1 <<
-		"\n¿‰ÂÒ ‚Ó 2-ÓÏ ÛÍ‡Á‡ÚÂÎÂ m5: " << pointer << '\n';
+	cout << "\n√Ä√§√∞√•√± √¢ 1-√Æ√¨ √≥√™√†√ß√†√≤√•√´√•: " << pointer1 <<
+		"\n√Ä√§√∞√•√± √¢√Æ 2-√Æ√¨ √≥√™√†√ß√†√≤√•√´√• m5: " << pointer << '\n';
 }
 
 void DemoTime()
@@ -194,15 +194,15 @@ void DemoTime()
 		"; " << time1.Minutes << "; " << time1.Seconds << '\n';
 
 	OutPutFormatting();
-	cout << "\n¬‚Â‰ËÚÂ ÍÓÎ-‚Ó ˜‡ÒÓ‚: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √™√Æ√´-√¢√Æ √∑√†√±√Æ√¢: ";
 	Time time2;
 	cin >> time2.Hours;
-	cout << "\n¬‚Â‰ËÚÂ ÍÓÎ-‚Ó ÏËÌÛÚ: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √™√Æ√´-√¢√Æ √¨√®√≠√≥√≤: ";
 	cin >> time2.Minutes;
-	cout << "\n¬‚Â‰ËÚÂ ÍÓÎ-‚Ó ÒÂÍÛÌ‰: ";
+	cout << "\n√Ç√¢√•√§√®√≤√• √™√Æ√´-√¢√Æ √±√•√™√≥√≠√§: ";
 	cin >> time2.Seconds;
 
-	cout << "\n¬ÂÏˇ: " << time2.Hours << ':' << time2.Minutes <<
+	cout << "\n√Ç√∞√•√¨√ø: " << time2.Hours << ':' << time2.Minutes <<
 		':' << time2.Seconds << '\n';
 
 	OutPutFormatting();
@@ -215,14 +215,14 @@ void DemoTime()
 
 	for (int i = 0; i < 3; ++i)
 	{
-		cout << "\n¬ÂÏˇ " << i << " (Hours,  Minutes, Seconds) " <<
+		cout << "\n√Ç√∞√•√¨√ø " << i << " (Hours,  Minutes, Seconds) " <<
 			times[i].Hours << ':' << times[i].Minutes <<
 			':' << times[i].Seconds << '\n';
 	}
 
 	OutPutFormatting();
 	Time* pointer1 = &time1;
-	cout << "\n¬ÂÏˇ ‚ ÔÂ‚ÓÏ Á‡‰‡ÌËË (Hours,  Minutes, Seconds): " <<
+	cout << "\n√Ç√∞√•√¨√ø √¢ √Ø√•√∞√¢√Æ√¨ √ß√†√§√†√≠√®√® (Hours,  Minutes, Seconds): " <<
 		pointer1->Hours << ':' << pointer1->Minutes <<
 		':' << pointer1->Seconds << '\n';
 
@@ -231,8 +231,8 @@ void DemoTime()
 	pointer1->Seconds = 0;
 
 	Time* pointer2 = pointer1;
-	cout << "\n¿‰ÂÒ ‚ 1-ÓÏ ÛÍ‡Á‡ÚÂÎÂ:" << pointer1 <<
-		"\n¿‰ÂÒ ‚Ó 2-ÓÏ ÛÍ‡Á‡ÚÂÎÂ: " << pointer2 << '\n';
+	cout << "\n√Ä√§√∞√•√± √¢ 1-√Æ√¨ √≥√™√†√ß√†√≤√•√´√•:" << pointer1 <<
+		"\n√Ä√§√∞√•√± √¢√Æ 2-√Æ√¨ √≥√™√†√ß√†√≤√•√´√•: " << pointer2 << '\n';
 }
 
 //ex 2.2.2.4
@@ -249,19 +249,20 @@ void WrongPointers()
 
 void WhriteRectangle(const Task222::Rectangle& rectangle)
 {
-	cout << "\nœˇÏÓÛ„ÓÎ¸ÌËÍ Ò ‰ÎËÌÓÈ - " << rectangle.Length <<
-		", ¯ËËÌÓÈ - " << rectangle.Width <<
-		", ˆ‚ÂÚÓÏ - " << rectangle.Color << '\n';
+	cout << "\n√è√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™ √± √§√´√®√≠√Æ√© - " << rectangle.Length <<
+		", √∏√®√∞√®√≠√Æ√© - " << rectangle.Width <<
+		", √∂√¢√•√≤√Æ√¨ - " << rectangle.Color << '\n';
 }
 
 void ReadRectangle(Task222::Rectangle& rectangle)
 {
-	cout << "\n¬‚Â‰ËÚÂ ‰ÎËÌÛ, ¯ËËÌÛ, Ë ˆ‚ÂÚ ÔˇÏÓÛ„ÓÎ¸ÌËÍ‡:";
+	cout << "\n√Ç√¢√•√§√®√≤√• √§√´√®√≠√≥, √∏√®√∞√®√≠√≥, √® √∂√¢√•√≤ √Ø√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™√†:";
 	cin >> rectangle.Length >>
 		rectangle.Width >>
 		rectangle.Color;
 }
 
+// TODO: –≥—Ä–∞–º –æ—à–∏–±–∫–∞ –≤ –Ω–∞–∑–≤–∞–Ω–∏–∏ —Ñ—É–Ω–∫—Ü–∏–∏
 void DemoReadAndWhriteRectangles()
 {
 	Task222::Rectangle rectangles[5];
@@ -304,7 +305,7 @@ void FindRectangle(const Task222::Rectangle* rectangles, size_t size)
 		}
 	}
 
-	cout << "\nœˇÏÓÛ„ÓÎ¸ÌËÍ Ò Ì‡Ë·ÓÎ¸¯ÂÈ ‰ÎËÌÓÈ ËÏÂÂÚ ‡ÁÏÂÌÓÒÚ¸ " <<
+	cout << "\n√è√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™ √± √≠√†√®√°√Æ√´√º√∏√•√© √§√´√®√≠√Æ√© √®√¨√•√•√≤ √∞√†√ß√¨√•√∞√≠√Æ√±√≤√º " <<
 		rectangles[index].Length << 'x' << rectangles[index].Width << '\n';
 }
 
@@ -322,7 +323,7 @@ void FindMaxRectangle(const Task222::Rectangle* rectangles, size_t size)
 		}
 	}
 
-	cout << "\nœˇÏÓÛ„ÓÎ¸ÌËÍ Ò Ì‡·ËÓÎ¸¯ÂÈ ÔÎÓ˘‡‰¸˛ ËÏÂÂÚ ‡ÁÏÂÌÓÒÚ¸ " <<
+	cout << "\n√è√∞√ø√¨√Æ√≥√£√Æ√´√º√≠√®√™ √± √≠√†√°√®√Æ√´√º√∏√•√© √Ø√´√Æ√π√†√§√º√æ √®√¨√•√•√≤ √∞√†√ß√¨√•√∞√≠√Æ√±√≤√º " <<
 		rectangles[index].Length << 'x' << rectangles[index].Width << '\n';
 }
 
@@ -333,8 +334,8 @@ void DemoDynamicFlight()
 	flight->To = "Canberra";
 	flight->Duration = 2048;
 
-	cout << "\n–ÂÈÒ " << flight->From << " - " << flight->To <<
-		" ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ¸˛ " << flight->Duration << '\n';
+	cout << "\n√ê√•√©√± " << flight->From << " - " << flight->To <<
+		" √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√º√æ " << flight->Duration << '\n';
 	delete flight;
 }
 
@@ -342,21 +343,21 @@ void DemoDynamicFlights()
 {
 	Flight* flights = new Flight[4]
 	{
-		{"ÃÓÒÍ‚‡", "—‡ÌÍÚ-œÂÚÂ·Û„", 45},
-		{"“ÓÏÒÍ", "ÃÓÒÍ‚‡", 190},
-		{"¡ÂÎËÌ", "ÀÓÌ‰ÓÌ", 105},
-		{"ÃÓÒÍ‚‡", "¡‡ÒÂÎÓÌ‡", 180}
+		{"√å√Æ√±√™√¢√†", "√ë√†√≠√™√≤-√è√•√≤√•√∞√°√≥√∞√£", 45},
+		{"√í√Æ√¨√±√™", "√å√Æ√±√™√¢√†", 190},
+		{"√Å√•√∞√´√®√≠", "√ã√Æ√≠√§√Æ√≠", 105},
+		{"√å√Æ√±√™√¢√†", "√Å√†√∞√±√•√´√Æ√≠√†", 180}
 	};
 
 	for (int i = 0; i < 4; ++i)
 	{
-		cout << "\n–ÂÈÒ" << i << ' ' <<
+		cout << "\n√ê√•√©√±" << i << ' ' <<
 			flights[i].From << " - " << flights[i].To <<
-			" ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ¸˛ " << flights[i].Duration << '\n';
+			" √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√º√æ " << flights[i].Duration << '\n';
 	}
 
 	//ex2.2.6.3
-	cout << "\n«‡‰‡ÌËÂ 2.2.6.3 Ì‡ÔËÒ‡Ú¸ ÙÛÌÍˆË˛" <<
+	cout << "\n√á√†√§√†√≠√®√• 2.2.6.3 √≠√†√Ø√®√±√†√≤√º √¥√≥√≠√™√∂√®√æ" <<
 		"void FindShortestFlight(Flight* flights, int count):\n";
 	FindShortestFlight(flights, 4U);
 
@@ -376,7 +377,7 @@ void FindShortestFlight(const Flight* flights, size_t size)
 		}
 	}
 
-	cout << "\n–ÂÈÒ " << flights[index].From << " - " << flights[index].To <<
-		" Ò Ì‡ËÏÂÌ¯ÂÈ ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ˛ ‚ " << flights[index].Duration <<
-		" ÏËÌÛÚ\n";
+	cout << "\n√ê√•√©√± " << flights[index].From << " - " << flights[index].To <<
+		" √± √≠√†√®√¨√•√≠√∏√•√© √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√æ √¢ " << flights[index].Duration <<
+		" √¨√®√≠√≥√≤\n";
 }

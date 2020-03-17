@@ -1,9 +1,10 @@
-#include "Task227.h"
+﻿#include "Task227.h"
 
 #include <string>
 #include <iostream>
 using namespace std;
 
+// TODO: объявление структур должно быть в h-файлах
 struct Circle
 {
 	double X;
@@ -12,7 +13,7 @@ struct Circle
 	string Color;
 };
 
-//ex 2.2.7.1 ��� ��������� Circle ������� �������-����������� MakeCircle()
+//ex 2.2.7.1 Äëÿ ñòðóêòóðû Circle ñîçäàòü ôóíêöèþ-êîíñòðóêòîð MakeCircle()
 Circle* MakeCircle(double x, double y, double radius, const std::string& color)
 {
 	Circle* circle = new Circle{ x, y, radius, color };
@@ -22,7 +23,7 @@ Circle* MakeCircle(double x, double y, double radius, const std::string& color)
 Circle* CopyCircle(const Circle* circle)
 {
 	Circle* copy = new Circle
-	{
+	{// TODO: заменить на использование функции-конструктора (когда в следующей лабе появятся сеттеры, то этот подход позволит создавать объекты в обход сеттеров - потенциальная ошибка
 		circle->X,
 		circle->Y,
 		circle->Radius,
@@ -45,6 +46,7 @@ void DemoCircle()
 	delete circle1;
 	delete circle2;
 	delete circle3;
+	// TODO: освободить память от копий
 }
 
 Task222::Rectangle* MakeRectangle(double length, double width,
@@ -76,6 +78,7 @@ Time* MakeTime(int hours, int minutes, int seconds)
 
 Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
 {
+	// TODO: заменить на вызов функции конструктора
 	Task222::Rectangle* r = new Task222::Rectangle
 	{
 		rectangle->Length,
@@ -88,6 +91,7 @@ Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
 
 Flight* CopyFlight(const Flight* flight)
 {
+	// TODO: заменить на вызов функции-конструктора
 	Flight* f = new Flight
 	{
 		flight->From,
@@ -100,6 +104,7 @@ Flight* CopyFlight(const Flight* flight)
 
 Movie* CopyMovie(const Movie* movie)
 {
+	// TODO: заменить на использование функции-конструктора
 	Movie* m = new Movie
 	{
 		movie->Name,
@@ -114,6 +119,7 @@ Movie* CopyMovie(const Movie* movie)
 
 Time* CopyTime(const Time* time)
 {
+	// TODO: заменить на использование функции-конструктора
 	Time* t = new Time
 	{
 		time->Hours,
@@ -140,4 +146,5 @@ void DemoMakeAndCopyFunctions()
 	delete movie;
 	delete flight;
 	delete rectangle;
+	// TODO: освободить память скопированных объектов
 }
