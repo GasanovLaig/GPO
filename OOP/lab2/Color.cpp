@@ -1,9 +1,11 @@
 ﻿#include "Color.h"
+
 #include "DayOfWeek.h"
 #include "MovieGenre.h"
 #include "ManufacturerOfSmartphones.h"
 #include "FormOfEducation.h"
 #include "Season.h"
+
 #include <iostream>
 #include "OutPutFormatting.h"
 using namespace std;
@@ -14,7 +16,7 @@ void DemoEnums()
 	Color color = Blues;
 	DayOfWeek day = Sunday;
 	MovieGenre genre = Drama;
-	FormOfEducation form = ParTime;
+	FormOfEducation formOfEducation = ParTime;
 	// TODO: грам ошибка
 	ManufacturerOfSmartphones manufaturer = Huawei;
 	Season season = Summer;
@@ -48,6 +50,7 @@ void DemoEnums()
 	{
 		WhriteColor(colors2[i]);
 	}
+
 	cout << "\nÊîë-âî êðàñíûõ öâåòîâ: " << CountColor(colors2, 6, Red);
 	cout << "\nÊîë-âî ñèíèõ öâåòîâ: " << CountColor(colors2, 6, Blues);
 	cout << "\nÊîë-âî ñèíèõ ôèîëåòîâûõ: " << CountColor(colors2, 6, Purple);
@@ -58,41 +61,41 @@ void WhriteColor(Color color)
 {
 	switch (color)
 	{
-	case Red:
-	{
-		cout << "\nÊðàñíûé öâåò\n";
-		break;
-	}
-	case Orange:
-	{
-		cout << "\nÎðàíæåâûé öâåò\n";
-		break;
-	}
-	case Yellow:
-	{
-		cout << "\nÆåëòûé öâåò\n";
-		break;
-	}
-	case Green:
-	{
-		cout << "\nÇåëåíûé öâåò\n";
-		break;
-	}
-	case Blue:
-	{
-		cout << "\nÃîëóáîé öâåò\n";
-		break;
-	}
-	case Blues:
-	{
-		cout << "\nÑèíèé öâåò\n";
-		break;
-	}
-	case Purple:
-	{
-		cout << "\nÔèîëåòîâûé öâåò\n";
-		break;
-	}
+		case Red:
+		{
+			cout << "\nÊðàñíûé öâåò\n";
+			break;
+		}
+		case Orange:
+		{
+			cout << "\nÎðàíæåâûé öâåò\n";
+			break;
+		}
+		case Yellow:
+		{
+			cout << "\nÆåëòûé öâåò\n";
+			break;
+		}
+		case Green:
+		{
+			cout << "\nÇåëåíûé öâåò\n";
+			break;
+		}
+		case Blue:
+		{
+			cout << "\nÃîëóáîé öâåò\n";
+			break;
+		}
+		case Blues:
+		{
+			cout << "\nÑèíèé öâåò\n";
+			break;
+		}
+		case Purple:
+		{
+			cout << "\nÔèîëåòîâûé öâåò\n";
+			break;
+		}
 	}
 }
 
@@ -106,38 +109,38 @@ Color ReadColor()
 
 	switch (color)
 	{
-	case Red:
-	{
-		return Red;
-	}
-	case Orange:
-	{
-		return Orange;
-	}
-	case Yellow:
-	{
-		return Yellow;
-	}
-	case Green:
-	{
-		return Green;
-	}
-	case Blue:
-	{
-		return Blue;
-	}
-	case Blues:
-	{
-		return Blues;
-	}
-	case Purple:
-	{
-		return Purple;
-	}
-	default:
-	{
-		return Red;
-	}
+		case Red:
+		{
+			return Red;
+		}
+		case Orange:
+		{
+			return Orange;
+		}
+		case Yellow:
+		{
+			return Yellow;
+		}
+		case Green:
+		{
+			return Green;
+		}
+		case Blue:
+		{
+			return Blue;
+		}
+		case Blues:
+		{
+			return Blues;
+		}
+		case Purple:
+		{
+			return Purple;
+		}
+		default:
+		{
+			return Red;
+		}
 	}
 }
 
