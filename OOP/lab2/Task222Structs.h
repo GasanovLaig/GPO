@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <string>
 #include "Task228Enums.h"
+using namespace std;
 
 //ex 2.2.2.1
 namespace Task222
@@ -10,21 +11,21 @@ namespace Task222
 	{
 		double Length;
 		double Width;
-		std::string Color;
+		string Color;
 	};
 }
 
 struct Flight
 {
 	// TODO: подключи пространство имен, что не писать везде std
-	std::string From;
-	std::string To;
+	string From;
+	string To;
 	int Duration;
 };
 
 struct Movie
 {
-	std::string Name;
+	string Name;
 	int Duration;
 	int ReleaseYear;
 	MovieGenre Genre;
@@ -41,23 +42,23 @@ struct Time
 //ex 2.2.2.2
 struct Contact
 {
-	std::string Name;
-	std::string Surname;
-	std::string Number;
+	string Name;
+	string Surname;
+	string Number;
 };
 
 struct Music
 {
-	std::string Name;
-	std::string Author;
-	std::string Genre;
+	string Name;
+	string Author;
+	string Genre;
 	int Duration;
 };
 
 // TODO: грам ошибка в названии?
 struct Dicipline
 {
-	std::string Name;
+	string Name;
 	__int8 Term; // TODO: Mark
 	int Hours;
 };
