@@ -131,7 +131,7 @@ void DemoMakeAndCopyFunctions()
 	Time* time = MakeTime(23, 59, 59);
 
 	Task222::Rectangle* copiedRectangle = CopyRectangle(rectangle);
-	Flight* copiedFilm = CopyFlight(flight);
+	Flight* copiedFlight = CopyFlight(flight);
 	Movie* copiedMovie = CopyMovie(movie);
 	Time* copiedTime = CopyTime(time);
 
@@ -139,5 +139,9 @@ void DemoMakeAndCopyFunctions()
 	delete movie;
 	delete flight;
 	delete rectangle;
+	delete copiedRectangle;
+	delete copiedFlight;
+	delete copiedMovie;
+	delete copiedTime;
 	// TODO: освободить память скопированных объектов
 }
