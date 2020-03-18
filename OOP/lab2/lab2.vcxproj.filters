@@ -19,21 +19,48 @@
     <Filter Include="Source Files\Task">
       <UniqueIdentifier>{a7c24ba1-3ac5-4a51-b5b3-3495b3993027}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Tasks\Enums">
+      <UniqueIdentifier>{f1c0f0c3-110b-44bd-8ea3-70958fe1e0f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tasks\Structs">
+      <UniqueIdentifier>{6f18c221-c543-4d20-aba7-57fcb9849041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task\Structs">
+      <UniqueIdentifier>{3e93a723-59e2-41da-bcf2-912a5d5df3a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task\Enums">
+      <UniqueIdentifier>{f8639998-0aaa-4fd5-901d-9a6809b27172}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Task221.cpp">
-      <Filter>Source Files\Task</Filter>
-    </ClCompile>
-    <ClCompile Include="Task223.cpp">
-      <Filter>Source Files\Task</Filter>
-    </ClCompile>
     <ClCompile Include="OutPutFormatting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Task227.cpp">
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Source Files\Task\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Source Files\Task\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Flight.cpp">
+      <Filter>Source Files\Task\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Movie.cpp">
+      <Filter>Source Files\Task\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\Task\Enums</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Source Files\Task\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoMakeAndCopyFunctions.cpp">
       <Filter>Source Files\Task</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,17 +71,53 @@
     <ClInclude Include="OutPutFormatting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Task221.h">
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Season.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Flight.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Movie.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Contact.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Music.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Discipline.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Header Files\Tasks\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions.h">
       <Filter>Header Files\Tasks</Filter>
     </ClInclude>
-    <ClInclude Include="Task222.h">
+    <ClInclude Include="DemoMakeAndCopyFunctions.h">
       <Filter>Header Files\Tasks</Filter>
     </ClInclude>
-    <ClInclude Include="Task223.h">
-      <Filter>Header Files\Tasks</Filter>
+    <ClInclude Include="SmartphonesManufacturer.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Task227.h">
-      <Filter>Header Files\Tasks</Filter>
+    <ClInclude Include="WeeksDay.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="MoviesGenre.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="EducationsForm.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,8 +1,13 @@
 #pragma once
-#include <iostream>
-#include "Task221.h"
-#include "Task222.h"
-#include "Task223.h"
-#include "Task227.h"
+#include "Exceptions.h"
+#include "Rectangle.h"
+#include "Flight.h"
+#include "Movie.h"
+#include "Time.h"
+#include "Circle.h"
+#include "Color.h"
+#include "DemoMakeAndCopyFunctions.h"
+
 #include "OutPutFormatting.h"
+#include <iostream>
 using namespace std;

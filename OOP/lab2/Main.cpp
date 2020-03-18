@@ -1,10 +1,10 @@
-#include "Main.h"
+ï»¿#include "Main.h"
 
 int main()
 {
 	setlocale(LC_ALL, "ru");
 	
-	cout << "\nÇàäàíèå 2.2.1 ÎÁÐÀÁÎÒÊÀ ÈÑÊËÞ×ÅÍÈÉ\n";
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.1 ÐžÐ‘Ð ÐÐ‘ÐžÐ¢ÐšÐ Ð˜Ð¡ÐšÐ›Ð®Ð§Ð•ÐÐ˜Ð™\n";
 	try
 	{
 		DemoSort();
@@ -15,7 +15,7 @@ int main()
 	}
 	
 	OutPutFormatting();
-	cout << "\nÇàäàíèå 2.2.2 ÑÎÇÄÀÍÈÅ ÑÒÐÓÊÒÓÐ\n";
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.2 Ð¡ÐžÐ—Ð”ÐÐÐ˜Ð• Ð¡Ð¢Ð Ð£ÐšÐ¢Ð£Ð \n";
 	DemoRectangle();
 	OutPutFormatting();
 	DemoFlight();
@@ -25,18 +25,27 @@ int main()
 	DemoTime();
 	
 	OutPutFormatting();
-	cout << "\nÇàäàíèå 2.2.5 ÑÒÐÓÊÒÓÐÛ È ÔÓÍÊÖÈÈ\n";
-	DemoReadAndWhriteRectangles();
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.5 Ð¡Ð¢Ð Ð£ÐšÐ¢Ð£Ð Ð« Ð˜ Ð¤Ð£ÐÐšÐ¦Ð˜Ð˜\n";
+	DemoReadAndWriteRectangles();
 
 	OutPutFormatting();
-	cout << "\nÇàäàíèå 2.2.6 ÑÒÐÓÊÒÓÐÛ È ÄÈÍÀÌÈ×ÅÑÊÀß ÏÀÌßÒÜ\n";
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.6 Ð¡Ð¢Ð Ð£ÐšÐ¢Ð£Ð Ð« Ð˜ Ð”Ð˜ÐÐÐœÐ˜Ð§Ð•Ð¡ÐšÐÐ¯ ÐŸÐÐœÐ¯Ð¢Ð¬\n";
 	DemoDynamicFlight();
 	OutPutFormatting();
 	DemoDynamicFlights();
 
 	OutPutFormatting();
-	cout << "\nÇàäàíèå 2.2.7 ÔÓÍÊÖÈÈ-ÊÎÍÑÒÐÓÊÒÎÐÛ\n";
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.7 Ð¤Ð£ÐÐšÐ¦Ð˜Ð˜-ÐšÐžÐÐ¡Ð¢Ð Ð£ÐšÐ¢ÐžÐ Ð«\n";
 	DemoCircle();
+	DemoMakeAndCopyFunctions();
+
+	OutPutFormatting();
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.8 ÐŸÐ•Ð Ð•Ð§Ð˜Ð¡Ð›Ð•ÐÐ˜Ð¯\n";
+	DemoEnums();
+
+	OutPutFormatting();
+	cout << "\nÐ—Ð°Ð´Ð°Ð½Ð¸Ðµ 2.2.9 Ð˜Ð¡ÐŸÐžÐ›Ð¬Ð—ÐžÐ’ÐÐÐ˜Ð• ÐŸÐ•Ð Ð•Ð§Ð˜Ð¡Ð›Ð•ÐÐ˜Ð™ Ð’ Ð¡Ð¢Ð Ð£ÐšÐ¢Ð£Ð ÐÐ¥\n";
+	DemoMoviesByGenre();
 
 	system("pause");
 	return 0;

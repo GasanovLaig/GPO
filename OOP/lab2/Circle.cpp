@@ -1,18 +1,8 @@
-#include "Task227.h"
-
+Ôªø#include "Circle.h"
 #include <string>
 #include <iostream>
 using namespace std;
 
-struct Circle
-{
-	double X;
-	double Y;
-	double Radius;
-	string Color;
-};
-
-//ex 2.2.7.1 ƒÎˇ ÒÚÛÍÚÛ˚ Circle ÒÓÁ‰‡Ú¸ ÙÛÌÍˆË˛-ÍÓÌÒÚÛÍÚÓ MakeCircle()
 Circle* MakeCircle(double x, double y, double radius, const std::string& color)
 {
 	Circle* circle = new Circle{ x, y, radius, color };
@@ -21,14 +11,8 @@ Circle* MakeCircle(double x, double y, double radius, const std::string& color)
 
 Circle* CopyCircle(const Circle* circle)
 {
-	Circle* copy = new Circle
-	{
-		circle->X,
-		circle->Y,
-		circle->Radius,
-		circle->Color
-	};
-
+	Circle* copy = MakeCircle(circle->X, circle->Y,
+		circle->Radius, circle->Color);
 	return copy;
 }
 
@@ -42,10 +26,12 @@ void DemoCircle()
 	Circle* copiedCircle2 = CopyCircle(circle2);
 	Circle* copiedCircle3 = CopyCircle(circle3);
 
-	delete copiedCircle1;
-	delete copiedCircle2;
-	delete copiedCircle3;
 	delete circle1;
 	delete circle2;
 	delete circle3;
-};
+	delete copiedCircle1;
+	delete copiedCircle2;
+	delete copiedCircle3;
+}
+
+// TODO: —ç—Ç–∏—Ö —Ñ—É–Ω–∫—Ü–∏–π –∑–¥–µ—Å—å –±—ã—Ç—å –Ω–µ –¥–æ–ª–∂–Ω–æ
