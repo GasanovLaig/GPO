@@ -17,8 +17,6 @@ void DemoEnums()
 	DayOfWeek weekDay = Sunday;
 	MovieGenre movieGenre = Drama;
 	FormOfEducation formOfEducation = ParTime;
-	// TODO: грам ошибка
-	// manufaturer -> smarphoneManufacturer
 	ManufacturerOfSmartphones smartphoneManufacturer = Huawei;
 	Season season = Summer;
 

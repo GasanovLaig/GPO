@@ -65,7 +65,6 @@ void DemoMovie()
 		"\nАдрес во 2-ом указателе m5: " << pointer << '\n';
 }
 
-// TODO: почему именно этот файл не в папке Task?
 size_t CountMoviesByGenre(const Movie* movies, size_t size,
 	MovieGenre findedGenre)
 {
@@ -111,7 +110,7 @@ void DemoMoviesByGenre()
 	cin >> genre;
 	cout << "\nКол-во фильмов этого жанра: " <<
 		CountMoviesByGenre(movies, 10, static_cast<MovieGenre>(genre));
-
+	// TODO: грам ошибка
 	cout << "\nНазвание фильма с наибольшым рейтингом этого жанра: " <<
 		FindBestGenreMovie(movies, 10, static_cast<MovieGenre>(genre))->Name;
 

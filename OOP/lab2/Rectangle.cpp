@@ -9,7 +9,7 @@ void DemoRectangle()
 	cout << "\nRectangle is (Length, Width, Color) " << rectangle1.Length <<
 		"; " << rectangle1.Width << "; " << rectangle1.Color << '\n';
 	OutPutFormatting();
-	// TODO: все русские символы зашакалены - устанавливал Unicode? Пересохранял файлы?
+	// TODO: куча грам ошибок
 	cout << "\nВведите длину прямоуголника: ";
 	Task222::Rectangle rectangle2;
 	cin >> rectangle2.Length;
@@ -52,6 +52,7 @@ void DemoRectangle()
 
 	OutPutFormatting();
 	//ex 2.2.5.4
+	// TODO: грам ошибки
 	cout << "\nЗадание 2.2.5.4 функция Exchange(Rectangle& r1, Rectanlge& r2)" <<
 		"\nПервый прямоуголник имеет размерность: " <<
 		rectangle1.Length << 'x' << rectangle1.Width <<
@@ -151,7 +152,7 @@ void FindMaxRectangle(const Task222::Rectangle* rectangles, size_t size)
 			index = i;
 		}
 	}
-
+	// TODO: грам ошибка
 	cout << "\nПрямоугольник с набиольшей площадью имеет размерность " <<
 		rectangles[index].Length << 'x' << rectangles[index].Width << '\n';
 }

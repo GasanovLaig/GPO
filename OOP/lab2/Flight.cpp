@@ -99,6 +99,7 @@ void FindShortestFlight(const Flight* flights, size_t size)
 		}
 	}
 
+	// TODO: грам ошибки
 	cout << "\nРейс " << flights[index].From << " - " << flights[index].To <<
 		" с наименшей продолжительностю в " << flights[index].Duration <<
 		" минут\n";

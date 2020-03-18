@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 
-// TODO: каждое перечисление в своём файле
+// TODO: ГЄГ Г¦Г¤Г®ГҐ ГЇГҐГ°ГҐГ·ГЁГ±Г«ГҐГ­ГЁГҐ Гў Г±ГўГ®ВёГ¬ ГґГ Г©Г«ГҐ
 enum Color
 {
 	Red,
@@ -15,6 +15,7 @@ enum Color
 //ex 2.2.8.3, ex 2.2.8.4
 void DemoEnums();
 //ex 2.2.8.5
+// TODO: РіСЂР°Рј РѕС€РёР±РєР°
 void WhriteColor(Color color);
 //ex 2.2.8.6
 Color ReadColor();

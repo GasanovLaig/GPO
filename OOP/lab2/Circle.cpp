@@ -3,8 +3,6 @@
 #include <iostream>
 using namespace std;
 
-// TODO: объявление структур должно быть в h-файлах
-
 Circle* MakeCircle(double x, double y, double radius, const std::string& color)
 {
 	Circle* circle = new Circle{ x, y, radius, color };
@@ -15,7 +13,6 @@ Circle* CopyCircle(const Circle* circle)
 {
 	Circle* copy = MakeCircle(circle->X, circle->Y,
 		circle->Radius, circle->Color);
-	// TODO: заменить на использование функции-конструктора (когда в следующей лабе появятся сеттеры, то этот подход позволит создавать объекты в обход сеттеров - потенциальная ошибка
 	return copy;
 }
 
@@ -35,9 +32,9 @@ void DemoCircle()
 	delete copiedCircle1;
 	delete copiedCircle2;
 	delete copiedCircle3;
-	// TODO: освободить память от копий
 }
 
+// TODO: этих функций здесь быть не должно
 Task222::Rectangle* MakeRectangle(double length, double width,
 	const std::string& color)
 {
@@ -67,7 +64,6 @@ Time* MakeTime(int hours, int minutes, int seconds)
 
 Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
 {
-	// TODO: заменить на вызов функции конструктора
 	Task222::Rectangle* r = MakeRectangle(rectangle->Length,
 		rectangle->Width, rectangle->Color);
 	return r;
@@ -75,14 +71,12 @@ Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
 
 Flight* CopyFlight(const Flight* flight)
 {
-	// TODO: заменить на вызов функции-конструктора
 	Flight* f = MakeFlight(flight->From, flight->To, flight->Duration);
 	return f;
 }
 
 Movie* CopyMovie(const Movie* movie)
 {
-	// TODO: заменить на использование функции-конструктора
 	Movie* m = MakeMovie(movie->Name, movie->Duration, 
 		movie->ReleaseYear, movie->Genre, movie->Rating);
 	return m;
@@ -90,7 +84,6 @@ Movie* CopyMovie(const Movie* movie)
 
 Time* CopyTime(const Time* time)
 {
-	// TODO: заменить на использование функции-конструктора
 	Time* t = MakeTime(time->Hours, time->Minutes, time->Seconds);
 	return t;
 }
@@ -115,5 +108,4 @@ void DemoMakeAndCopyFunctions()
 	delete copiedFlight;
 	delete copiedMovie;
 	delete copiedTime;
-	// TODO: освободить память скопированных объектов
 }
