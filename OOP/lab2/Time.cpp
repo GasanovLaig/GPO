@@ -9,15 +9,15 @@ void DemoTime()
 		"; " << time1.Minutes << "; " << time1.Seconds << '\n';
 
 	OutPutFormatting();
-	cout << "\nÂâåäèòå êîë-âî ÷àñîâ: ";
+	cout << "\nВведите кол-во часов: ";
 	Time time2;
 	cin >> time2.Hours;
-	cout << "\nÂâåäèòå êîë-âî ìèíóò: ";
+	cout << "\nВведите кол-во минут: ";
 	cin >> time2.Minutes;
-	cout << "\nÂâåäèòå êîë-âî ñåêóíä: ";
+	cout << "\nВведите кол-во секунд: ";
 	cin >> time2.Seconds;
 
-	cout << "\nÂðåìÿ: " << time2.Hours << ':' << time2.Minutes <<
+	cout << "\nВремя: " << time2.Hours << ':' << time2.Minutes <<
 		':' << time2.Seconds << '\n';
 
 	OutPutFormatting();
@@ -30,22 +30,20 @@ void DemoTime()
 
 	for (int i = 0; i < 3; ++i)
 	{
-		cout << "\nÂðåìÿ " << i << " (Hours,  Minutes, Seconds) " <<
-			times[i].Hours << ':' << times[i].Minutes <<
-			':' << times[i].Seconds << '\n';
+		cout << "\nВремя " << i << " (Hours,  Minutes, Seconds) " <<
+			times[i].Hours << ':' << times[i].Minutes << ':' << times[i].Seconds << '\n';
 	}
 
 	OutPutFormatting();
 	Time* pointer1 = &time1;
-	cout << "\nÂðåìÿ â ïåðâîì çàäàíèè (Hours,  Minutes, Seconds): " <<
-		pointer1->Hours << ':' << pointer1->Minutes <<
-		':' << pointer1->Seconds << '\n';
+	cout << "\nВремя в первом задании (Hours,  Minutes, Seconds): " <<
+		pointer1->Hours << ':' << pointer1->Minutes << ':' << pointer1->Seconds << '\n';
 
 	pointer1->Hours = 0;
 	pointer1->Minutes = 0;
 	pointer1->Seconds = 0;
 
 	Time* pointer2 = pointer1;
-	cout << "\nÀäðåñ â 1-îì óêàçàòåëå:" << pointer1 <<
-		"\nÀäðåñ âî 2-îì óêàçàòåëå: " << pointer2 << '\n';
+	cout << "\nАдрес в 1-ом указателе:" << pointer1 <<
+		"\nАдрес во 2-ом указателе: " << pointer2 << '\n';
 }

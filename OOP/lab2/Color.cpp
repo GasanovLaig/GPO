@@ -36,25 +36,25 @@ void DemoEnums()
 	//ex 2.2.8.7
 	OutPutFormatting();
 	Color colors2[6]{ Red, Blues, Yellow, Red, Yellow, Green };
-	cout << "\n Èñõîäíûé ìàññèâ:\n";
+	cout << "\nИсходный массив:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{
 		WhriteColor(colors2[i]);
 	}
 
-	cout << "\nÊîë-âî êðàñíûõ öâåòîâ: " << CountRed(colors2, 6);
+	cout << "\nКол-во красных цветов: " << CountRed(colors2, 6);
 
 	//ex 2.2.8.8
 	OutPutFormatting();
-	cout << "\n Èñõîäíûé ìàññèâ:\n";
+	cout << "\n Исходный массив:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{
 		WhriteColor(colors2[i]);
 	}
 
-	cout << "\nÊîë-âî êðàñíûõ öâåòîâ: " << CountColor(colors2, 6, Red);
-	cout << "\nÊîë-âî ñèíèõ öâåòîâ: " << CountColor(colors2, 6, Blues);
-	cout << "\nÊîë-âî ñèíèõ ôèîëåòîâûõ: " << CountColor(colors2, 6, Purple);
+	cout << "\nКол-во красных цветов: " << CountColor(colors2, 6, Red);
+	cout << "\nКол-во синих цветов: " << CountColor(colors2, 6, Blues);
+	cout << "\nКол-во синих фиолетовых: " << CountColor(colors2, 6, Purple);
 }
 
 //ex 2.2.8.5
@@ -64,37 +64,37 @@ void WhriteColor(Color color)
 	{
 		case Red:
 		{
-			cout << "\nÊðàñíûé öâåò\n";
+			cout << "\nКрасный цвет\n";
 			break;
 		}
 		case Orange:
 		{
-			cout << "\nÎðàíæåâûé öâåò\n";
+			cout << "\nОранжевый цвет\n";
 			break;
 		}
 		case Yellow:
 		{
-			cout << "\nÆåëòûé öâåò\n";
+			cout << "\nЖелтый цвет\n";
 			break;
 		}
 		case Green:
 		{
-			cout << "\nÇåëåíûé öâåò\n";
+			cout << "\nЗеленый цвет\n";
 			break;
 		}
 		case Blue:
 		{
-			cout << "\nÃîëóáîé öâåò\n";
+			cout << "\nГолубой цвет\n";
 			break;
 		}
 		case Blues:
 		{
-			cout << "\nÑèíèé öâåò\n";
+			cout << "\nСиний цвет\n";
 			break;
 		}
 		case Purple:
 		{
-			cout << "\nÔèîëåòîâûé öâåò\n";
+			cout << "\nФиолетовый цвет\n";
 			break;
 		}
 	}
@@ -103,8 +103,8 @@ void WhriteColor(Color color)
 //ex 2.2.8.6
 Color ReadColor()
 {
-	cout << "\nÂâåäèòå ÷èñëî îò 0 äî 6 (0 – êðàñíûé, 1 – îðàíæåâûé,"
-		"2 – æåëòûé, 3 – çåëåíûé, 4 – ãîëóáîé, 5 – ñèíèé, 6 – ôèîëåòîâûé):\n";
+	cout << "\nВведите число от 0 до 6 (0 – красный, 1 – оранжевый,"
+		"2 – желтый, 3 – зеленый, 4 – голубой, 5 – синий, 6 – фиолетовый):\n";
 	__int8 color;
 	cin >> color;
 

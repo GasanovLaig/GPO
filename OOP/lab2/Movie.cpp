@@ -5,38 +5,38 @@ using namespace std;
 
 void DemoMovie()
 {
-	Movie movie1{ "Çà ïðîïàñòüþ âî ðæè", 106, 2017, Drama, 6.7 };
+	Movie movie1{ "За пропастью во ржи", 106, 2017, Drama, 6.7 };
 	cout << "\nMovie is (Name, Duration, ReleaseYear, Genre, Rating) " <<
-		movie1.Name << "; " << movie1.Duration << "; " << movie1.ReleaseYear <<
-		"; " << movie1.Rating << '\n';
+		movie1.Name << "; " << movie1.Duration << "; " << movie1.ReleaseYear << "; " <<
+		movie1.Rating << '\n';
 
 	OutPutFormatting();
-	cout << "\nÂâåäèòå íàçâàíèå ôèëüìà:	";
+	cout << "\nВведите название фильма:	";
 	Movie movie2;
 	cin >> movie2.Name;
-	cout << "\nÂâåäèòå ïðîäîëæèòåëüíîñòü ôèëüìà: ";
+	cout << "\nВведите продолжительность фильма: ";
 	cin >> movie2.Duration;
-	cout << "\nÂâåäèòå ãîä âûïóñêà: ";
+	cout << "\nВведите год выпуска: ";
 	cin >> movie2.ReleaseYear;
-	cout << "\nÂâåäèòå æàíð ôèëüìà:\n"
+	cout << "\nВведите жанр фильма: ";
 		"0 - Comedy, 1 - Drama, 2 - Thriller, 3 - Action,"
 		"4 - Horror, 5 - Blockbuster\n";
 	int genre;
 	cin >> genre;
 	movie2.Genre = static_cast<MovieGenre>(genre);
-	cout << "\nÂâåäèòå ðåéòèíã ôèëüìà: ";
+	cout << "\nВведите рейтинг фильма: ";
 	cin >> movie2.Rating;
 
-	cout << "\nÔèëüì: (Name, Duration, ReleaseYear, Genre, Rating) " <<
+	cout << "\nФильм: (Name, Duration, ReleaseYear, Genre, Rating) " <<
 		movie2.Name << "; " << movie2.Duration << "; " <<
 		movie2.ReleaseYear << "; " << movie2.Rating << '\n';
 
 	OutPutFormatting();
 	Movie movies[3]
 	{
-		{"Ê çâåçäàì", 123, 2019, Drama, 6.382},
-		{"Ìàðñèàíèí", 200, 2020, Thriller, 5.0},
-		{"Âëàñòü", 128, 2021, Action, 8.19}
+		{"К звездам", 123, 2019, Drama, 6.382},
+		{"Марсианин", 200, 2020, Thriller, 5.0},
+		{"Власть", 128, 2021, Action, 8.19}
 	};
 
 	for (int i = 0; i < 3; ++i)
@@ -49,24 +49,23 @@ void DemoMovie()
 
 	OutPutFormatting();
 	Movie* pointer1 = &movie1;
-	cout << "\nÏåðâûé ôèëüì (Name, Duration, ReleaseYear,"
+	cout << "\nПервый фильм (Name, Duration, ReleaseYear,"
 		"Genre, Rating): " << pointer1->Name << "; " << pointer1->Duration <<
 		"; " << pointer1->ReleaseYear << "; " << pointer1->Genre << "; " <<
 		pointer1->Rating << '\n';
 
-	pointer1->Name = "Ïîåçä â Ïóñàí";
+	pointer1->Name = "Поезд в Пусан";
 	pointer1->Duration = 128;
 	pointer1->ReleaseYear = 2015;
 	pointer1->Genre = Horror;
 	pointer1->Rating = 7.2;
 
 	Movie* pointer = pointer1;
-	cout << "\nÀäðåñ â 1-îì óêàçàòåëå: " << pointer1 <<
-		"\nÀäðåñ âî 2-îì óêàçàòåëå m5: " << pointer << '\n';
+	cout << "\nАдрес в 1-ом указателе: " << pointer1 <<
+		"\nАдрес во 2-ом указателе m5: " << pointer << '\n';
 }
 
 // TODO: почему именно этот файл не в папке Task?
-// Это случайно.
 size_t CountMoviesByGenre(const Movie* movies, size_t size,
 	MovieGenre findedGenre)
 {
@@ -98,7 +97,7 @@ void DemoMoviesByGenre()
 		{"J", 90, 2018, Drama, 7.14}
 	};
 
-	cout << "\nÈñõîäíûé ìàññèâ (Name, Duration, ReleaseYear,"
+	cout << "\nИсходный массив (Name, Duration, ReleaseYear,"
 		"Genre, Rating):\n";
 	for (int i = 0; i < 10; ++i)
 	{
@@ -107,15 +106,13 @@ void DemoMoviesByGenre()
 			", " << movies[i].Rating << ");\n";
 	}
 
-	cout << "\nÂâåäèòå æàíð ôèëüìà:\n"
-		"0 - Comedy, 1 - Drama, 2 - Thriller, 3 - Action,"
-		"4 - Horror, 5 - Blockbuster\n";
+	cout << "\nВведите жанр фильма: ";
 	int genre;
 	cin >> genre;
-	cout << "\nÊîë-âî ôèëüìîâ ýòîãî æàíðà: " <<
+	cout << "\nКол-во фильмов этого жанра: " <<
 		CountMoviesByGenre(movies, 10, static_cast<MovieGenre>(genre));
 
-	cout << "\nÍàçâàíèå ôèëüìà ñ íàèáîëüøûì ðåéòèíãîì ýòîãî æàíðà: " <<
+	cout << "\nНазвание фильма с наибольшым рейтингом этого жанра: " <<
 		FindBestGenreMovie(movies, 10, static_cast<MovieGenre>(genre))->Name;
 
 	delete[] movies;

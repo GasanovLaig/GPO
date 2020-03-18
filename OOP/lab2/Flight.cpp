@@ -10,15 +10,15 @@ void DemoFlight()
 		film1.To << "; " << film1.Duration << '\n';
 
 	OutPutFormatting();
-	cout << "\nÂâåäèòå ïóíêò îòïðàâëåíèÿ: ";
+	cout << "\nВведите пункт отправления: ";
 	Flight film2;
 	cin >> film2.From;
-	cout << "\nÂâåäèòå ïóíêò ïðèáûòèÿ: ";
+	cout << "\nВведите пункт прибытия: ";
 	cin >> film2.To;
-	cout << "\nÂðåìÿ â ïîëåòå (â ìèí): ";
+	cout << "\nВремя в полете (в мин): ";
 	cin >> film2.Duration;
-	cout << "\nÂàø ðåéñ: " << film2.From << " - " <<
-		film2.To << " â ïîëåòå " << film2.Duration << '\n';
+	cout << "\nВаш рейс: " << film2.From << " - " <<
+		film2.To << " в полете " << film2.Duration << '\n';
 
 	OutPutFormatting();
 	Flight flights[3]
@@ -31,22 +31,22 @@ void DemoFlight()
 	for (int i = 0; i < 3; ++i)
 	{
 		cout << "\nFlight " << i << " is " << flights[i].From <<
-			" - " << flights[i].To << " ñ ïðîäîëæèòåëüíîñòüþ " <<
+			" - " << flights[i].To << " с продолжительностью " <<
 			flights[i].Duration << '\n';
 	}
 
 	OutPutFormatting();
 	Flight* pointer1 = &film1;
-	cout << "\nÏåðâûé ðåéñ: " << pointer1->From << " - " << pointer1->To <<
-		" c ïðîäîëæèòåëüíîñòüþ â " << pointer1->Duration << '\n';
+	cout << "\nПервый рейс: " << pointer1->From << " - " << pointer1->To <<
+		" c продолжительностью в " << pointer1->Duration << '\n';
 
 	pointer1->From = "Tomsk";
 	pointer1->To = "Krasnodar";
 	pointer1->Duration = 512;
 
 	Flight* pointer2 = pointer1;
-	cout << "\nÀäðåñ â 1-îì óêàçàòåëå: " << pointer1 <<
-		"\nÀäðåñ âî 2-îì óêàçàòåëå f5: " << pointer2 << '\n';
+	cout << "\nАдрес в 1-ом указателе: " << pointer1 <<
+		"\nАдрес во 2-ом указателе f5: " << pointer2 << '\n';
 }
 
 void DemoDynamicFlight()
@@ -56,8 +56,8 @@ void DemoDynamicFlight()
 	flight->To = "Canberra";
 	flight->Duration = 2048;
 
-	cout << "\nÐåéñ " << flight->From << " - " << flight->To <<
-		" ïðîäîëæèòåëüíîñòüþ " << flight->Duration << '\n';
+	cout << "\nРейс " << flight->From << " - " << flight->To <<
+		" продолжительностью " << flight->Duration << '\n';
 	delete flight;
 }
 
@@ -65,21 +65,21 @@ void DemoDynamicFlights()
 {
 	Flight* flights = new Flight[4]
 	{
-		{"Ìîñêâà", "Ñàíêò-Ïåòåðáóðã", 45},
-		{"Òîìñê", "Ìîñêâà", 190},
-		{"Áåðëèí", "Ëîíäîí", 105},
-		{"Ìîñêâà", "Áàðñåëîíà", 180}
+		{"Москва", "Санкт-Петербург", 45},
+		{"Томск", "Москва", 190},
+		{"Берлин", "Лондон", 105},
+		{"Москва", "Барселона", 180}
 	};
 
 	for (int i = 0; i < 4; ++i)
 	{
-		cout << "\nÐåéñ" << i << ' ' <<
+		cout << "\nРейс" << i << ' ' <<
 			flights[i].From << " - " << flights[i].To <<
-			" ïðîäîëæèòåëüíîñòüþ " << flights[i].Duration << '\n';
+			" продолжительностью " << flights[i].Duration << '\n';
 	}
 
 	//ex2.2.6.3
-	cout << "\nÇàäàíèå 2.2.6.3 íàïèñàòü ôóíêöèþ" <<
+	cout << "\nЗадание 2.2.6.3 написать функцию" <<
 		"void FindShortestFlight(Flight* flights, int count):\n";
 	FindShortestFlight(flights, 4U);
 
@@ -99,7 +99,7 @@ void FindShortestFlight(const Flight* flights, size_t size)
 		}
 	}
 
-	cout << "\nÐåéñ " << flights[index].From << " - " << flights[index].To <<
-		" ñ íàèìåíøåé ïðîäîëæèòåëüíîñòþ â " << flights[index].Duration <<
-		" ìèíóò\n";
+	cout << "\nРейс " << flights[index].From << " - " << flights[index].To <<
+		" с наименшей продолжительностю в " << flights[index].Duration <<
+		" минут\n";
 }
