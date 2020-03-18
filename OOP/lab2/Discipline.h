@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 
-// TODO: ãðàì îøèáêà â íàçâàíèè?
-// Dicipline -> Discipline (ãðàì?)
+// TODO: Ð³Ñ€Ð°Ð¼ Ð¾ÑˆÐ¸Ð±ÐºÐ° Ð² Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸?
+// Dicipline -> Discipline
 struct Discipline
 {
 	std::string Name;

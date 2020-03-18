@@ -23,7 +23,7 @@ void DemoMovie()
 		"4 - Horror, 5 - Blockbuster\n";
 	int genre;
 	cin >> genre;
-	movie2.Genre = static_cast<MovieGenre>(genre);
+	movie2.Genre = static_cast<MoviesGenre>(genre);
 	cout << "\nВведите рейтинг фильма: ";
 	cin >> movie2.Rating;
 
@@ -66,7 +66,7 @@ void DemoMovie()
 }
 
 size_t CountMoviesByGenre(const Movie* movies, size_t size,
-	MovieGenre findedGenre)
+	MoviesGenre findedGenre)
 {
 	size_t count = 0;
 	for (size_t i = 0; i < size; ++i)
@@ -109,16 +109,16 @@ void DemoMoviesByGenre()
 	int genre;
 	cin >> genre;
 	cout << "\nКол-во фильмов этого жанра: " <<
-		CountMoviesByGenre(movies, 10, static_cast<MovieGenre>(genre));
+		CountMoviesByGenre(movies, 10, static_cast<MoviesGenre>(genre));
 	// TODO: грам ошибка
-	cout << "\nНазвание фильма с наибольшым рейтингом этого жанра: " <<
-		FindBestGenreMovie(movies, 10, static_cast<MovieGenre>(genre))->Name;
+	cout << "\nНазвание фильма с наибольшим рейтингом этого жанра: " <<
+		FindBestGenreMovie(movies, 10, static_cast<MoviesGenre>(genre))->Name;
 
 	delete[] movies;
 }
 
 const Movie* FindBestGenreMovie(const Movie* movies, size_t size,
-	MovieGenre findedGenre)
+	MoviesGenre findedGenre)
 {
 	double maxRating = 0.0;
 	size_t index = 0;
@@ -138,4 +138,18 @@ const Movie* FindBestGenreMovie(const Movie* movies, size_t size,
 	}
 
 	return (movies + index);
+}
+
+Movie* MakeMovie(const std::string& name, int duration,
+	int releaseYear, MoviesGenre genre, double rating)
+{
+	Movie* m = new Movie{ name, duration, releaseYear, genre, rating };
+	return m;
+}
+
+Movie* CopyMovie(const Movie* movie)
+{
+	Movie* m = MakeMovie(movie->Name, movie->Duration,
+		movie->ReleaseYear, movie->Genre, movie->Rating);
+	return m;
 }

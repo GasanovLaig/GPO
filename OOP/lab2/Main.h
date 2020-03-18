@@ -6,6 +6,7 @@
 #include "Time.h"
 #include "Circle.h"
 #include "Color.h"
+#include "DemoMakeAndCopyFunctions.h"
 
 #include "OutPutFormatting.h"
 #include <iostream>

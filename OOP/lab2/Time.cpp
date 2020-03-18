@@ -47,3 +47,15 @@ void DemoTime()
 	cout << "\nАдрес в 1-ом указателе:" << pointer1 <<
 		"\nАдрес во 2-ом указателе: " << pointer2 << '\n';
 }
+
+Time* MakeTime(int hours, int minutes, int seconds)
+{
+	Time* t = new Time{ hours, minutes, seconds };
+	return t;
+}
+
+Time* CopyTime(const Time* time)
+{
+	Time* t = MakeTime(time->Hours, time->Minutes, time->Seconds);
+	return t;
+}

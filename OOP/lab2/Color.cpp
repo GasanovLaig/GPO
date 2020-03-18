@@ -1,9 +1,9 @@
 ﻿#include "Color.h"
 
-#include "DayOfWeek.h"
-#include "MovieGenre.h"
-#include "ManufacturerOfSmartphones.h"
-#include "FormOfEducation.h"
+#include "WeeksDay.h"
+#include "MoviesGenre.h"
+#include "SmartphonesManufacturer.h"
+#include "EducationsForm.h"
 #include "Season.h"
 
 #include <iostream>
@@ -14,22 +14,22 @@ void DemoEnums()
 {
 	//ex 2.2.8.3
 	Color color = Blues;
-	DayOfWeek weekDay = Sunday;
-	MovieGenre movieGenre = Drama;
-	FormOfEducation formOfEducation = ParTime;
-	ManufacturerOfSmartphones smartphoneManufacturer = Huawei;
+	WeeksDay weeksDay = Sunday;
+	MoviesGenre movieGenre = Drama;
+	EducationsForm educationsForm = ParTime;
+	SmartphonesManufacturer smartphonesManufacturer = Huawei;
 	Season season = Summer;
 
 	//ex 2.2.8.4
 	Color colors1[6]{ Red, Red, Blue, Blues, Green, Yellow };
-	DayOfWeek days[6]{ Monday, Sunday, Monday, Sunday, Monday, Sunday };
-	ManufacturerOfSmartphones manufacturers[6]{ Apple, Meizu, Huawei, Samsung,
+	WeeksDay days[6]{ Monday, Sunday, Monday, Sunday, Monday, Sunday };
+	SmartphonesManufacturer manufacturers[6]{ Apple, Meizu, Huawei, Samsung,
 		Huawei,	Huawei };
-	MovieGenre genres[6]{ Comedy, Drama, Thriller, Comedy, Horror, Action };
+	MoviesGenre genres[6]{ Comedy, Drama, Thriller, Comedy, Horror, Action };
 	Season seasons[6]{ Summer, Winter, Summer, Winter, Summer, Winter };
 
 	//ex 2.2.8.6
-	WhriteColor(ReadColor());
+	WriteColor(ReadColor());
 
 	//ex 2.2.8.7
 	OutPutFormatting();
@@ -37,7 +37,7 @@ void DemoEnums()
 	cout << "\nИсходный массив:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{
-		WhriteColor(colors2[i]);
+		WriteColor(colors2[i]);
 	}
 
 	cout << "\nКол-во красных цветов: " << CountRed(colors2, 6);
@@ -47,7 +47,7 @@ void DemoEnums()
 	cout << "\n Исходный массив:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{
-		WhriteColor(colors2[i]);
+		WriteColor(colors2[i]);
 	}
 
 	cout << "\nКол-во красных цветов: " << CountColor(colors2, 6, Red);
@@ -56,7 +56,7 @@ void DemoEnums()
 }
 
 //ex 2.2.8.5
-void WhriteColor(Color color)
+void WriteColor(Color color)
 {
 	switch (color)
 	{

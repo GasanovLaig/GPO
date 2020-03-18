@@ -101,6 +101,19 @@ void FindShortestFlight(const Flight* flights, size_t size)
 
 	// TODO: грам ошибки
 	cout << "\nРейс " << flights[index].From << " - " << flights[index].To <<
-		" с наименшей продолжительностю в " << flights[index].Duration <<
+		" с наименьшей продолжительностью в " << flights[index].Duration <<
 		" минут\n";
+}
+
+Flight* MakeFlight(const std::string& from, const std::string& to,
+	int duration)
+{
+	Flight* f = new Flight{ from, to, duration };
+	return f;
+}
+
+Flight* CopyFlight(const Flight* flight)
+{
+	Flight* f = MakeFlight(flight->From, flight->To, flight->Duration);
+	return f;
 }

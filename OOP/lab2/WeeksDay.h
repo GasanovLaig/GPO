@@ -1,6 +1,6 @@
 #pragma once
 
-enum DayOfWeek
+enum WeeksDay
 {
 	Monday,
 	Thrusday,

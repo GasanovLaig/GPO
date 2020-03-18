@@ -1,6 +1,6 @@
 #pragma once
 
-enum FormOfEducation
+enum EducationsForm
 {
 	FullTime,
 	ParTime,

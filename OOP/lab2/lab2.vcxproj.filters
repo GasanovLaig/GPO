@@ -60,6 +60,9 @@
     <ClCompile Include="Exceptions.cpp">
       <Filter>Source Files\Task</Filter>
     </ClCompile>
+    <ClCompile Include="DemoMakeAndCopyFunctions.cpp">
+      <Filter>Source Files\Task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -69,18 +72,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Color.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="DayOfWeek.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="MovieGenre.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="FormOfEducation.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
-    </ClInclude>
-    <ClInclude Include="ManufacturerOfSmartphones.h">
       <Filter>Header Files\Tasks\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Season.h">
@@ -112,6 +103,21 @@
     </ClInclude>
     <ClInclude Include="Exceptions.h">
       <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoMakeAndCopyFunctions.h">
+      <Filter>Header Files\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartphonesManufacturer.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="WeeksDay.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="MoviesGenre.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="EducationsForm.h">
+      <Filter>Header Files\Tasks\Enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

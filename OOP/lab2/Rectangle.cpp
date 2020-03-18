@@ -10,16 +10,16 @@ void DemoRectangle()
 		"; " << rectangle1.Width << "; " << rectangle1.Color << '\n';
 	OutPutFormatting();
 	// TODO: куча грам ошибок
-	cout << "\nВведите длину прямоуголника: ";
+	cout << "\nВведите длину прямоугольника: ";
 	Task222::Rectangle rectangle2;
 	cin >> rectangle2.Length;
-	cout << "\nВведите ширину прямоуголника: ";
+	cout << "\nВведите ширину прямоугольника: ";
 	cin >> rectangle2.Width;
-	cout << "\nВведите цвет прямоуголника: ";
+	cout << "\nВведите цвет прямоугольника: ";
 	cin >> rectangle2.Color;
-	cout << "\nРазмеры прямоуголника: " <<
+	cout << "\nРазмеры прямоугольника: " <<
 		rectangle2.Length << 'x' << rectangle2.Width <<
-		" öâåò " << rectangle2.Color << '\n';
+		" цвет " << rectangle2.Color << '\n';
 
 	OutPutFormatting();
 	Task222::Rectangle rectangles[3]
@@ -54,9 +54,9 @@ void DemoRectangle()
 	//ex 2.2.5.4
 	// TODO: грам ошибки
 	cout << "\nЗадание 2.2.5.4 функция Exchange(Rectangle& r1, Rectanlge& r2)" <<
-		"\nПервый прямоуголник имеет размерность: " <<
+		"\nПервый прямоугольник имеет размерность: " <<
 		rectangle1.Length << 'x' << rectangle1.Width <<
-		"\nВторой прямоуголник имеет размерность: " <<
+		"\nВторой прямоугольник имеет размерность: " <<
 		rectangle2.Length << 'x' << rectangle2.Width << '\n';
 	Exchange(rectangle1, rectangle2);
 	cout << "\nПосле перестановки полей 1-го и 2-го прямоугольников: " <<
@@ -78,7 +78,7 @@ void DemoRectangle()
 	FindMaxRectangle(rectangles, 3);
 }
 
-void WhriteRectangle(const Task222::Rectangle& rectangle)
+void WriteRectangle(const Task222::Rectangle& rectangle)
 {
 	cout << "\nПрямоугольник с длиной - " << rectangle.Length <<
 		", шириной - " << rectangle.Width <<
@@ -93,7 +93,7 @@ void ReadRectangle(Task222::Rectangle& rectangle)
 		rectangle.Color;
 }
 
-void DemoReadAndWhriteRectangles()
+void DemoReadAndWriteRectangles()
 {
 	Task222::Rectangle rectangles[5];
 	for (int i = 0; i < 5; ++i)
@@ -103,7 +103,7 @@ void DemoReadAndWhriteRectangles()
 
 	for (int i = 0; i < 5; ++i)
 	{
-		WhriteRectangle(rectangles[i]);
+		WriteRectangle(rectangles[i]);
 	}
 }
 
@@ -153,6 +153,20 @@ void FindMaxRectangle(const Task222::Rectangle* rectangles, size_t size)
 		}
 	}
 	// TODO: грам ошибка
-	cout << "\nПрямоугольник с набиольшей площадью имеет размерность " <<
+	cout << "\nПрямоугольник с наибольшей площадью имеет размерность " <<
 		rectangles[index].Length << 'x' << rectangles[index].Width << '\n';
+}
+
+Task222::Rectangle* MakeRectangle(double length, double width,
+	const std::string& color)
+{
+	Task222::Rectangle* r = new Task222::Rectangle{ length, width, color };
+	return r;
+}
+
+Task222::Rectangle* CopyRectangle(const Task222::Rectangle* rectangle)
+{
+	Task222::Rectangle* r = MakeRectangle(rectangle->Length,
+		rectangle->Width, rectangle->Color);
+	return r;
 }

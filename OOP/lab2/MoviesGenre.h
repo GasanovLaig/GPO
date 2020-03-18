@@ -1,6 +1,6 @@
 #pragma once
 
-enum MovieGenre
+enum MoviesGenre
 {
 	Comedy,
 	Drama,

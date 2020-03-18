@@ -9,3 +9,5 @@ struct Time
 };
 
 void DemoTime();
+Time* MakeTime(int hours, int minutes, int seconds);
+Time* CopyTime(const Time* time);

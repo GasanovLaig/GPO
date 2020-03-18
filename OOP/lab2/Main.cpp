@@ -26,7 +26,7 @@ int main()
 	
 	OutPutFormatting();
 	cout << "\nЗадание 2.2.5 СТРУКТУРЫ И ФУНКЦИИ\n";
-	DemoReadAndWhriteRectangles();
+	DemoReadAndWriteRectangles();
 
 	OutPutFormatting();
 	cout << "\nЗадание 2.2.6 СТРУКТУРЫ И ДИНАМИЧЕСКАЯ ПАМЯТЬ\n";

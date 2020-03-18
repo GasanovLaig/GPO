@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="DemoMakeAndCopyFunctions.cpp" />
     <ClCompile Include="Flight.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Movie.cpp" />
@@ -151,14 +152,15 @@
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="Contact.h" />
-    <ClInclude Include="DayOfWeek.h" />
+    <ClInclude Include="WeeksDay.h" />
+    <ClInclude Include="DemoMakeAndCopyFunctions.h" />
     <ClInclude Include="Discipline.h" />
     <ClInclude Include="Flight.h" />
-    <ClInclude Include="FormOfEducation.h" />
+    <ClInclude Include="EducationsForm.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="ManufacturerOfSmartphones.h" />
+    <ClInclude Include="SmartphonesManufacturer.h" />
     <ClInclude Include="Movie.h" />
-    <ClInclude Include="MovieGenre.h" />
+    <ClInclude Include="MoviesGenre.h" />
     <ClInclude Include="Music.h" />
     <ClInclude Include="OutPutFormatting.h" />
     <ClInclude Include="Rectangle.h" />

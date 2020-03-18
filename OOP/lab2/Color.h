@@ -1,6 +1,5 @@
 ﻿#pragma once
 
-// TODO: êàæäîå ïåðå÷èñëåíèå â ñâî¸ì ôàéëå
 enum Color
 {
 	Red,
@@ -16,7 +15,7 @@ enum Color
 void DemoEnums();
 //ex 2.2.8.5
 // TODO: грам ошибка
-void WhriteColor(Color color);
+void WriteColor(Color color);
 //ex 2.2.8.6
 Color ReadColor();
 //ex 2.2.8.7
