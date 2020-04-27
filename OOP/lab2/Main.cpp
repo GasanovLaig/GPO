@@ -14,36 +14,36 @@ int main()
 		std::cerr << "Exception catched!\n";
 	}
 	
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nЗадание 2.2.2 СОЗДАНИЕ СТРУКТУР\n";
 	DemoRectangle();
-	OutPutFormatting();
+	FormatOutput();
 	DemoFlight();
-	OutPutFormatting();
+	FormatOutput();
 	DemoMovie();
-	OutPutFormatting();
+	FormatOutput();
 	DemoTime();
 	
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nЗадание 2.2.5 СТРУКТУРЫ И ФУНКЦИИ\n";
 	DemoReadAndWriteRectangles();
 
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nЗадание 2.2.6 СТРУКТУРЫ И ДИНАМИЧЕСКАЯ ПАМЯТЬ\n";
 	DemoDynamicFlight();
-	OutPutFormatting();
+	FormatOutput();
 	DemoDynamicFlights();
 
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nЗадание 2.2.7 ФУНКЦИИ-КОНСТРУКТОРЫ\n";
 	DemoCircle();
 	DemoMakeAndCopyFunctions();
 
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nЗадание 2.2.8 ПЕРЕЧИСЛЕНИЯ\n";
 	DemoEnums();
 
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nЗадание 2.2.9 ИСПОЛЬЗОВАНИЕ ПЕРЕЧИСЛЕНИЙ В СТРУКТУРАХ\n";
 	DemoMoviesByGenre();
 

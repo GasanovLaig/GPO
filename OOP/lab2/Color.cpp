@@ -32,7 +32,7 @@ void DemoEnums()
 	WriteColor(ReadColor());
 
 	//ex 2.2.8.7
-	OutPutFormatting();
+	FormatOutput();
 	Color colors2[6]{ Red, Blues, Yellow, Red, Yellow, Green };
 	cout << "\nИсходный массив:\n";
 	for (size_t i = 0; i < 6; ++i)
@@ -43,7 +43,7 @@ void DemoEnums()
 	cout << "\nКол-во красных цветов: " << CountRed(colors2, 6);
 
 	//ex 2.2.8.8
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\n Исходный массив:\n";
 	for (size_t i = 0; i < 6; ++i)
 	{

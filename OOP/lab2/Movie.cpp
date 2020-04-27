@@ -10,7 +10,7 @@ void DemoMovie()
 		movie1.Name << "; " << movie1.Duration << "; " << movie1.ReleaseYear << "; " <<
 		movie1.Rating << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nВведите название фильма:	";
 	Movie movie2;
 	cin >> movie2.Name;
@@ -31,7 +31,7 @@ void DemoMovie()
 		movie2.Name << "; " << movie2.Duration << "; " <<
 		movie2.ReleaseYear << "; " << movie2.Rating << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	Movie movies[3]
 	{
 		{"К звездам", 123, 2019, Drama, 6.382},
@@ -47,7 +47,7 @@ void DemoMovie()
 			movies[3].Genre << "; " << movies[3].Rating << '\n';
 	}
 
-	OutPutFormatting();
+	FormatOutput();
 	Movie* pointer1 = &movie1;
 	cout << "\nПервый фильм (Name, Duration, ReleaseYear,"
 		"Genre, Rating): " << pointer1->Name << "; " << pointer1->Duration <<

@@ -8,7 +8,7 @@ void DemoRectangle()
 	Task222::Rectangle rectangle1{ 20.1, 4.25, "Grey" };
 	cout << "\nRectangle is (Length, Width, Color) " << rectangle1.Length <<
 		"; " << rectangle1.Width << "; " << rectangle1.Color << '\n';
-	OutPutFormatting();
+	FormatOutput();
 	// TODO: куча грам ошибок
 	cout << "\nВведите длину прямоугольника: ";
 	Task222::Rectangle rectangle2;
@@ -21,7 +21,7 @@ void DemoRectangle()
 		rectangle2.Length << 'x' << rectangle2.Width <<
 		" цвет " << rectangle2.Color << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	Task222::Rectangle rectangles[3]
 	{
 		{1, 2, "red"},
@@ -50,7 +50,7 @@ void DemoRectangle()
 	cout << "\nАдрес в 1-ом указателе: " << pointer1 <<
 		"\nАдрес во 2-ом указателе r5: " << pointer2 << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	//ex 2.2.5.4
 	// TODO: грам ошибки
 	cout << "\nЗадание 2.2.5.4 функция Exchange(Rectangle& r1, Rectanlge& r2)" <<
@@ -65,13 +65,13 @@ void DemoRectangle()
 		"\n2-ой имеет размерность " <<
 		rectangle2.Length << 'x' << rectangle2.Width << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	//ex 2.2.5.5
 	cout << "\nЗадание 2.2.5.5 " <<
 		"написать функцию void FindRectangle(Rectangle* r, int count)";
 	FindRectangle(rectangles, 3);
 
-	OutPutFormatting();
+	FormatOutput();
 	//ex 2.2.5.6
 	cout << "\nЗадание 2.2.5.6 " << "написать функцию" <<
 		"void FindRectangle(Rectangle* rectangles, int count)";

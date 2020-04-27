@@ -1,7 +1,7 @@
 #include "OutPutFormatting.h"
 #include <Windows.h>
 
-void OutPutFormatting()
+void FormatOutput()
 {
 	system("pause");
 	system("cls");

@@ -9,7 +9,7 @@ void DemoFlight()
 	cout << "\nFlight is (From, To, Duration) " << film1.From << "; " <<
 		film1.To << "; " << film1.Duration << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	cout << "\nВведите пункт отправления: ";
 	Flight film2;
 	cin >> film2.From;
@@ -20,7 +20,7 @@ void DemoFlight()
 	cout << "\nВаш рейс: " << film2.From << " - " <<
 		film2.To << " в полете " << film2.Duration << '\n';
 
-	OutPutFormatting();
+	FormatOutput();
 	Flight flights[3]
 	{
 		{"Tomsk", "San-Francisco", 241434},
@@ -35,7 +35,7 @@ void DemoFlight()
 			flights[i].Duration << '\n';
 	}
 
-	OutPutFormatting();
+	FormatOutput();
 	Flight* pointer1 = &film1;
 	cout << "\nПервый рейс: " << pointer1->From << " - " << pointer1->To <<
 		" c продолжительностью в " << pointer1->Duration << '\n';
