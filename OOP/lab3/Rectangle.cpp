@@ -40,10 +40,11 @@ void Rectangle::DemoRectangleWithPoint()
 	Rectangle rectangles[5];
 	float averageX = 0;
 	float averageY = 0;
-	srand(static_cast<size_t>(time(nullptr)));
+	srand(static_cast<unsigned int>(time(nullptr)));
 	for (int i = 0; i < 5; ++i)
 	{
-		rectangles[i].MakeRectangle(rand(), rand(), { rand(), rand() });
+		rectangles[i].MakeRectangle(0.5f * rand(), 0.5f * rand(),
+			{ 0.5f * rand(), 0.5f * rand() });
 		std::cout <<
 			rectangles[i].Center.X << ", " <<
 			rectangles[i].Center.Y << "; " <<
@@ -56,5 +57,5 @@ void Rectangle::DemoRectangleWithPoint()
 
 	std::cout << "\nСреднее арифметическое"
 		"координат центров всех прямоугольников: " <<
-		averageX << "; " << averageY << "\n";
+		averageX / 5 << "; " << averageY / 5 << "\n";
 }
