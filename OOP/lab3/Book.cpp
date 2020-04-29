@@ -1,5 +1,5 @@
 #include "Book.h"
-#include "..\..\..\dataStructs\DataStructs\Common\GetValue.h"
+#include "../Common/GetValue.h"
 #include <iostream>
 using namespace std;
 

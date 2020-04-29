@@ -1,6 +1,6 @@
 #include "Route.h"
 #include <iostream>
-#include "..\..\..\dataStructs\DataStructs\Common\GetValue.h"
+#include "../Common/GetValue.h"
 using namespace std;
 
 void ReadRouteFromConsole(Route& route)
@@ -16,7 +16,7 @@ void ReadRouteFromConsole(Route& route)
 		"Количество остановок может быть от 1 до 10!", IsRange);
 	for (int i = 0; i < route.StopsCount; ++i)
 	{
-		route.Stops[i] = GetValue<std::string>();
+		cin >> route.Stops[i];
 	}
 }
 
@@ -25,7 +25,7 @@ void WriteRouteToConsole(const Route& route)
 	cout << route.Number << ". ";
 	for (int i = 0; i < route.StopsCount; ++i)
 	{
-		cout << route.Stops[i] << (route.StopsCount != i) ? ", " : ". ";
+		cout << route.Stops[i] << (route.StopsCount != i ? ", " : ". ");
 	}
 
 	cout << "Продолжительность - " << route.DurationMinutes << "минут. "
@@ -58,8 +58,16 @@ void DemoRoute()
 		cout << '\n';
 	}
 
-	cout << "Введите название остановка: ";
-	std::string stop;
+	cout << "\nВведите название остановки: ";
+	string stop;
 	cin >> stop;
 	int index = FindRouteTo(routes, 3, stop);
+	if (index < 0)
+	{
+		cout << "Марштрут не найден.";
+	}
+	else
+	{
+		WriteRouteToConsole(routes[index]);
+	}
 }
