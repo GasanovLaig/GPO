@@ -3,9 +3,17 @@
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	DemoBook();
-	FormatOutput();
-	DemoRoute();
+	try
+	{
+
+		DemoBook();
+		FormatOutput();
+		DemoRoute();
+	}
+	catch (const std::exception& exception)
+	{
+		std::cerr << exception.what();
+	}
 
 	system("pause");
 	return 0;
