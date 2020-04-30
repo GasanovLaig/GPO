@@ -1,17 +1,23 @@
 #pragma once
 #include "Point.h"
 
-struct Rectangle
+class Rectangle
 {
-	float Length;
-	float Width;
-	Point Center;
-
-	void MakeRectangle(float length, float width, Point center);
+public:
+	Rectangle(float length, float width, Point center);
 
 	void SetLength(float length);
 	void SetWidth(float width);
 	void SetCenter(Point center);
-	
+
+	float GetLength();
+	float GetWidth();
+	Point GetCenter();
+
 	void DemoRectangleWithPoint();
+
+private:
+	float _length;
+	float _width;
+	Point _center;
 };

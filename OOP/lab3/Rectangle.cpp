@@ -1,13 +1,12 @@
 #include "Rectangle.h"
 #include <exception>
-#include <ctime>
 #include <iostream>
 
-void Rectangle::MakeRectangle(float length, float width, Point center)
+Rectangle::Rectangle(float length, float width, Point center)
 {
-	Length = length;
-	Width = width;
-	Center = center;
+	SetLength(length);
+	SetWidth(width);
+	SetCenter(center);
 }
 
 void Rectangle::SetLength(float length)
@@ -17,7 +16,7 @@ void Rectangle::SetLength(float length)
 		throw std::exception("Длина не может быть < 0!");
 	}
 
-	Length = length;
+	_length = length;
 }
 
 void Rectangle::SetWidth(float width)
@@ -27,35 +26,56 @@ void Rectangle::SetWidth(float width)
 		throw std::exception("Ширина прямогольника не может быть < 0!");
 	}
 
-	Width = width;
+	_width = width;
 }
 
 void Rectangle::SetCenter(Point center)
 {
-	Center = center;
+	_center.SetX(center.GetX());
+	_center.SetY(center.GetY());
+}
+
+float Rectangle::GetLength()
+{
+	return _length;
+}
+
+float Rectangle::GetWidth()
+{
+	return _width;
+}
+
+Point Rectangle::GetCenter()
+{
+	return _center;
 }
 
 void Rectangle::DemoRectangleWithPoint()
 {
-	Rectangle rectangles[5];
-	float averageX = 0;
-	float averageY = 0;
-	srand(static_cast<unsigned int>(time(nullptr)));
+	Rectangle rectangles[5]
+	{
+		{25.0f, 1.1f, {5.0f, 10.7f}},
+		{50.0f, 7.3f, {12.0f, -10.7f}},
+		{4.7f, 43.6f, {-7.0f, 16.2f}},
+		{9.2f, 23.9f, {4.0f, 4.0f}},
+		{17.9f, 38.0f, {-3.0f, -2.1f}}
+	};
+
+	float averageX = 0.0f;
+	float averageY = 0.0f;
 	for (int i = 0; i < 5; ++i)
 	{
-		rectangles[i].MakeRectangle(0.5f * rand(), 0.5f * rand(),
-			{ 0.5f * rand(), 0.5f * rand() });
 		std::cout <<
-			rectangles[i].Center.X << ", " <<
-			rectangles[i].Center.Y << "; " <<
-			rectangles[i].Length << ", " <<
-			rectangles[i].Width << ".\n";
+			rectangles[i]._center.GetX() << ", " <<
+			rectangles[i]._center.GetY() << "; " <<
+			rectangles[i]._length << ", " <<
+			rectangles[i]._width << ".\n";
 
-		averageX += rectangles[i].Center.X;
-		averageY += rectangles[i].Center.Y;
+		averageX += rectangles[i]._center.GetX();
+		averageY += rectangles[i]._center.GetY();
 	}
 
 	std::cout << "\nСреднее арифметическое"
 		"координат центров всех прямоугольников: " <<
-		averageX / 5 << "; " << averageY / 5 << "\n";
+		averageX / 5.0f << "; " << averageY / 5.0f << "\n";
 }
