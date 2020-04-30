@@ -1,17 +1,17 @@
 #include "Point.h"
 
-void Point::MakePoint(float x, float y)
+Point::Point(float x, float y)
 {
-	X = x;
-	Y = y;
+	SetX(x);
+	SetY(y);
 }
 
 void Point::SetX(float x)
 {
-	X = x;
+	_x = x;
 }
 
 void Point::SetY(float y)
 {
-	Y = y;
+	_y = y;
 }
