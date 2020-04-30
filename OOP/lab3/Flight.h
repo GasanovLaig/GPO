@@ -11,8 +11,8 @@ struct Flight
 	Time* Departure;
 };
 
-Flight* MakeFlight(int number, std::string from, std::string to,
-	const Time* arrival, const Time* departure);
+Flight* MakeFlight(Flight* flight, int number, std::string from,
+	std::string to,	const Time* arrival, const Time* departure);
 
 void SetNumber(Flight* flight, int number);
 void SetFrom(Flight* flight, std::string from);

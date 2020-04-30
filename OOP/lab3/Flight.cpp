@@ -1,8 +1,8 @@
 #include "Flight.h"
 #include <iostream>
 
-Flight* MakeFlight(int number, std::string from, std::string to,
-	Time* arrival, Time* departure)
+Flight* MakeFlight(Flight* flight, int number, std::string from,
+	std::string to, Time* arrival, Time* departure)
 {
 	if ((arrival->Year > departure->Year ||
 		arrival->Month > departure->Month ||
@@ -15,7 +15,13 @@ Flight* MakeFlight(int number, std::string from, std::string to,
 			"раньше времени отправления!");
 	}
 
-	return new Flight{ number, from, to, arrival, departure };
+	flight->Number = number;
+	flight->From = from;
+	flight->To = to;
+	flight->Arrival = arrival;
+	flight->Departure = departure;
+
+	return flight;
 }
 
 void SetNumber(Flight* flight, int number)
@@ -46,21 +52,31 @@ void SetDeparture(Flight* flight, Time* departure)
 void DemoFlightWithTime()
 {
 	Flight** flights = new Flight*[5];
-	flights[0] = MakeFlight(0, "Юрга", "Томск",
-		MakeTime(2020, 01, 01, 13, 00, 00),
-		MakeTime(2020, 01, 01, 13, 30, 00));
-	flights[1] = MakeFlight(1, "Томск", "Берн",
-		MakeTime(2021, 01, 15, 06, 00, 00),
-		MakeTime(2021, 01, 15, 17, 00, 00));
-	flights[2] = MakeFlight(2, "Берн", "Амстердам",
-		MakeTime(2022, 01, 15, 00, 00, 00),
-		MakeTime(2022, 01, 15, 04, 00, 00));
-	flights[3] = MakeFlight(3, "Амстердам", "Сидней",
-		MakeTime(2023, 01, 01, 05, 00, 00),
-		MakeTime(2023, 01, 01, 15, 00, 00));
-	flights[4] = MakeFlight(4, "Сидней", "Сан-Франциско",
-		MakeTime(2023, 12, 31, 15, 00, 00),
-		MakeTime(2024, 01, 01, 00, 00, 00));
+	Time* arrivalTimes = new Time[5];
+	Time* departureTimes = new Time[5];
+	MakeTime(arrivalTimes, 2020, 01, 01, 13, 00, 00);
+	MakeTime(departureTimes, 2020, 01, 01, 13, 30, 00);
+	MakeFlight(flights[0], 0, "Юрга", "Томск", arrivalTimes, departureTimes);
+	
+	MakeTime(arrivalTimes + 1, 2021, 01, 15, 06, 00, 00);
+	MakeTime(departureTimes + 1, 2021, 01, 15, 17, 00, 00);
+	MakeFlight(flights[1], 1, "Томск", "Берн", arrivalTimes + 1,
+		departureTimes + 1);
+
+	MakeTime(arrivalTimes + 2, 2022, 01, 15, 00, 00, 00);
+	MakeTime(departureTimes + 2, 2022, 01, 15, 04, 00, 00);
+	MakeFlight(flights[2], 2, "Берн", "Амстердам", arrivalTimes + 2,
+		departureTimes + 2);
+	
+	MakeTime(arrivalTimes + 3, 2023, 01, 01, 05, 00, 00);
+	MakeTime(departureTimes + 3, 2023, 01, 01, 15, 00, 00);
+	MakeFlight(flights[4], 3, "Амстердам", "Сидней", arrivalTimes + 3,
+		departureTimes + 3);
+		
+	MakeTime(arrivalTimes + 4, 2023, 12, 31, 15, 00, 00);
+	MakeTime(departureTimes +4, 2024, 01, 01, 00, 00, 00);
+	MakeFlight(flights[5], 4, "Сидней", "Сан-Франциско", arrivalTimes + 4,
+		departureTimes + 4);
 
 	for (int i = 0; i < 5; ++i)
 	{
@@ -71,11 +87,11 @@ void DemoFlightWithTime()
 
 	for (int i = 0; i < 5; ++i)
 	{
-		delete flights[i]->Arrival;
-		delete flights[i]->Departure;
 		delete flights[i];
 	}
 
+	delete[] arrivalTimes;
+	delete[] departureTimes;
 	delete[] flights;
 }
 

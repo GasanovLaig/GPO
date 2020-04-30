@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 struct Time
 {
@@ -10,7 +11,7 @@ struct Time
 	__int8 Seconds;
 };
 
-Time* MakeTime(__int64 year, __int8 month, __int8 day,
+Time* MakeTime(Time* time, __int64 year, __int8 month, __int8 day,
 	__int8 hours, __int8 minutes, __int8 seconds);
 
 void SetYear(Time& time, __int64 year);

@@ -1,8 +1,7 @@
 #include "Time.h"
 #include <exception>
-#include <iostream>
 
-Time* MakeTime(__int64 year, __int8 month, __int8 day,
+Time* MakeTime(Time* time, __int64 year, __int8 month, __int8 day,
 	__int8 hours, __int8 minutes, __int8 seconds)
 {
 	if (month > 12)
@@ -25,8 +24,15 @@ Time* MakeTime(__int64 year, __int8 month, __int8 day,
 	{
 		throw std::exception("Секунд не может быть > 60!");
 	}
-
-	return new Time{ year, month, day, hours, minutes, seconds };
+	
+	time->Year = year;
+	time->Month = month;
+	time->Day = day;
+	time->Hours = hours;
+	time->Minutes = minutes;
+	time->Seconds = seconds;
+	
+	return time;
 }
 
 void SetYear(Time& time, __int64 year)
