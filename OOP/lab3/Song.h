@@ -1,16 +1,24 @@
 #pragma once
 #include <string>
 #include "Genre.h"
+#include "Time.h"
 
-struct Song
+class Song
 {
-	std::string Name;
-	int DurationMinutes;
-	Genre Genre;
+public:
+	Song();
+	Song(std::string name, Time duration, Genre genre);
+
+	void SetName(std::string name);
+	void SetDuration(Time durationMinutes);
+	void SetGenre(Genre genre);
+
+	std::string GetName();
+	Time GetDuration();
+	Genre GetGenre();
+
+private:
+	std::string _name;
+	Time _duration;
+	Genre _genre;
 };
-
-Song* MakeSong(Song* song, std::string name, int durationMinutes, Genre genre);
-
-void SetName(Song& song, std::string name);
-void SetDurationMinutes(Song& song, int durationMinutes);
-void SetGenre(Song& song, Genre genre);

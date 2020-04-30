@@ -1,25 +1,51 @@
 #include "Song.h"
 
-Song* MakeSong(Song* song, std::string name, int durationMinutes, Genre genre)
+Song::Song() :
+	_name(""),
+	_duration({00i64, 00i8, 00i8, 00i8, 00i8, 00i8}),
+	_genre(Classical)
 {
-	song->Name = name;
-	song->DurationMinutes = durationMinutes;
-	song->Genre = genre;
-
-	return song;
 }
 
-void SetName(Song& song, std::string name)
+Song::Song(std::string name, Time duration, Genre genre)
 {
-	song.Name = name;
+	SetName(name);
+	SetDuration(duration);
+	SetGenre(genre);
 }
 
-void SetDurationMinutes(Song& song, int durationMinutes)
+void Song::SetName(std::string name)
 {
-	song.DurationMinutes = durationMinutes;
+	_name = name;
 }
 
-void SetGenre(Song& song, Genre genre)
+void Song::SetDuration(Time duration)
 {
-	song.Genre = genre;
+	_duration.SetMinutes(duration.GetMinutes());
+	_duration.SetSeconds(duration.GetSeconds());
+
+	_duration.SetYear(0i64);
+	_duration.SetMonth(0i8);
+	_duration.SetDay(0i8);
+	_duration.SetHours(0i8);
+}
+
+void Song::SetGenre(Genre genre)
+{
+	_genre = genre;
+}
+
+std::string Song::GetName()
+{
+	return _name;
+}
+
+Time Song::GetDuration()
+{
+	return _duration;
+}
+
+Genre Song::GetGenre()
+{
+	return _genre;
 }
