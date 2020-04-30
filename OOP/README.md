@@ -1,1 +1,3 @@
-![UML class диаграмма структуры Rectangle и Point](lab3/RectangleAndPointUml.jpg)
+---
+
+#### [Третья лабораторная: UML class диаграмы](lab3/Readme.md)
