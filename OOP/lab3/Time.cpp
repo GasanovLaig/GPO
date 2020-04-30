@@ -1,7 +1,13 @@
 #include "Time.h"
 #include <exception>
 
-Time* MakeTime(Time* time, __int64 year, __int8 month, __int8 day,
+Time::Time()
+{
+	_year = 0i64;
+	_month = _day = _hours = _minutes = _seconds = 0i8;
+}
+
+Time::Time(__int64 year, __int8 month, __int8 day,
 	__int8 hours, __int8 minutes, __int8 seconds)
 {
 	if (month > 12)
@@ -25,75 +31,103 @@ Time* MakeTime(Time* time, __int64 year, __int8 month, __int8 day,
 		throw std::exception("Секунд не может быть > 60!");
 	}
 	
-	time->Year = year;
-	time->Month = month;
-	time->Day = day;
-	time->Hours = hours;
-	time->Minutes = minutes;
-	time->Seconds = seconds;
-	
-	return time;
+	SetYear(year);
+	SetMonth(month);
+	SetDay(day);
+	SetHours(hours);
+	SetMinutes(minutes);
+	SetSeconds(seconds);
 }
 
-void SetYear(Time& time, __int64 year)
+void Time::SetYear(__int64 year)
 {
-	time.Year = year;
+	_year = year;
 }
 
-void SetMonth(Time& time, __int8 month)
+void Time::SetMonth(__int8 month)
 {
 	if (month > 12)
 	{
 		throw std::exception("Месяцов не может быть > 12!");
 	}
 
-	time.Month = month;
+	_month = month;
 }
 
-void SetDay(Time& time, __int8 day)
+void Time::SetDay(__int8 day)
 {
 	if (day > 30)
 	{
 		throw std::exception("Дней не может быть > 30!");
 	}
 
-	time.Day = day;
+	_day = day;
 }
 
-void SetHours(Time& time, __int8 hours)
+void Time::SetHours(__int8 hours)
 {
 	if (hours > 24)
 	{
 		throw std::exception("Часов не может быть > 24!");
 	}
 
-	time.Hours = hours;
+	_hours = hours;
 }
 
-void SetMinutes(Time& time, __int8 minutes)
+void Time::SetMinutes(__int8 minutes)
 {
 	if (minutes > 60)
 	{
 		throw std::exception("Минут не может быть > 60!");
 	}
 
-	time.Minutes = minutes;
+	_minutes = minutes;
 }
 
-void SetSeconds(Time& time, __int8 seconds)
+void Time::SetSeconds(__int8 seconds)
 {
 	if (seconds > 60)
 	{
 		throw std::exception("Секунд не может быть > 60!");
 	}
 
-	time.Seconds = seconds;
+	_seconds = seconds;
 }
 
-std::ostream& operator<<(std::ostream& ostream, const Time& time)
+__int64 Time::GetYear()
 {
-	std::cout << time.Month << '.' << time.Day << ' ' <<
-		time.Hours << ':' << time.Minutes;
+	return _year;
+}
+
+__int8 Time::GetMonth()
+{
+	return _month;
+}
+
+__int8 Time::GetDay()
+{
+	return _day;
+}
+
+__int8 Time::GetHours()
+{
+	return _hours;
+}
+
+__int8 Time::GetMinutes()
+{
+	return _minutes;
+}
+
+__int8 Time::GetSeconds()
+{
+	return _seconds;
+}
+
+std::ostream& operator<<(std::ostream& ostream, Time time)
+{
+	std::cout << time.GetYear() << '.' << time.GetMonth() << '.' << time.GetDay() <<
+		' ' << time.GetHours()<< ':' << time.GetMinutes() << ':' <<  time.GetSeconds();
 
 	return ostream;
 }

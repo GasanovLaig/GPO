@@ -1,110 +1,86 @@
 #include "Flight.h"
 #include <iostream>
 
-Flight* MakeFlight(Flight* flight, int number, std::string from,
-	std::string to, Time* arrival, Time* departure)
+Flight::Flight(int number, std::string from,
+	std::string to, Time arrival, Time departure)
 {
-	if ((arrival->Year > departure->Year ||
-		arrival->Month > departure->Month ||
-		arrival->Day > departure->Day) &&
-		arrival->Hours > departure->Hours &&
-		arrival->Minutes > departure->Minutes &&
-		arrival->Seconds > departure->Seconds)
+	if ((arrival.GetYear() > departure.GetYear() ||
+		arrival.GetMonth() > departure.GetMonth() ||
+		arrival.GetDay() > departure.GetDay()) &&
+		arrival.GetHours() > departure.GetHours() &&
+		arrival.GetMinutes() > departure.GetMinutes() &&
+		arrival.GetSeconds() > departure.GetSeconds())
 	{
 		throw std::exception("Время прибытия не может быть"
 			"раньше времени отправления!");
 	}
 
-	flight->Number = number;
-	flight->From = from;
-	flight->To = to;
-	flight->Arrival = arrival;
-	flight->Departure = departure;
-
-	return flight;
+	SetNumber(number);
+	SetFrom(from);
+	SetTo(to);
+	SetArrival(arrival);
+	SetDeparture(departure);
 }
 
-void SetNumber(Flight* flight, int number)
+void Flight::SetNumber(int number)
 {
-	flight->Number = number;
+	_number = number;
 }
 
-void SetFrom(Flight* flight, std::string from)
+void Flight::SetFrom(std::string from)
 {
-	flight->From = from;
+	_from = from;
 }
 
-void SetTo(Flight* flight, std::string to)
+void Flight::SetTo(std::string to)
 {
-	flight->To = to;
+	_to = to;
 }
 
-void SetArrival(Flight* flight, Time* arrival)
+void Flight::SetArrival(Time arrival)
 {
-	flight->Arrival = arrival;
+	_arrival.SetYear(arrival.GetYear());
+	_arrival.SetMonth(arrival.GetMonth());
+	_arrival.SetDay(arrival.GetDay());
+	_arrival.SetHours(arrival.GetHours());
+	_arrival.SetMinutes(arrival.GetMinutes());
+	_arrival.SetSeconds(arrival.GetSeconds());
 }
 
-void SetDeparture(Flight* flight, Time* departure)
+void Flight::SetDeparture(Time departure)
 {
-	flight->Departure = departure;
+	_departure.SetYear(departure.GetYear());
+	_departure.SetMonth(departure.GetMonth());
+	_departure.SetDay(departure.GetDay());
+	_departure.SetHours(departure.GetHours());
+	_departure.SetMinutes(departure.GetMinutes());
+	_departure.SetSeconds(departure.GetSeconds());
 }
 
-void DemoFlightWithTime()
+void Flight::DemoFlightWithTime()
 {
-	Flight** flights = new Flight*[5];
-	Time* arrivalTimes = new Time[5];
-	Time* departureTimes = new Time[5];
-	MakeTime(arrivalTimes, 2020, 01, 01, 13, 00, 00);
-	MakeTime(departureTimes, 2020, 01, 01, 13, 30, 00);
-	MakeFlight(flights[0], 0, "Юрга", "Томск", arrivalTimes, departureTimes);
-	
-	MakeTime(arrivalTimes + 1, 2021, 01, 15, 06, 00, 00);
-	MakeTime(departureTimes + 1, 2021, 01, 15, 17, 00, 00);
-	MakeFlight(flights[1], 1, "Томск", "Берн", arrivalTimes + 1,
-		departureTimes + 1);
-
-	MakeTime(arrivalTimes + 2, 2022, 01, 15, 00, 00, 00);
-	MakeTime(departureTimes + 2, 2022, 01, 15, 04, 00, 00);
-	MakeFlight(flights[2], 2, "Берн", "Амстердам", arrivalTimes + 2,
-		departureTimes + 2);
-	
-	MakeTime(arrivalTimes + 3, 2023, 01, 01, 05, 00, 00);
-	MakeTime(departureTimes + 3, 2023, 01, 01, 15, 00, 00);
-	MakeFlight(flights[4], 3, "Амстердам", "Сидней", arrivalTimes + 3,
-		departureTimes + 3);
-		
-	MakeTime(arrivalTimes + 4, 2023, 12, 31, 15, 00, 00);
-	MakeTime(departureTimes +4, 2024, 01, 01, 00, 00, 00);
-	MakeFlight(flights[5], 4, "Сидней", "Сан-Франциско", arrivalTimes + 4,
-		departureTimes + 4);
-
-	for (int i = 0; i < 5; ++i)
+	Flight* flights = new Flight[5]
 	{
-		std::cout << flights[i]->Number << flights[i]->From << '-' <<
-			flights[i]->To << " Вылет " << flights[i]->Arrival <<
-			" Прилет" << flights[i]->Departure << '\n';
-	}
+		{0, "Юрга", "Томск", {2020, 01, 01, 13, 00, 00}, {2020, 01, 01, 13, 30, 00}},
+		{1, "Томск", "Берн", {2021, 01, 15, 06, 00, 00}, {2021, 01, 15, 17, 00, 00}},
+		{2, "Берн", "Амстердам", {2022, 01, 15, 00, 00, 00}, {2022, 01, 15, 04, 00, 00}},
+		{3, "Амстердам", "Сидней", {2023, 01, 01, 05, 00, 00}, {2023, 01, 01, 15, 00, 00}},
+		{4, "Сидней", "Сан-Франциско", {2023, 12, 31, 15, 00, 00}, {2024, 01, 01, 00, 00, 00}}
+	};
 
-	for (int i = 0; i < 5; ++i)
-	{
-		delete flights[i];
-	}
-
-	delete[] arrivalTimes;
-	delete[] departureTimes;
 	delete[] flights;
 }
 
-Time* GetFlightTimeMinutes(const Flight& flight)
+Time Flight::GetFlightTimeMinutes()
 {
-	__int8 differenceMinutes = flight.Departure->Minutes - flight.Arrival->Minutes;
-
+	__int8 differenceMinutes = _departure.GetMinutes() - _arrival.GetMinutes();
+	
 	if (differenceMinutes < 0)
 	{
 		differenceMinutes += 60;
 	}
 
-	__int8 differenceHours = flight.Departure->Hours - flight.Arrival->Hours;
+	__int8 differenceHours = _departure.GetHours() - _arrival.GetHours();
 
-	return new Time{ 00, 00, 00, differenceHours, differenceMinutes, 00 };
+	return { 00i64, 00i8, 00i8, differenceHours, differenceMinutes, 00i8 };
 }

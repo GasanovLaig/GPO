@@ -34,25 +34,25 @@
       <Filter>Source Files\Structs</Filter>
     </ClCompile>
     <ClCompile Include="Point.cpp">
-      <Filter>Source Files\Structs</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Rectangle.cpp">
-      <Filter>Source Files\Structs</Filter>
-    </ClCompile>
-    <ClCompile Include="Flight.cpp">
-      <Filter>Source Files\Structs</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Time.cpp">
-      <Filter>Source Files\Structs</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Album.cpp">
-      <Filter>Source Files\Structs</Filter>
-    </ClCompile>
-    <ClCompile Include="Band.cpp">
-      <Filter>Source Files\Structs</Filter>
+    <ClCompile Include="Flight.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Song.cpp">
-      <Filter>Source Files\Structs</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Band.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Album.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,29 +68,29 @@
     <ClInclude Include="Route.h">
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Header Files\Structs</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Header Files\Structs</Filter>
-    </ClInclude>
-    <ClInclude Include="Time.h">
-      <Filter>Header Files\Structs</Filter>
-    </ClInclude>
-    <ClInclude Include="Flight.h">
-      <Filter>Header Files\Structs</Filter>
-    </ClInclude>
     <ClInclude Include="Genre.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Flight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Song.h">
-      <Filter>Header Files\Structs</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Album.h">
-      <Filter>Header Files\Structs</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Band.h">
-      <Filter>Header Files\Structs</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,24 +1,34 @@
 #pragma once
 #include <iostream>
 
-struct Time
+class Time
 {
-	__int32 Year;
-	__int8 Month;
-	__int16 Day;
-	__int8 Hours;
-	__int8 Minutes;
-	__int8 Seconds;
+public:
+	Time();
+	Time(__int64 year, __int8 month, __int8 day,
+		__int8 hours, __int8 minutes, __int8 seconds);
+
+	void SetYear(__int64 year);
+	void SetMonth(__int8 month);
+	void SetDay(__int8 day);
+	void SetHours(__int8 hours);
+	void SetMinutes(__int8 minutes);
+	void SetSeconds(__int8 seconds);
+
+	__int64 GetYear();
+	__int8 GetMonth();
+	__int8 GetDay();
+	__int8 GetHours();
+	__int8 GetMinutes();
+	__int8 GetSeconds();
+
+private:
+	__int32 _year;
+	__int8 _month;
+	__int8 _day;
+	__int8 _hours;
+	__int8 _minutes;
+	__int8 _seconds;
 };
 
-Time* MakeTime(Time* time, __int64 year, __int8 month, __int8 day,
-	__int8 hours, __int8 minutes, __int8 seconds);
-
-void SetYear(Time& time, __int64 year);
-void SetMonth(Time& time, __int8 month);
-void SetDay(Time& time, __int8 day);
-void SetHours(Time& time, __int8 hours);
-void SetMinutes(Time& time, __int8 minutes);
-void SetSeconds(Time& time, __int8 seconds);
-
-std::ostream& operator<<(std::ostream& ostream, const Time& time);
+std::ostream& operator<<(std::ostream& ostream, Time time);
