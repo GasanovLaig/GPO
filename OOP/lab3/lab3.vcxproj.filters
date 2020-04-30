@@ -39,6 +39,12 @@
     <ClCompile Include="Rectangle.cpp">
       <Filter>Source Files\Structs</Filter>
     </ClCompile>
+    <ClCompile Include="Flight.cpp">
+      <Filter>Source Files\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Source Files\Structs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h">
@@ -57,6 +63,12 @@
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
+      <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Header Files\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Flight.h">
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
   </ItemGroup>

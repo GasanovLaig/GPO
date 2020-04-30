@@ -4,18 +4,20 @@ struct Time
 {
 	__int32 Year;
 	__int8 Month;
-	__int8 Day;
+	__int16 Day;
 	__int8 Hours;
 	__int8 Minutes;
 	__int8 Seconds;
-
-	void MakeTime(__int64 year, __int8 month, __int8 day,
-		__int8 hours, __int8 minutes, __int8 seconds);
-
-	void SetYear(__int64 year);
-	void SetMonth(__int8 month);
-	void SetDay(__int16 day);
-	void SetHours(__int8 hours);
-	void SetMinutes(__int8 minutes);
-	void SetSeconds(__int8 seconds);
 };
+
+Time* MakeTime(__int64 year, __int8 month, __int8 day,
+	__int8 hours, __int8 minutes, __int8 seconds);
+
+void SetYear(Time& time, __int64 year);
+void SetMonth(Time& time, __int8 month);
+void SetDay(Time& time, __int8 day);
+void SetHours(Time& time, __int8 hours);
+void SetMinutes(Time& time, __int8 minutes);
+void SetSeconds(Time& time, __int8 seconds);
+
+std::ostream& operator<<(std::ostream& ostream, const Time& time);

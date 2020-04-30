@@ -1,7 +1,8 @@
 #include "Time.h"
 #include <exception>
+#include <iostream>
 
-void Time::MakeTime(__int64 year, __int8 month, __int8 day,
+Time* MakeTime(__int64 year, __int8 month, __int8 day,
 	__int8 hours, __int8 minutes, __int8 seconds)
 {
 	if (month > 12)
@@ -25,65 +26,68 @@ void Time::MakeTime(__int64 year, __int8 month, __int8 day,
 		throw std::exception("Секунд не может быть > 60!");
 	}
 
-	Year = year;
-	Month = month;
-	Day = day;
-	Hours = hours;
-	Minutes = minutes;
-	Seconds = seconds;
+	return new Time{ year, month, day, hours, minutes, seconds };
 }
 
-void Time::SetYear(__int64 year)
+void SetYear(Time& time, __int64 year)
 {
-	Year = year;
+	time.Year = year;
 }
 
-void Time::SetMonth(__int8 month)
+void SetMonth(Time& time, __int8 month)
 {
 	if (month > 12)
 	{
 		throw std::exception("Месяцов не может быть > 12!");
 	}
 
-	Month = month;
+	time.Month = month;
 }
 
-void Time::SetDay(__int16 day)
+void SetDay(Time& time, __int8 day)
 {
 	if (day > 30)
 	{
 		throw std::exception("Дней не может быть > 30!");
 	}
 
-	Day = day;
+	time.Day = day;
 }
 
-void Time::SetHours(__int8 hours)
+void SetHours(Time& time, __int8 hours)
 {
 	if (hours > 24)
 	{
 		throw std::exception("Часов не может быть > 24!");
 	}
 
-	Hours = hours;
+	time.Hours = hours;
 }
 
-void Time::SetMinutes(__int8 minutes)
+void SetMinutes(Time& time, __int8 minutes)
 {
 	if (minutes > 60)
 	{
 		throw std::exception("Минут не может быть > 60!");
 	}
 
-	Minutes = minutes;
+	time.Minutes = minutes;
 }
 
-void Time::SetSeconds(__int8 seconds)
+void SetSeconds(Time& time, __int8 seconds)
 {
 	if (seconds > 60)
 	{
 		throw std::exception("Секунд не может быть > 60!");
 	}
 
-	Seconds = seconds;
+	time.Seconds = seconds;
+}
+
+std::ostream& operator<<(std::ostream& ostream, const Time& time)
+{
+	std::cout << time.Month << '.' << time.Day << ' ' <<
+		time.Hours << ':' << time.Minutes;
+
+	return ostream;
 }
