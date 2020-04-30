@@ -14,13 +14,20 @@ public:
 	void SetArrival(Time arrival);
 	void SetDeparture(Time departure);
 
-	void DemoFlightWithTime();
+	int GetNumber();
+	std::string GetFrom();
+	std::string GetTo();
+	Time GetArrival();
+	Time GetDeparture();
+
 	Time GetFlightTimeMinutes();
 
 private:
-	std::string _number;
+	int _number;
 	std::string _from;
 	std::string _to;
 	Time _arrival;
 	Time _departure;
 };
+
+void DemoFlightWithTime();

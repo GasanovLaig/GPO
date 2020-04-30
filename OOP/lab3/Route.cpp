@@ -6,14 +6,14 @@ using namespace std;
 void ReadRouteFromConsole(Route& route)
 {
 	cout << "Введите номер маршрута: ";
-	route.Number = GetValue(1, INT32_MAX,
-		"Номер маршрута может быть от 1 до 2147483647!", IsRange);
-	route.DurationMinutes = GetValue(1i16, INT16_MAX,
-		"Продолжительность маршрута может быть от 1 до 32767 минут!", IsRange);
-	route.PeriodicityMinutes = GetValue(1i16, INT16_MAX,
-		"Периодичность маршрута может быть от 1 до 32767!", IsRange);
-	route.StopsCount = GetValue(1, 10,
-		"Количество остановок может быть от 1 до 10!", IsRange);
+	route.Number = GetValue(exception("Номер маршрута может быть от 1 до 2147483647!"),
+		1, INT32_MAX, IsRange);
+	route.DurationMinutes = GetValue(exception("Продолжительность маршрута"
+		"может быть от 1 до 32767 минут!"), 1i16, INT16_MAX, IsRange);
+	route.PeriodicityMinutes = GetValue(exception("Периодичность маршрута может быть"
+		"от 1 до 32767!"), 1i16, INT16_MAX, IsRange);
+	route.StopsCount = GetValue(exception("Количество остановок может быть"
+		"от 1 до 2147483647!"), 1, INT32_MAX, IsRange);
 	for (int i = 0; i < route.StopsCount; ++i)
 	{
 		cin >> route.Stops[i];
@@ -29,7 +29,7 @@ void WriteRouteToConsole(const Route& route)
 	}
 
 	cout << "Продолжительность - " << route.DurationMinutes << "минут. "
-		<< "Периодичность - " << route.PeriodicityMinutes << "минут.";
+		"Периодичность - " << route.PeriodicityMinutes << "минут.";
 }
 
 int FindRouteTo(const Route* routes, int routesCount, std::string stop)
@@ -50,10 +50,18 @@ int FindRouteTo(const Route* routes, int routesCount, std::string stop)
 
 void DemoRoute()
 {
-	Route routes[3];
+	Route routes[3]
+	{
+		{19, 30, 10, 3, new std::string[3]{"Площадь Кукина", "Южная",
+		"Площадь Новособорная"}},
+		{32, 60, 15, 3, new std::string[3]{"Транспортное Кольцо",
+		"Детский мир", "Улица Учебная"}},
+		{22, 45, 12, 3, new std::string[3]{"2-Й Переезд", "3-Я Гор. Больница",
+		"Томский государственный университет"}}
+	};
+
 	for (int i = 0; i < 3; ++i)
 	{
-		ReadRouteFromConsole(routes[i]);
 		WriteRouteToConsole(routes[i]);
 		cout << '\n';
 	}

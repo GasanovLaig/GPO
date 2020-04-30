@@ -3,45 +3,20 @@
 #include <iostream>
 using namespace std;
 
-void DemoBook()
-{
-	Book books[5];
-	for (int i = 0; i < 5; ++i)
-	{
-		ReadBookFromConsole(books[i]);
-		WriteBookToConsole(books[i]);
-		cout << '\n';
-	}
-
-	cout << "Введите автора для поиска книги: ";
-	string author;
-	cin >> author;
-	int index = FindBookByAuthor(books, 5, author);
-	if (index > 0)
-	{
-		WriteBookToConsole(books[index]);
-	}
-	else
-	{
-		cout << "Нет книги с данным автором.";
-	}
-}
-
 void ReadBookFromConsole(Book& book)
 {
 	cout << "Введите название книги: ";
 	cin >> book.Name;
 	cout << "Введите год издания: ";
-	book.PublicationYear = GetValue(1, 2020,
-		"Год издания не может быть позднее чем текущий!", IsRange);
+	book.PublicationYear = GetValue(exception("Год издания не может быть позднее"
+		"чем текущий!"), 1, 2020, IsRange);
 	cout << "Введите количество страниц: ";
-	book.PagesNumber = GetValue(1, INT32_MAX,
-		"Количество страниц от 1 до 2147483647!", IsRange);
+	book.PagesNumber = GetValue(exception("Количество страниц от 1 до 2147483647!"),
+		1, INT32_MAX, IsRange);
 	cout << "Введите количество авторов: ";
-	book.AuthorsCount = GetValue(1, 10,
-		"Количество авторов может быть от 1 до 10!", IsRange);
-	cout << "Введите имена авторов: ";
-	for (size_t i = 0; i < book.AuthorsCount; ++i)
+	book.AuthorsCount = GetValue(exception("Количество авторов может быть от 1 до 10!"),
+		1i16, 10i16, IsRange);
+	for (int i = 0; i < book.AuthorsCount; ++i)
 	{
 		cout << "\nВведите имя автора №" << i << ": ";
 		cin >> book.Authors[i];
@@ -50,7 +25,7 @@ void ReadBookFromConsole(Book& book)
 
 void WriteBookToConsole(const Book& book)
 {
-	for (unsigned short i = 0; i < book.AuthorsCount; ++i)
+	for (short i = 0; i < book.AuthorsCount; ++i)
 	{
 		cout << book.Authors[i] << (i != book.AuthorsCount ? ", " : ". ");
 	}
@@ -73,4 +48,35 @@ int FindBookByAuthor(const Book* books, int booksCount, std::string author)
 	}
 
 	return -1;
+}
+
+void DemoBook()
+{
+	Book books[4]
+	{
+		{"Цифровая схемотехника и архитектура компьютера", 2013, 1662, 2,
+		"Девид М. Харрис", "Сара Л. Харрис"},
+		{"Далекая радуга", 1963, 224, 2, "Стругацкий А.", "Стругацкий Б."},
+		{"Война и мир", 1230, 1869, 1, "Л. Н. Толстой"},
+		{"Братья Карамазовы", 800, 1880, 1, "Ф. М. Достоевский"},
+	};
+
+	for (int i = 0; i < 4; ++i)
+	{
+		WriteBookToConsole(books[i]);
+		cout << '\n';
+	}
+
+	cout << "\nВведите автора для поиска книги: ";
+	string author;
+	cin >> author;
+	int index = FindBookByAuthor(books, 4, author);
+	if (index > -1)
+	{
+		WriteBookToConsole(books[index]);
+	}
+	else
+	{
+		cout << "Нет книги с данным автором.";
+	}
 }

@@ -29,7 +29,7 @@ void Band::SetAlbumsCount(int albumsCount)
 	_albumsCount = albumsCount;
 }
 
-const Song* Band::FindSong(std::string songTitle)
+Song* Band::FindSong(std::string songTitle)
 {
 	for (int i = 0; i < _albumsCount; ++i)
 	{
@@ -45,7 +45,7 @@ const Song* Band::FindSong(std::string songTitle)
 	return nullptr;
 }
 
-const Album* Band::FindAlbum(std::string songTitle)
+Album* Band::FindAlbum(std::string songTitle)
 {
 	for (int i = 0; i < _albumsCount; ++i)
 	{
@@ -112,7 +112,7 @@ Song* Band::GetAllGenreSongs(Genre genre, int& allSongsCount)
 	return songs;
 }
 
-void Band::DemoBand()
+void DemoBand()
 {
 	Song* songs1 = new Song[4]
 	{
@@ -132,11 +132,11 @@ void Band::DemoBand()
 
 	Song* songs3 = new Song[5]
 	{
-		{"Play the Game", {}, Rock},
-		{"Dragon Attack", {}, Rock},
-		{"Another One Bites the Dust", {}, Rock},
-		{"Crazy Little Thing Called Love", {}, Rock},
-		{"Need Your Loving Tonight", {}, Rock}
+		{"Play the Game", {}, Pop},
+		{"Dragon Attack", {}, Pop},
+		{"Another One Bites the Dust", {}, Pop},
+		{"Crazy Little Thing Called Love", {}, Pop},
+		{"Need Your Loving Tonight", {}, Pop}
 	};
 
 	Album* albums = new Album[3]
@@ -151,6 +151,29 @@ void Band::DemoBand()
 		"Queen", new std::string[4]{ "Фредди Меркьюри",	"Брайан Мей",
 		"Роджер Тейлор", "Джон Дикон" }, albums, 3
 	};
+
+	Song* findedSongs = band->FindSong("News of the World");
+	std::cout << "\nКомпозиция: " << findedSongs->GetName() <<
+		(findedSongs != nullptr ? " найдена." : " не найдена.");
+
+	Album* album = band->FindAlbum("A Night at the Opera");
+	std::cout << "\nАльбом: " << album->GetName() <<
+		(album != nullptr ? " найден." : " не найден.");
+
+	std::cout << "\nВся музыка группы Gueen:\n";
+	int songsCount;
+	Song* findedSongsByGenre = band->GetAllSongs(songsCount);
+	for (int i = 0; i < songsCount; ++i)
+	{
+		std::cout << findedSongsByGenre[i].GetName() + '\n';
+	}
+
+	std::cout << "Музыка группы Gueen жанра Pop:\n";
+	Song* songs = band->GetAllGenreSongs(Pop, songsCount);
+	for (int i = 0; i < songsCount; ++i)
+	{
+		std::cout << songs[i].GetName() + '\n';
+	}
 
 	delete[] songs3;
 	delete[] songs2;

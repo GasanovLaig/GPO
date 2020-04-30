@@ -50,7 +50,7 @@ Point Rectangle::GetCenter()
 	return _center;
 }
 
-void Rectangle::DemoRectangleWithPoint()
+void DemoRectangleWithPoint()
 {
 	Rectangle rectangles[5]
 	{
@@ -66,13 +66,13 @@ void Rectangle::DemoRectangleWithPoint()
 	for (int i = 0; i < 5; ++i)
 	{
 		std::cout <<
-			rectangles[i]._center.GetX() << ", " <<
-			rectangles[i]._center.GetY() << "; " <<
-			rectangles[i]._length << ", " <<
-			rectangles[i]._width << ".\n";
+			rectangles[i].GetCenter().GetX() << ", " <<
+			rectangles[i].GetCenter().GetY() << "; " <<
+			rectangles[i].GetLength() << ", " <<
+			rectangles[i].GetWidth() << ".\n";
 
-		averageX += rectangles[i]._center.GetX();
-		averageY += rectangles[i]._center.GetY();
+		averageX += rectangles[i].GetCenter().GetX();
+		averageY += rectangles[i].GetCenter().GetY();
 	}
 
 	std::cout << "\nСреднее арифметическое"

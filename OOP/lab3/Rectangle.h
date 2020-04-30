@@ -14,10 +14,10 @@ public:
 	float GetWidth();
 	Point GetCenter();
 
-	void DemoRectangleWithPoint();
-
 private:
 	float _length;
 	float _width;
 	Point _center;
 };
+
+void DemoRectangleWithPoint();

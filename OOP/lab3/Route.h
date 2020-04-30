@@ -6,8 +6,8 @@ struct Route
 	int Number;
 	short DurationMinutes;
 	short PeriodicityMinutes;
-	std::string Stops[10];
 	int StopsCount;
+	std::string* Stops;
 };
 
 void ReadRouteFromConsole(Route& route);
