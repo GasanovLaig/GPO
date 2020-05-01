@@ -141,9 +141,9 @@
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="DemoMakeAndCopyFunctions.cpp" />
     <ClCompile Include="Flight.cpp" />
+    <ClCompile Include="FormatOutput.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Movie.cpp" />
-    <ClCompile Include="OutPutFormatting.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="Circle.cpp" />
@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="Contact.h" />
+    <ClInclude Include="FormatOutput.h" />
     <ClInclude Include="WeeksDay.h" />
     <ClInclude Include="DemoMakeAndCopyFunctions.h" />
     <ClInclude Include="Discipline.h" />
@@ -162,7 +163,6 @@
     <ClInclude Include="Movie.h" />
     <ClInclude Include="MoviesGenre.h" />
     <ClInclude Include="Music.h" />
-    <ClInclude Include="OutPutFormatting.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Season.h" />
     <ClInclude Include="Exceptions.h" />

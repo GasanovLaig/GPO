@@ -33,9 +33,6 @@
     <ClCompile Include="Book.cpp">
       <Filter>Source Files\Structs</Filter>
     </ClCompile>
-    <ClCompile Include="GetYear.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Route.cpp">
       <Filter>Source Files\Structs</Filter>
     </ClCompile>
@@ -68,9 +65,6 @@
     <ClInclude Include="Book.h">
       <Filter>Header Files\Structs</Filter>
     </ClInclude>
-    <ClInclude Include="GetYear.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -102,9 +96,6 @@
       <Filter>Header Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\lab2\FormatOutput.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\GetValue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

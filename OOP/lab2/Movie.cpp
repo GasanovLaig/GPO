@@ -1,6 +1,6 @@
 ﻿#include "Movie.h"
 #include <iostream>
-#include "OutPutFormatting.h"
+#include "FormatOutput.h"
 using namespace std;
 
 void DemoMovie()
@@ -41,7 +41,7 @@ void DemoMovie()
 
 	for (int i = 0; i < 3; ++i)
 	{
-		cout << "\nÔèëüì (Name, Duration, ReleaseYear, Genre, Rating) " <<
+		cout << "\nФильм (Name, Duration, ReleaseYear, Genre, Rating) " <<
 			i << ' ' << movies[3].Name << "; " << movies[3].Duration <<
 			"; " << movies[3].ReleaseYear << "; " <<
 			movies[3].Genre << "; " << movies[3].Rating << '\n';

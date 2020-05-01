@@ -5,21 +5,21 @@ using namespace std;
 
 void ReadBookFromConsole(Book& book)
 {
-	cout << "Ââåäèòå íàçâàíèå êíèãè: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ½Ð¸Ð³Ð¸: ";
 	cin >> book.Name;
-	cout << "Ââåäèòå ãîä èçäàíèÿ: ";
-	book.PublicationYear = GetValue(exception("Ãîä èçäàíèÿ íå ìîæåò áûòü ïîçäíåå"
-		"÷åì òåêóùèé!"), 1, 2020, IsRange);
-	cout << "Ââåäèòå êîëè÷åñòâî ñòðàíèö: ";
-	book.PagesNumber = GetValue(exception("Êîëè÷åñòâî ñòðàíèö îò 1 äî 2147483647!"),
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´ Ð¸Ð·Ð´Ð°Ð½Ð¸Ñ: ";
+	book.PublicationYear = GetValue(exception("Ð“Ð¾Ð´ Ð¸Ð·Ð´Ð°Ð½Ð¸Ñ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¿Ð¾Ð·Ð´Ð½ÐµÐµ"
+		"Ñ‡ÐµÐ¼ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ð¹!"), 1, 2020, IsRange);
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†: ";
+	book.PagesNumber = GetValue(exception("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ† Ð¾Ñ‚ 1 Ð´Ð¾ 2147483647!"),
 		1, INT32_MAX, IsRange);
-	cout << "Ââåäèòå êîëè÷åñòâî àâòîðîâ: ";
-	book.AuthorsCount = GetValue(exception("Êîëè÷åñòâî àâòîðîâ ìîæåò áûòü îò 1 äî 10!"),
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð¾Ð²: ";
+	book.AuthorsCount = GetValue(exception("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð¾Ð² Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 10!"),
 		1i16, 10i16, IsRange);
 	for (int i = 0; i < book.AuthorsCount; ++i)
 	{
-		cout << "\nÂâåäèòå èìÿ àâòîðà ¹" << i << ": ";
-		cin >> book.Authors[i];
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð°Ð²Ñ‚Ð¾Ñ€Ð° â„–" << i << ": ";
+		getline(cin, book.Authors[i]);
 	}
 }
 
@@ -31,7 +31,7 @@ void WriteBookToConsole(const Book& book)
 	}
 
 	cout << book.Name << ". " << book.PublicationYear <<
-		". - " << book.PagesNumber << "ñ.";
+		". - " << book.PagesNumber << "Ñ.";
 }
 
 int FindBookByAuthor(const Book* books, int booksCount, std::string author)
@@ -42,7 +42,7 @@ int FindBookByAuthor(const Book* books, int booksCount, std::string author)
 		{
 			if (books[i].Authors[j] == author)
 			{
-				return j;
+				return i;
 			}
 		}
 	}
@@ -54,11 +54,11 @@ void DemoBook()
 {
 	Book books[4]
 	{
-		{"Öèôðîâàÿ ñõåìîòåõíèêà è àðõèòåêòóðà êîìïüþòåðà", 2013, 1662, 2,
-		"Äåâèä Ì. Õàððèñ", "Ñàðà Ë. Õàððèñ"},
-		{"Äàëåêàÿ ðàäóãà", 1963, 224, 2, "Ñòðóãàöêèé À.", "Ñòðóãàöêèé Á."},
-		{"Âîéíà è ìèð", 1230, 1869, 1, "Ë. Í. Òîëñòîé"},
-		{"Áðàòüÿ Êàðàìàçîâû", 800, 1880, 1, "Ô. Ì. Äîñòîåâñêèé"},
+		{"Ð¦Ð¸Ñ„Ñ€Ð¾Ð²Ð°Ñ ÑÑ…ÐµÐ¼Ð¾Ñ‚ÐµÑ…Ð½Ð¸ÐºÐ° Ð¸ Ð°Ñ€Ñ…Ð¸Ñ‚ÐµÐºÑ‚ÑƒÑ€Ð° ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€Ð°", 2013, 1662, 2,
+		"Ð”ÐµÐ²Ð¸Ð´ Ðœ. Ð¥Ð°Ñ€Ñ€Ð¸Ñ", "Ð¡Ð°Ñ€Ð° Ð›. Ð¥Ð°Ñ€Ñ€Ð¸Ñ"},
+		{"Ð”Ð°Ð»ÐµÐºÐ°Ñ Ñ€Ð°Ð´ÑƒÐ³Ð°", 1963, 224, 2, "Ð¡Ñ‚Ñ€ÑƒÐ³Ð°Ñ†ÐºÐ¸Ð¹ Ð.", "Ð¡Ñ‚Ñ€ÑƒÐ³Ð°Ñ†ÐºÐ¸Ð¹ Ð‘."},
+		{"Ð’Ð¾Ð¹Ð½Ð° Ð¸ Ð¼Ð¸Ñ€", 1869, 1230, 1, "Ð›. Ð. Ð¢Ð¾Ð»ÑÑ‚Ð¾Ð¹"},
+		{"Ð‘Ñ€Ð°Ñ‚ÑŒÑ ÐšÐ°Ñ€Ð°Ð¼Ð°Ð·Ð¾Ð²Ñ‹", 1880, 800, 1, "Ð¤. Ðœ. Ð”Ð¾ÑÑ‚Ð¾ÐµÐ²ÑÐºÐ¸Ð¹"},
 	};
 
 	for (int i = 0; i < 4; ++i)
@@ -67,9 +67,9 @@ void DemoBook()
 		cout << '\n';
 	}
 
-	cout << "\nÂâåäèòå àâòîðà äëÿ ïîèñêà êíèãè: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð° Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° ÐºÐ½Ð¸Ð³Ð¸: ";
 	string author;
-	cin >> author;
+	getline(cin, author);
 	int index = FindBookByAuthor(books, 4, author);
 	if (index > -1)
 	{
@@ -77,6 +77,6 @@ void DemoBook()
 	}
 	else
 	{
-		cout << "Íåò êíèãè ñ äàííûì àâòîðîì.";
+		cout << "ÐÐµÑ‚ ÐºÐ½Ð¸Ð³Ð¸ Ñ Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð°Ð²Ñ‚Ð¾Ñ€Ð¾Ð¼.";
 	}
 }

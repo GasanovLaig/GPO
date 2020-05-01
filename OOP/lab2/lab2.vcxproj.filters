@@ -13,111 +13,105 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Tasks">
-      <UniqueIdentifier>{e887dbd1-6c86-413e-9695-5451e82c8e1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Task">
-      <UniqueIdentifier>{a7c24ba1-3ac5-4a51-b5b3-3495b3993027}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Tasks\Enums">
+    <Filter Include="Header Files\Enums">
       <UniqueIdentifier>{f1c0f0c3-110b-44bd-8ea3-70958fe1e0f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Tasks\Structs">
+    <Filter Include="Header Files\Structs">
       <UniqueIdentifier>{6f18c221-c543-4d20-aba7-57fcb9849041}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Task\Structs">
-      <UniqueIdentifier>{3e93a723-59e2-41da-bcf2-912a5d5df3a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Task\Enums">
+    <Filter Include="Source Files\Enums">
       <UniqueIdentifier>{f8639998-0aaa-4fd5-901d-9a6809b27172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structs">
+      <UniqueIdentifier>{3e93a723-59e2-41da-bcf2-912a5d5df3a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OutPutFormatting.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Rectangle.cpp">
-      <Filter>Source Files\Task\Structs</Filter>
+      <Filter>Source Files\Structs</Filter>
     </ClCompile>
     <ClCompile Include="Time.cpp">
-      <Filter>Source Files\Task\Structs</Filter>
+      <Filter>Source Files\Structs</Filter>
     </ClCompile>
     <ClCompile Include="Flight.cpp">
-      <Filter>Source Files\Task\Structs</Filter>
+      <Filter>Source Files\Structs</Filter>
     </ClCompile>
     <ClCompile Include="Movie.cpp">
-      <Filter>Source Files\Task\Structs</Filter>
+      <Filter>Source Files\Structs</Filter>
     </ClCompile>
     <ClCompile Include="Color.cpp">
-      <Filter>Source Files\Task\Enums</Filter>
+      <Filter>Source Files\Enums</Filter>
     </ClCompile>
     <ClCompile Include="Circle.cpp">
-      <Filter>Source Files\Task\Structs</Filter>
-    </ClCompile>
-    <ClCompile Include="Exceptions.cpp">
-      <Filter>Source Files\Task</Filter>
+      <Filter>Source Files\Structs</Filter>
     </ClCompile>
     <ClCompile Include="DemoMakeAndCopyFunctions.cpp">
-      <Filter>Source Files\Task</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatOutput.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OutPutFormatting.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Color.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
+      <Filter>Header Files\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Season.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
+      <Filter>Header Files\Enums</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Flight.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Movie.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Time.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Contact.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Music.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Discipline.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h">
-      <Filter>Header Files\Tasks\Structs</Filter>
-    </ClInclude>
-    <ClInclude Include="Exceptions.h">
-      <Filter>Header Files\Tasks</Filter>
-    </ClInclude>
-    <ClInclude Include="DemoMakeAndCopyFunctions.h">
-      <Filter>Header Files\Tasks</Filter>
+      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="SmartphonesManufacturer.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
+      <Filter>Header Files\Enums</Filter>
     </ClInclude>
     <ClInclude Include="WeeksDay.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
+      <Filter>Header Files\Enums</Filter>
     </ClInclude>
     <ClInclude Include="MoviesGenre.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
+      <Filter>Header Files\Enums</Filter>
     </ClInclude>
     <ClInclude Include="EducationsForm.h">
-      <Filter>Header Files\Tasks\Enums</Filter>
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="DemoMakeAndCopyFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatOutput.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

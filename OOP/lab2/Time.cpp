@@ -1,5 +1,5 @@
 ﻿#include "Time.h"
-#include "OutPutFormatting.h"
+#include "FormatOutput.h"
 using namespace std;
 
 void DemoTime()

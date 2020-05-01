@@ -2,7 +2,7 @@
 
 int main()
 {
-	setlocale(LC_ALL, "ru");
+	setlocale(LC_ALL, "ru_RU.UTF-8");
 	try
 	{
 		DemoBook();
@@ -17,7 +17,7 @@ int main()
 	}
 	catch (const std::exception& exception)
 	{
-		std::cerr << exception.what();
+		std::cerr << exception.what() << '\n';
 	}
 
 	system("pause");

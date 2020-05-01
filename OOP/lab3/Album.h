@@ -13,6 +13,8 @@ public:
 	void SetSongs(Song* songs);
 	void SetSongsCount(int songsCount);
 
+	~Album();
+
 	std::string GetName();
 	int GetPublicationYear();
 	Song* GetSongs();

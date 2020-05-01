@@ -13,7 +13,7 @@ void Rectangle::SetLength(float length)
 {
 	if (length < 0)
 	{
-		throw std::exception("Äëèíà íå ìîæåò áûòü < 0!");
+		throw std::exception("Ð”Ð»Ð¸Ð½Ð° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ < 0!");
 	}
 
 	_length = length;
@@ -23,7 +23,7 @@ void Rectangle::SetWidth(float width)
 {
 	if (width < 0)
 	{
-		throw std::exception("Øèðèíà ïðÿìîãîëüíèêà íå ìîæåò áûòü < 0!");
+		throw std::exception("Ð¨Ð¸Ñ€Ð¸Ð½Ð° Ð¿Ñ€ÑÐ¼Ð¾Ð³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ < 0!");
 	}
 
 	_width = width;
@@ -75,7 +75,7 @@ void DemoRectangleWithPoint()
 		averageY += rectangles[i].GetCenter().GetY();
 	}
 
-	std::cout << "\nÑðåäíåå àðèôìåòè÷åñêîå"
-		"êîîðäèíàò öåíòðîâ âñåõ ïðÿìîóãîëüíèêîâ: " <<
+	std::cout << "\nÐ¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ"
+		"ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚ Ñ†ÐµÐ½Ñ‚Ñ€Ð¾Ð² Ð²ÑÐµÑ… Ð¿Ñ€Â¤Ð¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð²: " <<
 		averageX / 5.0f << "; " << averageY / 5.0f << "\n";
 }

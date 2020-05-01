@@ -1,6 +1,8 @@
 #include "Band.h"
+#include <iostream>
+using namespace std;
 
-Band::Band(std::string name, std::string* structure,
+Band::Band(string name, string* structure,
 	Album* _albums, int _albumsCount)
 {
 	SetName(name);
@@ -9,12 +11,12 @@ Band::Band(std::string name, std::string* structure,
 	SetAlbumsCount(_albumsCount);
 }
 
-void Band::SetName(std::string name)
+void Band::SetName(string name)
 {
 	_name = name;
 }
 
-void Band::SetStructure(std::string* structure)
+void Band::SetStructure(string* structure)
 {
 	_structure = structure;
 }
@@ -29,15 +31,31 @@ void Band::SetAlbumsCount(int albumsCount)
 	_albumsCount = albumsCount;
 }
 
-Song* Band::FindSong(std::string songTitle)
+Band::~Band()
+{
+	if (_structure != nullptr)
+	{
+		delete[] _structure;
+		_structure = nullptr;
+	}
+
+	if (_albums != nullptr)
+	{
+		delete[] _albums;
+		_albums = nullptr;
+		_albumsCount;
+	}
+}
+
+Song* Band::FindSong(string songTitle)
 {
 	for (int i = 0; i < _albumsCount; ++i)
 	{
-		for (int j = 0; i < _albums[i].GetSongsCount(); ++j)
+		for (int j = 0; j < _albums[i].GetSongsCount(); ++j)
 		{
 			if ((_albums[i].GetSongs() + j)->GetName() == songTitle)
 			{
-				return (_albums[i].GetSongs() + j);
+				return _albums[i].GetSongs() + j;
 			}
 		}
 	}
@@ -45,15 +63,16 @@ Song* Band::FindSong(std::string songTitle)
 	return nullptr;
 }
 
-Album* Band::FindAlbum(std::string songTitle)
+Album* Band::FindAlbum(string songTitle)
 {
 	for (int i = 0; i < _albumsCount; ++i)
 	{
-		for (int j = 0; i < _albums[i].GetSongsCount(); ++j)
+		for (int j = 0; j < _albums[i].GetSongsCount(); ++j)
 		{
-			if ((_albums[i].GetSongs() + j)->GetName() == songTitle)
+			string name = (_albums[i].GetSongs() + j)->GetName();
+			if (name == songTitle)
 			{
-				return (_albums + i);
+				return _albums + i;
 			}
 		}
 	}
@@ -73,7 +92,7 @@ Song* Band::GetAllSongs(int& allSongsCount)
 	int k = 0;
 	for (int i = 0; i < _albumsCount; ++i)
 	{
-		for (int j = 0; i < _albums[i].GetSongsCount(); ++j)
+		for (int j = 0; j < _albums[i].GetSongsCount(); ++j)
 		{
 			songs[k++] = *(_albums[i].GetSongs() + j);
 		}
@@ -100,7 +119,7 @@ Song* Band::GetAllGenreSongs(Genre genre, int& allSongsCount)
 	int k = 0;
 	for (int i = 0; i < _albumsCount; ++i)
 	{
-		for (int j = 0; i < _albums[i].GetSongsCount(); ++j)
+		for (int j = 0; j < _albums[i].GetSongsCount(); ++j)
 		{
 			if ((_albums[i].GetSongs() + j)->GetGenre() == genre)
 			{
@@ -116,68 +135,65 @@ void DemoBand()
 {
 	Song* songs1 = new Song[4]
 	{
-		{"Death on Two Legs", {}, Rock},
-		{"Lazing on a Sunday Afternoon", {}, Rock},
-		{"I’m in Love with My Car", {}, Rock},
-		{"You’re My Best Friend", {}, Rock}
+		{"Death on Two Legs", Time{}, Rock},
+		{"Lazing on a Sunday Afternoon", Time{}, Rock},
+		{"Iâ€™m in Love with My Car", Time{}, Rock},
+		{"Youâ€™re My Best Friend", Time{}, Rock}
 	};
 
 	Song* songs2 = new Song[4]
 	{
-		{"We Will Rock You", {}, Rock},
-		{"We Are the Champions", {}, Rock},
-		{"Sheer Heart Attack", {}, Rock},
-		{"Spread Your Wings", {}, Rock}
+		{"We Will Rock You", Time{}, Rock},
+		{"We Are the Champions", Time{}, Rock},
+		{"Sheer Heart Attack", Time{}, Rock},
+		{"Spread Your Wings", Time{}, Rock}
 	};
 
 	Song* songs3 = new Song[5]
 	{
-		{"Play the Game", {}, Pop},
-		{"Dragon Attack", {}, Pop},
-		{"Another One Bites the Dust", {}, Pop},
-		{"Crazy Little Thing Called Love", {}, Pop},
-		{"Need Your Loving Tonight", {}, Pop}
+		{"Play the Game", Time{}, Pop},
+		{"Dragon Attack", Time{}, Pop},
+		{"Another One Bites the Dust", Time{}, Pop},
+		{"Crazy Little Thing Called Love", Time{}, Pop},
+		{"Need Your Loving Tonight", Time{}, Pop}
 	};
 
 	Album* albums = new Album[3]
 	{
 		{"A Night at the Opera", 1975, songs1, 4 },
 		{"News of the World", 1977, songs2, 4},
-		{"The Game", 1980, songs3, 4}
+		{"The Game", 1980, songs3, 5}
 	};
 
-	Band* band = new Band
-	{
-		"Queen", new std::string[4]{ "Ôðåääè Ìåðêüþðè",	"Áðàéàí Ìåé",
-		"Ðîäæåð Òåéëîð", "Äæîí Äèêîí" }, albums, 3
-	};
+	Band* band = new Band{ "Queen", new string[4]{ "Ð¤Ñ€ÐµÐ´Ð´Ð¸ ÐœÐµÑ€ÐºÑŒÑŽÑ€Ð¸", "Ð‘Ñ€Ð°Ð¹Ð°Ð½ ÐœÐµÐ¹",
+		"Ð Ð¾Ð´Ð¶ÐµÑ€ Ð¢ÐµÐ¹Ð»Ð¾Ñ€", "Ð”Ð¶Ð¾Ð½ Ð”Ð¸ÐºÐ¾Ð½" }, albums, 3 };
 
-	Song* findedSongs = band->FindSong("News of the World");
-	std::cout << "\nÊîìïîçèöèÿ: " << findedSongs->GetName() <<
-		(findedSongs != nullptr ? " íàéäåíà." : " íå íàéäåíà.");
+	string song{ "Dragon Attack" };
+	Song* findedSongs = band->FindSong(song);
+	cout << "\nÐšÐ¾Ð¼Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ñ: "  << song <<
+		(findedSongs != nullptr ? " Ð½Ð°Ð¹Ð´ÐµÐ½Ð°.\n" : " Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°.\n");
 
-	Album* album = band->FindAlbum("A Night at the Opera");
-	std::cout << "\nÀëüáîì: " << album->GetName() <<
-		(album != nullptr ? " íàéäåí." : " íå íàéäåí.");
+	song = "We Will Rock You";
+	Album* album = band->FindAlbum(song);
+	cout << "\nÐÐ»ÑŒÐ±Ð¾Ð¼ Ñ ÐºÐ¾Ð¼Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÐµÐ¹ " << song << 
+		(album != nullptr ? " Ð½Ð°Ð¹Ð´ÐµÐ½, " + album->GetName() + '\n' : " Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½.\n");
 
-	std::cout << "\nÂñÿ ìóçûêà ãðóïïû Gueen:\n";
+	cout << "\nÐ’ÑÑ Ð¼ÑƒÐ·Ñ‹ÐºÐ° Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ Gueen:\n";
 	int songsCount;
 	Song* findedSongsByGenre = band->GetAllSongs(songsCount);
 	for (int i = 0; i < songsCount; ++i)
 	{
-		std::cout << findedSongsByGenre[i].GetName() + '\n';
+		cout << " - " << findedSongsByGenre[i].GetName() << '\n';
 	}
 
-	std::cout << "Ìóçûêà ãðóïïû Gueen æàíðà Pop:\n";
+	system("pause");
+	system("cls");
+	cout << "\nÐœÑƒÐ·Ñ‹ÐºÐ° Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ Gueen Ð¶Ð°Ð½Ñ€Ð° Pop:\n";
 	Song* songs = band->GetAllGenreSongs(Pop, songsCount);
 	for (int i = 0; i < songsCount; ++i)
 	{
-		std::cout << songs[i].GetName() + '\n';
+		cout << " - " << songs[i].GetName() << '\n';
 	}
 
-	delete[] songs3;
-	delete[] songs2;
-	delete[] songs1;
-	delete[] albums;
 	delete band;
 }

@@ -5,18 +5,18 @@ using namespace std;
 
 void ReadRouteFromConsole(Route& route)
 {
-	cout << "Ââåäèòå íîìåð ìàðøðóòà: ";
-	route.Number = GetValue(exception("Íîìåð ìàðøðóòà ìîæåò áûòü îò 1 äî 2147483647!"),
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: ";
+	route.Number = GetValue(exception("ÐÐ¾Ð¼ÐµÑ€ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð° Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 2147483647!"),
 		1, INT32_MAX, IsRange);
-	route.DurationMinutes = GetValue(exception("Ïðîäîëæèòåëüíîñòü ìàðøðóòà"
-		"ìîæåò áûòü îò 1 äî 32767 ìèíóò!"), 1i16, INT16_MAX, IsRange);
-	route.PeriodicityMinutes = GetValue(exception("Ïåðèîäè÷íîñòü ìàðøðóòà ìîæåò áûòü"
-		"îò 1 äî 32767!"), 1i16, INT16_MAX, IsRange);
-	route.StopsCount = GetValue(exception("Êîëè÷åñòâî îñòàíîâîê ìîæåò áûòü"
-		"îò 1 äî 2147483647!"), 1, INT32_MAX, IsRange);
+	route.DurationMinutes = GetValue(exception("ÐŸÑ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°"
+		"Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 32767 Ð¼Ð¸Ð½ÑƒÑ‚!"), 1i16, INT16_MAX, IsRange);
+	route.PeriodicityMinutes = GetValue(exception("ÐŸÐµÑ€Ð¸Ð¾Ð´Ð¸Ñ‡Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð° Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ"
+		"Ð¾Ñ‚ 1 Ð´Ð¾ 32767!"), 1i16, INT16_MAX, IsRange);
+	route.StopsCount = GetValue(exception("ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾ÑÑ‚Ð°Ð½Ð¾Ð²Ð¾Ðº Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ"
+		"Ð¾Ñ‚ 1 Ð´Ð¾ 2147483647!"), 1, INT32_MAX, IsRange);
 	for (int i = 0; i < route.StopsCount; ++i)
 	{
-		cin >> route.Stops[i];
+		getline(cin, route.Stops[i]);
 	}
 }
 
@@ -28,8 +28,8 @@ void WriteRouteToConsole(const Route& route)
 		cout << route.Stops[i] << (route.StopsCount != i ? ", " : ". ");
 	}
 
-	cout << "Ïðîäîëæèòåëüíîñòü - " << route.DurationMinutes << "ìèíóò. "
-		"Ïåðèîäè÷íîñòü - " << route.PeriodicityMinutes << "ìèíóò.";
+	cout << "ÐŸÑ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ - " << route.DurationMinutes << "Ð¼Ð¸Ð½ÑƒÑ‚. "
+		"ÐŸÐµÑ€Ð¸Ð¾Ð´Ð¸Ñ‡Ð½Ð¾ÑÑ‚ÑŒ - " << route.PeriodicityMinutes << "Ð¼Ð¸Ð½ÑƒÑ‚.";
 }
 
 int FindRouteTo(const Route* routes, int routesCount, std::string stop)
@@ -38,9 +38,9 @@ int FindRouteTo(const Route* routes, int routesCount, std::string stop)
 	{
 		for (int j = 0; j < routes[i].StopsCount; ++j)
 		{
-			if (routes[i].Stops[i] == stop)
+			if (routes[i].Stops[j] == stop)
 			{
-				return j;
+				return i;
 			}
 		}
 	}
@@ -52,12 +52,12 @@ void DemoRoute()
 {
 	Route routes[3]
 	{
-		{19, 30, 10, 3, new std::string[3]{"Ïëîùàäü Êóêèíà", "Þæíàÿ",
-		"Ïëîùàäü Íîâîñîáîðíàÿ"}},
-		{32, 60, 15, 3, new std::string[3]{"Òðàíñïîðòíîå Êîëüöî",
-		"Äåòñêèé ìèð", "Óëèöà Ó÷åáíàÿ"}},
-		{22, 45, 12, 3, new std::string[3]{"2-É Ïåðååçä", "3-ß Ãîð. Áîëüíèöà",
-		"Òîìñêèé ãîñóäàðñòâåííûé óíèâåðñèòåò"}}
+		{19, 30, 10, 3, new std::string[3]{"ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ ÐšÑƒÐºÐ¸Ð½Ð°", "Ð®Ð¶Ð½Ð°Ñ",
+		"ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ ÐÐ¾Ð²Ð¾ÑÐ¾Ð±Ð¾Ñ€Ð½Ð°Ñ"}},
+		{32, 60, 15, 3, new std::string[3]{"Ð¢Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚Ð½Ð¾Ðµ ÐšÐ¾Ð»ÑŒÑ†Ð¾",
+		"Ð”ÐµÑ‚ÑÐºÐ¸Ð¹ Ð¼Ð¸Ñ€", "Ð£Ð»Ð¸Ñ†Ð° Ð£Ñ‡ÐµÐ±Ð½Ð°Ñ"}},
+		{22, 45, 12, 3, new std::string[3]{"2-Ð™ ÐŸÐµÑ€ÐµÐµÐ·Ð´", "3-Ð¯ Ð“Ð¾Ñ€. Ð‘Ð¾Ð»ÑŒÐ½Ð¸Ñ†Ð°",
+		"Ð¢Ð¾Ð¼ÑÐºÐ¸Ð¹ Ð³Ð¾ÑÑƒÐ´Ð°Ñ€ÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ð¹ ÑƒÐ½Ð¸Ð²ÐµÑ€ÑÐ¸Ñ‚ÐµÑ‚"}}
 	};
 
 	for (int i = 0; i < 3; ++i)
@@ -66,16 +66,21 @@ void DemoRoute()
 		cout << '\n';
 	}
 
-	cout << "\nÂâåäèòå íàçâàíèå îñòàíîâêè: ";
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¾ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ¸: ";
 	string stop;
-	cin >> stop;
+	getline(cin, stop);
 	int index = FindRouteTo(routes, 3, stop);
 	if (index < 0)
 	{
-		cout << "Ìàðøòðóò íå íàéäåí.";
+		cout << "ÐœÐ°Ñ€ÑˆÑ‚Ñ€ÑƒÑ‚ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½.";
 	}
 	else
 	{
 		WriteRouteToConsole(routes[index]);
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		delete[] routes[i].Stops;
 	}
 }

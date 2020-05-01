@@ -2,7 +2,7 @@
 
 Song::Song() :
 	_name(""),
-	_duration({00i64, 00i8, 00i8, 00i8, 00i8, 00i8}),
+	_duration({0, 0, 0, 0, 0, 0}),
 	_genre(Classical)
 {
 }
@@ -24,10 +24,10 @@ void Song::SetDuration(Time duration)
 	_duration.SetMinutes(duration.GetMinutes());
 	_duration.SetSeconds(duration.GetSeconds());
 
-	_duration.SetYear(0i64);
-	_duration.SetMonth(0i8);
-	_duration.SetDay(0i8);
-	_duration.SetHours(0i8);
+	_duration.SetYear(0);
+	_duration.SetMonth(0);
+	_duration.SetDay(0);
+	_duration.SetHours(0);
 }
 
 void Song::SetGenre(Genre genre)

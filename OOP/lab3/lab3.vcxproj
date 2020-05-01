@@ -103,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +144,6 @@
     <ClCompile Include="Band.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Flight.cpp" />
-    <ClCompile Include="GetYear.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Rectangle.cpp" />
@@ -152,14 +152,12 @@
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Common\GetValue.h" />
     <ClInclude Include="..\lab2\FormatOutput.h" />
     <ClInclude Include="Album.h" />
     <ClInclude Include="Band.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="Flight.h" />
     <ClInclude Include="Genre.h" />
-    <ClInclude Include="GetYear.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />

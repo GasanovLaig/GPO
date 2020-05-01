@@ -78,29 +78,3 @@ T GetValue(const std::exception& errorMessage =
 		}
 	}
 }
-
-//std::string GetValue(const std::regex& lineFormat =
-//	std::regex("[A-z]+"))
-//{
-//	std::cin.clear();
-//	std::cin.ignore();
-//
-//	std::string line;
-//	while (true)
-//	{
-//		try
-//		{
-//			getline(std::cin, line);
-//			if (line.empty() || !std::regex_match(line, lineFormat))
-//			{
-//				throw std::exception("Вводите строку!\n->");
-//			}
-//
-//			return line;
-//		}
-//		catch (const std::exception& exception)
-//		{
-//			std::cerr << exception.what();
-//		}
-//	}
-//}

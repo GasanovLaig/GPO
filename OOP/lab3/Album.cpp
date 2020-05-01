@@ -14,7 +14,7 @@ Album::Album(std::string name, int publicationYear, Song* songs, int songsCount)
 {
 	if (publicationYear > 2020)
 	{
-		throw std::exception("Год издания не может быть позже текущего!");
+		throw std::exception("Р“РѕРґ РёР·РґР°РЅРёСЏ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїРѕР·Р¶Рµ С‚РµРєСѓС‰РµРіРѕ!");
 	}
 
 	SetName(name);
@@ -41,6 +41,16 @@ void Album::SetSongs(Song* songs)
 void Album::SetSongsCount(int songsCount)
 {
 	_songsCount = songsCount;
+}
+
+Album::~Album()
+{
+	if (_songs != nullptr)
+	{
+		delete[] _songs;
+		_songs = nullptr;
+		_songsCount = 0;
+	}
 }
 
 std::string Album::GetName()

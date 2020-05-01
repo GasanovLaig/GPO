@@ -13,6 +13,8 @@ public:
 	void SetAlbums(Album* albums);
 	void SetAlbumsCount(int albumsCount);
 
+	~Band();
+
 	Song* FindSong(std::string songTitle);
 	Album* FindAlbum(std::string songTitle);
 	Song* GetAllSongs(int& allSongsCount);

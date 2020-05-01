@@ -3,32 +3,32 @@
 
 Time::Time()
 {
-	_year = 0i64;
-	_month = _day = _hours = _minutes = _seconds = 0i8;
+	_year = 0;
+	_month = _day = _hours = _minutes = _seconds = 0;
 }
 
-Time::Time(__int64 year, __int8 month, __int8 day,
-	__int8 hours, __int8 minutes, __int8 seconds)
+Time::Time(int year, short month, short day,
+	short hours, short minutes, short seconds)
 {
 	if (month > 12)
 	{
-		throw std::exception("Ìåñÿöîâ íå ìîæåò áûòü > 12!");
+		throw std::exception("ÐœÐµÑÑÑ†Ð¾Ð² Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 12!");
 	}
 	else if (day > 30)
 	{
-		throw std::exception("Äíåé íå ìîæåò áûòü > 30!");
+		throw std::exception("Ð”Ð½ÐµÐ¹ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 30!");
 	}
 	else if (hours > 24)
 	{
-		throw std::exception("×àñîâ íå ìîæåò áûòü > 24!");
+		throw std::exception("Ð§Ð°ÑÐ¾Ð² Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 24!");
 	}
-	else if (minutes > 60)
+	else if (minutes > 59)
 	{
-		throw std::exception("Ìèíóò íå ìîæåò áûòü > 60!");
+		throw std::exception("ÐœÐ¸Ð½ÑƒÑ‚ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 59!");
 	}
-	else if (seconds > 60)
+	else if (seconds > 59)
 	{
-		throw std::exception("Ñåêóíä íå ìîæåò áûòü > 60!");
+		throw std::exception("Ð¡ÐµÐºÑƒÐ½Ð´ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 59!");
 	}
 	
 	SetYear(year);
@@ -39,87 +39,87 @@ Time::Time(__int64 year, __int8 month, __int8 day,
 	SetSeconds(seconds);
 }
 
-void Time::SetYear(__int64 year)
+void Time::SetYear(int year)
 {
 	_year = year;
 }
 
-void Time::SetMonth(__int8 month)
+void Time::SetMonth(short month)
 {
 	if (month > 12)
 	{
-		throw std::exception("Ìåñÿöîâ íå ìîæåò áûòü > 12!");
+		throw std::exception("ÐœÐµÑÑÑ†Ð¾Ð² Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 12!");
 	}
 
 	_month = month;
 }
 
-void Time::SetDay(__int8 day)
+void Time::SetDay(short day)
 {
 	if (day > 30)
 	{
-		throw std::exception("Äíåé íå ìîæåò áûòü > 30!");
+		throw std::exception("Ð”Ð½ÐµÐ¹ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 30!");
 	}
 
 	_day = day;
 }
 
-void Time::SetHours(__int8 hours)
+void Time::SetHours(short hours)
 {
 	if (hours > 24)
 	{
-		throw std::exception("×àñîâ íå ìîæåò áûòü > 24!");
+		throw std::exception("Ð§Ð°ÑÐ¾Ð² Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 24!");
 	}
 
 	_hours = hours;
 }
 
-void Time::SetMinutes(__int8 minutes)
+void Time::SetMinutes(short minutes)
 {
 	if (minutes > 60)
 	{
-		throw std::exception("Ìèíóò íå ìîæåò áûòü > 60!");
+		throw std::exception("ÐœÐ¸Ð½ÑƒÑ‚ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 59!");
 	}
 
 	_minutes = minutes;
 }
 
-void Time::SetSeconds(__int8 seconds)
+void Time::SetSeconds(short seconds)
 {
 	if (seconds > 60)
 	{
-		throw std::exception("Ñåêóíä íå ìîæåò áûòü > 60!");
+		throw std::exception("CÐµÐºÑƒÐ½Ð´ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ > 59!");
 	}
 
 	_seconds = seconds;
 }
 
-__int64 Time::GetYear()
+int Time::GetYear()
 {
 	return _year;
 }
 
-__int8 Time::GetMonth()
+short Time::GetMonth()
 {
 	return _month;
 }
 
-__int8 Time::GetDay()
+short Time::GetDay()
 {
 	return _day;
 }
 
-__int8 Time::GetHours()
+short Time::GetHours()
 {
 	return _hours;
 }
 
-__int8 Time::GetMinutes()
+short Time::GetMinutes()
 {
 	return _minutes;
 }
 
-__int8 Time::GetSeconds()
+short Time::GetSeconds()
 {
 	return _seconds;
 }

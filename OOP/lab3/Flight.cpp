@@ -1,18 +1,30 @@
 #include "Flight.h"
 #include <iostream>
+using namespace std;
 
-Flight::Flight(int number, std::string from,
-	std::string to, Time arrival, Time departure)
+Flight::Flight(int number, string from,
+	string to, Time arrival, Time departure)
 {
-	if ((arrival.GetYear() > departure.GetYear() ||
-		arrival.GetMonth() > departure.GetMonth() ||
-		arrival.GetDay() > departure.GetDay()) ||
-		(arrival.GetHours() > departure.GetHours() &&
-		arrival.GetMinutes() > departure.GetMinutes() &&
-		arrival.GetSeconds() > departure.GetSeconds()))
+	if (arrival.GetYear() > departure.GetYear() ||
+		(arrival.GetYear() == departure.GetYear() &&
+			arrival.GetMonth() > departure.GetMonth()) ||
+		(arrival.GetMonth() == departure.GetMonth() &&
+			arrival.GetDay() > departure.GetDay()))
 	{
-		throw std::exception("¬ÂÏˇ ÔË·˚ÚËˇ ÌÂ ÏÓÊÂÚ ·˚Ú¸"
-			"‡Ì¸¯Â ‚ÂÏÂÌË ÓÚÔ‡‚ÎÂÌËˇ!");
+		throw exception("–í—Ä–µ–º—è –ø—Ä–∏–±—ã—Ç–∏—è –Ω–µ –º–æ–∂–µ—Ç –±—ã—Ç—å"
+			"—Ä–∞–Ω—å—à–µ –≤—Ä–µ–º–µ–Ω–∏ –æ—Ç–ø—Ä–∞–≤–ª–µ–Ω–∏—è!");
+	}
+	else if ((arrival.GetYear() == departure.GetYear() &&
+		arrival.GetMinutes() == departure.GetMinutes() &&
+		arrival.GetSeconds() == departure.GetSeconds() &&
+		arrival.GetHours() > departure.GetHours()) ||
+		(arrival.GetHours() == departure.GetHours() &&
+			arrival.GetMinutes() > departure.GetMinutes()) ||
+		(arrival.GetMinutes() == departure.GetMinutes() &&
+			arrival.GetSeconds() > departure.GetSeconds()))
+	{
+		throw exception("–í—Ä–µ–º—è –ø—Ä–∏–±—ã—Ç–∏—è –Ω–µ –º–æ–∂–µ—Ç –±—ã—Ç—å"
+			"—Ä–∞–Ω—å—à–µ –≤—Ä–µ–º–µ–Ω–∏ –æ—Ç–ø—Ä–∞–≤–ª–µ–Ω–∏—è!");
 	}
 
 	SetNumber(number);
@@ -27,12 +39,12 @@ void Flight::SetNumber(int number)
 	_number = number;
 }
 
-void Flight::SetFrom(std::string from)
+void Flight::SetFrom(string from)
 {
 	_from = from;
 }
 
-void Flight::SetTo(std::string to)
+void Flight::SetTo(string to)
 {
 	_to = to;
 }
@@ -62,12 +74,12 @@ int Flight::GetNumber()
 	return _number;
 }
 
-std::string Flight::GetFrom()
+string Flight::GetFrom()
 {
 	return _from;
 }
 
-std::string Flight::GetTo()
+string Flight::GetTo()
 {
 	return _to;
 }
@@ -84,35 +96,47 @@ Time Flight::GetDeparture()
 
 Time Flight::GetFlightTimeMinutes()
 {
-	__int8 differenceMinutes = _departure.GetMinutes() - _arrival.GetMinutes();
-	
+	short differenceMinutes = _departure.GetMinutes() - _arrival.GetMinutes();
+	short differenceHours = _departure.GetHours() - _arrival.GetHours();
+
 	if (differenceMinutes < 0)
 	{
 		differenceMinutes += 60;
+		differenceHours += -1;
 	}
 
-	__int8 differenceHours = _departure.GetHours() - _arrival.GetHours();
-
-	return { 00i64, 00i8, 00i8, differenceHours, differenceMinutes, 00i8 };
+	return Time{ 0, 0, 0, differenceHours, differenceMinutes, 0 };
 }
 
 void DemoFlightWithTime()
 {
 	Flight* flights = new Flight[5]
 	{
-		{0, "ﬁ„‡", "“ÓÏÒÍ", {2020, 01, 01, 13, 00, 00}, {2020, 01, 01, 13, 30, 00}},
-		{1, "“ÓÏÒÍ", "¡ÂÌ", {2021, 01, 15, 06, 00, 00}, {2021, 01, 15, 17, 00, 00}},
-		{2, "¡ÂÌ", "¿ÏÒÚÂ‰‡Ï", {2022, 01, 15, 00, 00, 00}, {2022, 01, 15, 04, 00, 00}},
-		{3, "¿ÏÒÚÂ‰‡Ï", "—Ë‰ÌÂÈ", {2023, 01, 01, 05, 00, 00}, {2023, 01, 01, 15, 00, 00}},
-		{4, "—Ë‰ÌÂÈ", "—‡Ì-‘‡ÌˆËÒÍÓ", {2023, 12, 31, 15, 00, 00}, {2024, 01, 01, 00, 00, 00}}
+		{0, "–Æ—Ä–≥–∞", "–¢–æ–º—Å–∫",
+		Time{2020, 01, 01, 12, 15, 00},
+		Time{2020, 01, 01, 13, 30, 00}},
+		{1, "–¢–æ–º—Å–∫", "–ë–µ—Ä–Ω",
+		Time{2021, 01, 15, 06, 45, 00},
+		Time{2021, 01, 15, 17, 00, 00}},
+		{2, "–ë–µ—Ä–Ω", "–ê–º—Å—Ç–µ—Ä–¥–∞–º",
+		Time{2022, 01, 15, 01, 00, 00},
+		Time{2022, 01, 15, 04, 00, 00}},
+		{3, "–ê–º—Å—Ç–µ—Ä–¥–∞–º", "–°–∏–¥–Ω–µ–π",
+		Time{2023, 01, 01, 05, 00, 00},
+		Time{2023, 01, 01, 15, 00, 00}},
+		{4, "–°–∏–¥–Ω–µ–π", "–°–∞–Ω-–§—Ä–∞–Ω—Ü–∏—Å–∫–æ",
+		Time{2024, 01, 01, 02, 30, 00},
+		Time{2024, 01, 01, 15, 00, 00}}
 	};
 
 	for (int i = 0; i < 5; ++i)
 	{
-		std::cout << flights[i].GetNumber() << flights[i].GetFrom() << '-' <<
-			flights[i].GetTo() << " ¬˚ÎÂÚ " << flights[i].GetArrival() <<
-			" œËÎÂÚ " << flights[i].GetDeparture() << " ¬ÂÏˇ ÔÓÎÂÚ‡: " <<
-			flights[i].GetFlightTimeMinutes();
+		Time time = flights[i].GetFlightTimeMinutes();
+		cout << flights[i].GetNumber() << ' ' << flights[i].GetFrom() << '-' <<
+			flights[i].GetTo() << " –í—ã–ª–µ—Ç " << flights[i].GetArrival() <<
+			" –ü—Ä–∏–ª–µ—Ç " << flights[i].GetDeparture() << " –í—Ä–µ–º—è –ø–æ–ª–µ—Ç–∞: " <<
+			time.GetHours() << ':' << time.GetMinutes() << ':' <<
+			time.GetSeconds() << '\n';
 	}
 
 	delete[] flights;

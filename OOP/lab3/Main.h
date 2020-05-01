@@ -6,4 +6,3 @@
 #include "Band.h"
 
 #include "../lab2/FormatOutput.h"
-#include <iostream>

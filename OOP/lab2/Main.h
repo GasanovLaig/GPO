@@ -8,6 +8,6 @@
 #include "Color.h"
 #include "DemoMakeAndCopyFunctions.h"
 
-#include "OutPutFormatting.h"
+#include "FormatOutput.h"
 #include <iostream>
 using namespace std;
