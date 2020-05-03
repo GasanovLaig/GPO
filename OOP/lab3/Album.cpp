@@ -12,11 +12,6 @@ Album::Album() :
 
 Album::Album(std::string name, int publicationYear, Song* songs, int songsCount)
 {
-	if (publicationYear > 2020)
-	{
-		throw std::exception("Год издания не может быть позже текущего!");
-	}
-
 	SetName(name);
 	SetPublicationYear(publicationYear);
 	SetSongs(songs);
@@ -30,6 +25,11 @@ void Album::SetName(std::string name)
 
 void Album::SetPublicationYear(int publicationYear)
 {
+	if (publicationYear > 2020)
+	{
+		throw std::exception("Год издания не может быть позже текущего!");
+	}
+
 	_publicationYear = publicationYear;
 }
 

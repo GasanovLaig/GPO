@@ -1,6 +1,6 @@
 ﻿#include "Flight.h"
 #include <iostream>
-#include "FormatOutput.h"
+#include "PauseClearConsole.h"
 using namespace std;
 
 void DemoFlight()
@@ -9,7 +9,7 @@ void DemoFlight()
 	cout << "\nFlight is (From, To, Duration) " << film1.From << "; " <<
 		film1.To << "; " << film1.Duration << '\n';
 
-	FormatOutput();
+	PauseClear();
 	cout << "\nВведите пункт отправления: ";
 	Flight film2;
 	cin >> film2.From;
@@ -20,7 +20,7 @@ void DemoFlight()
 	cout << "\nВаш рейс: " << film2.From << " - " <<
 		film2.To << " в полете " << film2.Duration << '\n';
 
-	FormatOutput();
+	PauseClear();
 	Flight flights[3]
 	{
 		{"Tomsk", "San-Francisco", 241434},
@@ -35,7 +35,7 @@ void DemoFlight()
 			flights[i].Duration << '\n';
 	}
 
-	FormatOutput();
+	PauseClear();
 	Flight* pointer1 = &film1;
 	cout << "\nПервый рейс: " << pointer1->From << " - " << pointer1->To <<
 		" c продолжительностью в " << pointer1->Duration << '\n';
@@ -99,7 +99,6 @@ void FindShortestFlight(const Flight* flights, size_t size)
 		}
 	}
 
-	// TODO: грам ошибки
 	cout << "\nРейс " << flights[index].From << " - " << flights[index].To <<
 		" с наименьшей продолжительностью в " << flights[index].Duration <<
 		" минут\n";

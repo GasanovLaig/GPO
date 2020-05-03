@@ -13,89 +13,77 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Structs">
-      <UniqueIdentifier>{bf33eb96-d0c8-4ff3-89f9-0927a26535a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Structs">
-      <UniqueIdentifier>{af2ddb1e-a110-4adf-9521-c8fcc59b1e1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Classes">
-      <UniqueIdentifier>{2c5f9f91-b5d0-410a-870d-d1982029b1a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes">
-      <UniqueIdentifier>{1f84df8b-5365-4986-b902-58bebbf22310}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Book.cpp">
-      <Filter>Source Files\Structs</Filter>
-    </ClCompile>
-    <ClCompile Include="Route.cpp">
-      <Filter>Source Files\Structs</Filter>
-    </ClCompile>
-    <ClCompile Include="Point.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="Album.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Band.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Flight.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Rectangle.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Time.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Song.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\lab2\FormatOutput.cpp">
+    <ClCompile Include="Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Book.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Route.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lab2\PauseClearConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Book.h">
-      <Filter>Header Files\Structs</Filter>
-    </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Route.h">
-      <Filter>Header Files\Structs</Filter>
     </ClInclude>
     <ClInclude Include="Genre.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Album.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Band.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Flight.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Song.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Time.h">
-      <Filter>Header Files\Classes</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lab2\FormatOutput.h">
+    <ClInclude Include="Book.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Route.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lab2\PauseClearConsole.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -33,5 +33,3 @@ void DemoCircle()
 	delete copiedCircle2;
 	delete copiedCircle3;
 }
-
-// TODO: этих функций здесь быть не должно

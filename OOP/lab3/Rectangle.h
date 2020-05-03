@@ -3,9 +3,12 @@
 // TODO: порядок
 class Rectangle
 {
-public:
-	Rectangle(float length, float width, Point center);
+private:
+	float _length;
+	float _width;
+	Point _center;
 
+public:
 	void SetLength(float length);
 	void SetWidth(float width);
 	void SetCenter(Point center);
@@ -14,10 +17,7 @@ public:
 	float GetWidth();
 	Point GetCenter();
 
-private:
-	float _length;
-	float _width;
-	Point _center;
+	Rectangle(float length, float width, Point center);
 };
 
 void DemoRectangleWithPoint();

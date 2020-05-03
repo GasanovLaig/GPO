@@ -1,5 +1,5 @@
 ﻿#include "Time.h"
-#include "FormatOutput.h"
+#include "PauseClearConsole.h"
 using namespace std;
 
 void DemoTime()
@@ -8,7 +8,7 @@ void DemoTime()
 	cout << "\nTime is (Hours, Minutes, Seconds) " << time1.Hours <<
 		"; " << time1.Minutes << "; " << time1.Seconds << '\n';
 
-	FormatOutput();
+	PauseClear();
 	cout << "\nВведите кол-во часов: ";
 	Time time2;
 	cin >> time2.Hours;
@@ -20,7 +20,7 @@ void DemoTime()
 	cout << "\nВремя: " << time2.Hours << ':' << time2.Minutes <<
 		':' << time2.Seconds << '\n';
 
-	FormatOutput();
+	PauseClear();
 	Time times[3]
 	{
 		{0, 0, 0},
@@ -34,7 +34,7 @@ void DemoTime()
 			times[i].Hours << ':' << times[i].Minutes << ':' << times[i].Seconds << '\n';
 	}
 
-	FormatOutput();
+	PauseClear();
 	Time* pointer1 = &time1;
 	cout << "\nВремя в первом задании (Hours,  Minutes, Seconds): " <<
 		pointer1->Hours << ':' << pointer1->Minutes << ':' << pointer1->Seconds << '\n';

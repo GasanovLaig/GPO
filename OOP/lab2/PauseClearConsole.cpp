@@ -1,7 +1,7 @@
-﻿#include "FormatOutput.h"
+﻿#include "PauseClearConsole.h"
 #include <iostream>
 // TODO: название не соответствует назначению. Ожидание, что после вызова будет какой-то вывод в определенном формате
-void FormatOutput()
+void PauseClear()
 {
 	system("pause");
 	system("cls");

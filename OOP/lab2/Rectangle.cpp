@@ -1,6 +1,6 @@
 ﻿#include "Rectangle.h"
 #include <iostream>
-#include "FormatOutput.h"
+#include "PauseClearConsole.h"
 using namespace std;
 
 void DemoRectangle()
@@ -8,8 +8,7 @@ void DemoRectangle()
 	Task222::Rectangle rectangle1{ 20.1, 4.25, "Grey" };
 	cout << "\nRectangle is (Length, Width, Color) " << rectangle1.Length <<
 		"; " << rectangle1.Width << "; " << rectangle1.Color << '\n';
-	FormatOutput();
-	// TODO: куча грам ошибок
+	PauseClear();
 	cout << "\nВведите длину прямоугольника: ";
 	Task222::Rectangle rectangle2;
 	cin >> rectangle2.Length;
@@ -21,7 +20,7 @@ void DemoRectangle()
 		rectangle2.Length << 'x' << rectangle2.Width <<
 		" цвет " << rectangle2.Color << '\n';
 
-	FormatOutput();
+	PauseClear();
 	Task222::Rectangle rectangles[3]
 	{
 		{1, 2, "red"},
@@ -50,9 +49,8 @@ void DemoRectangle()
 	cout << "\nАдрес в 1-ом указателе: " << pointer1 <<
 		"\nАдрес во 2-ом указателе r5: " << pointer2 << '\n';
 
-	FormatOutput();
+	PauseClear();
 	//ex 2.2.5.4
-	// TODO: грам ошибки
 	cout << "\nЗадание 2.2.5.4 функция Exchange(Rectangle& r1, Rectanlge& r2)" <<
 		"\nПервый прямоугольник имеет размерность: " <<
 		rectangle1.Length << 'x' << rectangle1.Width <<
@@ -65,13 +63,13 @@ void DemoRectangle()
 		"\n2-ой имеет размерность " <<
 		rectangle2.Length << 'x' << rectangle2.Width << '\n';
 
-	FormatOutput();
+	PauseClear();
 	//ex 2.2.5.5
 	cout << "\nЗадание 2.2.5.5 " <<
 		"написать функцию void FindRectangle(Rectangle* r, int count)";
 	FindRectangle(rectangles, 3);
 
-	FormatOutput();
+	PauseClear();
 	//ex 2.2.5.6
 	cout << "\nЗадание 2.2.5.6 " << "написать функцию" <<
 		"void FindRectangle(Rectangle* rectangles, int count)";
@@ -152,7 +150,7 @@ void FindMaxRectangle(const Task222::Rectangle* rectangles, size_t size)
 			index = i;
 		}
 	}
-	// TODO: грам ошибка
+
 	cout << "\nПрямоугольник с наибольшей площадью имеет размерность " <<
 		rectangles[index].Length << 'x' << rectangles[index].Width << '\n';
 }

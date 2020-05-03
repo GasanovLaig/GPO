@@ -2,7 +2,7 @@
 
 Song::Song() :
 	_name(""),
-	_duration({0, 0, 0, 0, 0, 0}),
+	_duration(Time{0, 0, 0, 0, 0, 0}),
 	_genre(Classical)
 {
 }
@@ -23,13 +23,7 @@ void Song::SetDuration(Time duration)
 {
 	// TODO: чтобы постоянно не копировать по отдельным полям либо хранят объекты по указателям, либо используют конструктор копирования
 	// Обычно подменяют весь объект целиком. С точки зрения памяти это слишком незаметный расход, а вот с точки зрения производительности - не эффективный
-	_duration.SetMinutes(duration.GetMinutes());
-	_duration.SetSeconds(duration.GetSeconds());
-
-	_duration.SetYear(0);
-	_duration.SetMonth(0);
-	_duration.SetDay(0);
-	_duration.SetHours(0);
+	_duration = duration;
 }
 
 void Song::SetGenre(Genre genre)

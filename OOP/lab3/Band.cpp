@@ -18,7 +18,12 @@ void Band::SetName(string name)
 
 void Band::SetStructure(string* structure)
 {
-	_structure = structure;
+	_members = structure;
+}
+
+void Band::SetMembersCount(int membersCount)
+{
+	_membersCount = membersCount;
 }
 
 void Band::SetAlbums(Album* albums)
@@ -33,10 +38,10 @@ void Band::SetAlbumsCount(int albumsCount)
 
 Band::~Band()
 {
-	if (_structure != nullptr)
+	if (_members != nullptr)
 	{
-		delete[] _structure;
-		_structure = nullptr;
+		delete[] _members;
+		_members = nullptr;
 	}
 
 	if (_albums != nullptr)

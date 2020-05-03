@@ -31,8 +31,7 @@ void Rectangle::SetWidth(float width)
 
 void Rectangle::SetCenter(Point center)
 {
-	_center.SetX(center.GetX());
-	_center.SetY(center.GetY());
+	_center = center;
 }
 
 float Rectangle::GetLength()

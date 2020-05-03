@@ -7,28 +7,12 @@ Flight::Flight(int number, string from,
 {
 	// TODO: лучше сделать перегрузку оператора сравнения в Time и использовать её здесь в одну строку
 	// TODO: мне кажется, делать отдельные условия на год, месяц, день и т.д. было бы более читаемо, чем одно большое условие
-	if (arrival.GetYear() > departure.GetYear() ||
-		(arrival.GetYear() == departure.GetYear() &&
-			arrival.GetMonth() > departure.GetMonth()) ||
-		(arrival.GetMonth() == departure.GetMonth() &&
-			arrival.GetDay() > departure.GetDay()))
+	if (arrival > departure)
 	{
 		throw exception("Время прибытия не может быть"
 			"раньше времени отправления!");
 	}
-	else if ((arrival.GetYear() == departure.GetYear() &&
-		arrival.GetMinutes() == departure.GetMinutes() &&
-		arrival.GetSeconds() == departure.GetSeconds() &&
-		arrival.GetHours() > departure.GetHours()) ||
-		(arrival.GetHours() == departure.GetHours() &&
-			arrival.GetMinutes() > departure.GetMinutes()) ||
-		(arrival.GetMinutes() == departure.GetMinutes() &&
-			arrival.GetSeconds() > departure.GetSeconds()))
-	{
-		throw exception("Время прибытия не может быть"
-			"раньше времени отправления!");
-	}
-
+	
 	SetNumber(number);
 	SetFrom(from);
 	SetTo(to);
@@ -54,22 +38,12 @@ void Flight::SetTo(string to)
 void Flight::SetArrival(Time arrival)
 {
 	// TODO: вместо копирования полей лучше хранение по указателю или вызов конструктора копирования
-	_arrival.SetYear(arrival.GetYear());
-	_arrival.SetMonth(arrival.GetMonth());
-	_arrival.SetDay(arrival.GetDay());
-	_arrival.SetHours(arrival.GetHours());
-	_arrival.SetMinutes(arrival.GetMinutes());
-	_arrival.SetSeconds(arrival.GetSeconds());
+	_arrival = arrival;
 }
 
 void Flight::SetDeparture(Time departure)
 {
-	_departure.SetYear(departure.GetYear());
-	_departure.SetMonth(departure.GetMonth());
-	_departure.SetDay(departure.GetDay());
-	_departure.SetHours(departure.GetHours());
-	_departure.SetMinutes(departure.GetMinutes());
-	_departure.SetSeconds(departure.GetSeconds());
+	_departure = departure;
 }
 
 int Flight::GetNumber()

@@ -1,6 +1,6 @@
 ﻿#include "Movie.h"
 #include <iostream>
-#include "FormatOutput.h"
+#include "PauseClearConsole.h"
 using namespace std;
 
 void DemoMovie()
@@ -10,7 +10,7 @@ void DemoMovie()
 		movie1.Name << "; " << movie1.Duration << "; " << movie1.ReleaseYear << "; " <<
 		movie1.Rating << '\n';
 
-	FormatOutput();
+	PauseClear();
 	cout << "\nВведите название фильма:	";
 	Movie movie2;
 	cin >> movie2.Name;
@@ -31,7 +31,7 @@ void DemoMovie()
 		movie2.Name << "; " << movie2.Duration << "; " <<
 		movie2.ReleaseYear << "; " << movie2.Rating << '\n';
 
-	FormatOutput();
+	PauseClear();
 	Movie movies[3]
 	{
 		{"К звездам", 123, 2019, Drama, 6.382},
@@ -47,7 +47,7 @@ void DemoMovie()
 			movies[3].Genre << "; " << movies[3].Rating << '\n';
 	}
 
-	FormatOutput();
+	PauseClear();
 	Movie* pointer1 = &movie1;
 	cout << "\nПервый фильм (Name, Duration, ReleaseYear,"
 		"Genre, Rating): " << pointer1->Name << "; " << pointer1->Duration <<
@@ -110,7 +110,6 @@ void DemoMoviesByGenre()
 	cin >> genre;
 	cout << "\nКол-во фильмов этого жанра: " <<
 		CountMoviesByGenre(movies, 10, static_cast<MoviesGenre>(genre));
-	// TODO: грам ошибка
 	cout << "\nНазвание фильма с наибольшим рейтингом этого жанра: " <<
 		FindBestGenreMovie(movies, 10, static_cast<MoviesGenre>(genre))->Name;
 

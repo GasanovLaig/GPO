@@ -6,13 +6,13 @@ int main()
 	try
 	{
 		DemoBook();
-		FormatOutput();
+		PauseClear();
 		DemoRoute();
-		FormatOutput();
+		PauseClear();
 		DemoRectangleWithPoint();
-		FormatOutput();
+		PauseClear();
 		DemoFlightWithTime();
-		FormatOutput();
+		PauseClear();
 		DemoBand();
 	}
 	catch (const std::exception& exception)

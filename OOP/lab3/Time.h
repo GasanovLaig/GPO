@@ -3,11 +3,15 @@
 // TODO: порядок
 class Time
 {
-public:
-	Time();
-	Time(int year, short month, short day,
-		short hours, short minutes, short seconds);
+private:
+	int _year;
+	short _month;
+	short _day;
+	short _hours;
+	short _minutes;
+	short _seconds;
 
+public:
 	void SetYear(int year);
 	void SetMonth(short month);
 	void SetDay(short day);
@@ -22,13 +26,11 @@ public:
 	short GetMinutes();
 	short GetSeconds();
 
-private:
-	int _year;
-	short _month;
-	short _day;
-	short _hours;
-	short _minutes;
-	short _seconds;
+	Time();
+	Time(int year, short month, short day,
+		short hours, short minutes, short seconds);
+	Time(const Time& time);
 };
 
 std::ostream& operator<<(std::ostream& ostream, Time time);
+bool operator>(Time time1, Time time2);

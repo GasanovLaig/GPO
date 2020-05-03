@@ -14,7 +14,6 @@ enum Color
 //ex 2.2.8.3, ex 2.2.8.4
 void DemoEnums();
 //ex 2.2.8.5
-// TODO: грам ошибка
 void WriteColor(Color color);
 //ex 2.2.8.6
 Color ReadColor();

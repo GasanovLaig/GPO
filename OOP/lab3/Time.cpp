@@ -11,33 +11,22 @@ Time::Time(int year, short month, short day,
 	short hours, short minutes, short seconds)
 {
 	// TODO: зачем здесь проверки, если они всё равно есть в сеттерах? Убрать
-	if (month > 12)
-	{
-		throw std::exception("Месяцов не может быть > 12!");
-	}
-	else if (day > 30)
-	{
-		throw std::exception("Дней не может быть > 30!");
-	}
-	else if (hours > 24)
-	{
-		throw std::exception("Часов не может быть > 24!");
-	}
-	else if (minutes > 59)
-	{
-		throw std::exception("Минут не может быть > 59!");
-	}
-	else if (seconds > 59)
-	{
-		throw std::exception("Секунд не может быть > 59!");
-	}
-	
 	SetYear(year);
 	SetMonth(month);
 	SetDay(day);
 	SetHours(hours);
 	SetMinutes(minutes);
 	SetSeconds(seconds);
+}
+
+Time::Time(const Time& time) :
+	_year(time._year),
+	_month(time._month),
+	_day(time._day),
+	_hours(time._hours),
+	_minutes(time._minutes),
+	_seconds(time._seconds)
+{
 }
 
 void Time::SetYear(int year)
@@ -131,4 +120,29 @@ std::ostream& operator<<(std::ostream& ostream, Time time)
 		' ' << time.GetHours()<< ':' << time.GetMinutes() << ':' <<  time.GetSeconds();
 
 	return ostream;
+}
+
+bool operator>(Time time1, Time time2)
+{
+	if (time2.GetYear() > time2.GetYear() ||
+		(time2.GetYear() == time2.GetYear() &&
+			time2.GetMonth() > time2.GetMonth()) ||
+		(time2.GetMonth() == time2.GetMonth() &&
+			time2.GetDay() > time2.GetDay()))
+	{
+		return true;
+	}
+	else if ((time2.GetYear() == time2.GetYear() &&
+		time2.GetMinutes() == time2.GetMinutes() &&
+		time2.GetSeconds() == time2.GetSeconds() &&
+		time2.GetHours() > time2.GetHours()) ||
+		(time2.GetHours() == time2.GetHours() &&
+			time2.GetMinutes() > time2.GetMinutes()) ||
+		(time2.GetMinutes() == time2.GetMinutes() &&
+			time2.GetSeconds() > time2.GetSeconds()))
+	{
+		return true;
+	}
+
+	return false;
 }

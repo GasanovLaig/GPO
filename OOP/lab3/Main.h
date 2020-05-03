@@ -5,4 +5,4 @@
 #include "Flight.h"
 #include "Band.h"
 
-#include "../lab2/FormatOutput.h"
+#include "../lab2/PauseClearConsole.h"

@@ -3,6 +3,8 @@
 
 struct Book
 {// TODO: чтобы не писать везде std его лучше подключать в начале файла
+	//При подключении такого заголовочного файла может возникнуть
+	//конфликт имен из-за using namespace std;
 	std::string Name;
 	int PublicationYear;
 	int PagesNumber;

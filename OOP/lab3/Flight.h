@@ -4,6 +4,13 @@
 
 class Flight
 {
+private:
+	int _number;
+	std::string _from;
+	std::string _to;
+	Time _arrival;
+	Time _departure;
+
 public:
 	Flight(int number, std::string from, std::string to,
 		Time arrival, Time departure);
@@ -23,12 +30,6 @@ public:
 	Time GetFlightTimeMinutes();
 
 	// TODO: сначала принято поля. Так удобнее знакомиться с классом
-private:
-	int _number;
-	std::string _from;
-	std::string _to;
-	Time _arrival;
-	Time _departure;
 };
 
 void DemoFlightWithTime();
