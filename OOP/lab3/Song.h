@@ -2,7 +2,7 @@
 #include <string>
 #include "Genre.h"
 #include "Time.h"
-// TODO: порядок
+
 class Song
 {
 private:

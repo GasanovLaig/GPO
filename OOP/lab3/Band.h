@@ -6,9 +6,8 @@ class Band
 {
 private:
 	std::string _name;
-	std::string* _members; // TODO: неочевидное название для состава группы.
+	std::string* _members;
 	int _membersCount;
-	// TODO: А где ты хранишь количество музыкантов?
 	Album* _albums;
 	int _albumsCount;
 
@@ -26,7 +25,6 @@ public:
 	Album* FindAlbum(std::string songTitle);
 	Song* GetAllSongs(int& allSongsCount);
 	Song* GetAllGenreSongs(Genre genre, int& allSongsCount);
-	// TODO: поля в начало
 
 	~Band();
 };

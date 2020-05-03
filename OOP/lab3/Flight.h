@@ -28,8 +28,6 @@ public:
 	Time GetDeparture();
 
 	Time GetFlightTimeMinutes();
-
-	// TODO: сначала принято поля. Так удобнее знакомиться с классом
 };
 
 void DemoFlightWithTime();

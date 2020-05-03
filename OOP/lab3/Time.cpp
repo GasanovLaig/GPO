@@ -10,7 +10,6 @@ Time::Time()
 Time::Time(int year, short month, short day,
 	short hours, short minutes, short seconds)
 {
-	// TODO: зачем здесь проверки, если они всё равно есть в сеттерах? Убрать
 	SetYear(year);
 	SetMonth(month);
 	SetDay(day);
@@ -124,6 +123,7 @@ std::ostream& operator<<(std::ostream& ostream, Time time)
 
 bool operator>(Time time1, Time time2)
 {
+	// TODO: сравниваешь time2 c time2
 	if (time2.GetYear() > time2.GetYear() ||
 		(time2.GetYear() == time2.GetYear() &&
 			time2.GetMonth() > time2.GetMonth()) ||
