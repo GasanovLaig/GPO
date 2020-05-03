@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include "Time.h"
 
@@ -22,6 +22,7 @@ public:
 
 	Time GetFlightTimeMinutes();
 
+	// TODO: сначала принято поля. Так удобнее знакомиться с классом
 private:
 	int _number;
 	std::string _from;

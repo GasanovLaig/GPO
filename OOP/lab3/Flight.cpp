@@ -5,6 +5,8 @@ using namespace std;
 Flight::Flight(int number, string from,
 	string to, Time arrival, Time departure)
 {
+	// TODO: лучше сделать перегрузку оператора сравнения в Time и использовать её здесь в одну строку
+	// TODO: мне кажется, делать отдельные условия на год, месяц, день и т.д. было бы более читаемо, чем одно большое условие
 	if (arrival.GetYear() > departure.GetYear() ||
 		(arrival.GetYear() == departure.GetYear() &&
 			arrival.GetMonth() > departure.GetMonth()) ||
@@ -51,6 +53,7 @@ void Flight::SetTo(string to)
 
 void Flight::SetArrival(Time arrival)
 {
+	// TODO: вместо копирования полей лучше хранение по указателю или вызов конструктора копирования
 	_arrival.SetYear(arrival.GetYear());
 	_arrival.SetMonth(arrival.GetMonth());
 	_arrival.SetDay(arrival.GetDay());

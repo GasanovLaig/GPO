@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 #include <string>
 
 struct Book
-{
+{// TODO: чтобы не писать везде std его лучше подключать в начале файла
 	std::string Name;
 	int PublicationYear;
 	int PagesNumber;

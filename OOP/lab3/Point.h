@@ -1,5 +1,5 @@
-#pragma once
-
+﻿#pragma once
+// TODO: порядок членов класса
 class Point
 {
 public:

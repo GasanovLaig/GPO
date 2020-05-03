@@ -1,4 +1,4 @@
-#include "Song.h"
+﻿#include "Song.h"
 
 Song::Song() :
 	_name(""),
@@ -21,6 +21,8 @@ void Song::SetName(std::string name)
 
 void Song::SetDuration(Time duration)
 {
+	// TODO: чтобы постоянно не копировать по отдельным полям либо хранят объекты по указателям, либо используют конструктор копирования
+	// Обычно подменяют весь объект целиком. С точки зрения памяти это слишком незаметный расход, а вот с точки зрения производительности - не эффективный
 	_duration.SetMinutes(duration.GetMinutes());
 	_duration.SetSeconds(duration.GetSeconds());
 

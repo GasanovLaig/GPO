@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 #include "Point.h"
-
+// TODO: порядок
 class Rectangle
 {
 public:

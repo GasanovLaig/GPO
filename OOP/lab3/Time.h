@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
-
+// TODO: порядок
 class Time
 {
 public:

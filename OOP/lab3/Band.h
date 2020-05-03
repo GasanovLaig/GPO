@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include "Album.h"
 
@@ -19,10 +19,11 @@ public:
 	Album* FindAlbum(std::string songTitle);
 	Song* GetAllSongs(int& allSongsCount);
 	Song* GetAllGenreSongs(Genre genre, int& allSongsCount);
-
+	// TODO: поля в начало
 private:
 	std::string _name;
-	std::string* _structure;
+	std::string* _structure; // TODO: неочевидное название для состава группы.
+	// TODO: А где ты хранишь количество музыкантов?
 	Album* _albums;
 	int _albumsCount;
 };

@@ -1,7 +1,8 @@
-#include "Point.h"
+﻿#include "Point.h"
 
 Point::Point()
 {
+	// TODO: это лучше делать значениями полей по умолчанию
 	_x = _y = 0.0f;
 }
 

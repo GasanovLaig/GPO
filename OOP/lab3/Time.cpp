@@ -10,6 +10,7 @@ Time::Time()
 Time::Time(int year, short month, short day,
 	short hours, short minutes, short seconds)
 {
+	// TODO: зачем здесь проверки, если они всё равно есть в сеттерах? Убрать
 	if (month > 12)
 	{
 		throw std::exception("Месяцов не может быть > 12!");
