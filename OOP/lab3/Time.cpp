@@ -123,23 +123,22 @@ std::ostream& operator<<(std::ostream& ostream, Time time)
 
 bool operator>(Time time1, Time time2)
 {
-	// TODO: сравниваешь time2 c time2
-	if (time2.GetYear() > time2.GetYear() ||
-		(time2.GetYear() == time2.GetYear() &&
-			time2.GetMonth() > time2.GetMonth()) ||
-		(time2.GetMonth() == time2.GetMonth() &&
-			time2.GetDay() > time2.GetDay()))
+	if (time1.GetYear() > time2.GetYear() ||
+		(time1.GetYear() == time2.GetYear() &&
+			time1.GetMonth() > time2.GetMonth()) ||
+		(time1.GetMonth() == time2.GetMonth() &&
+			time1.GetDay() > time2.GetDay()))
 	{
 		return true;
 	}
-	else if ((time2.GetYear() == time2.GetYear() &&
-		time2.GetMinutes() == time2.GetMinutes() &&
-		time2.GetSeconds() == time2.GetSeconds() &&
-		time2.GetHours() > time2.GetHours()) ||
-		(time2.GetHours() == time2.GetHours() &&
-			time2.GetMinutes() > time2.GetMinutes()) ||
-		(time2.GetMinutes() == time2.GetMinutes() &&
-			time2.GetSeconds() > time2.GetSeconds()))
+	else if ((time1.GetYear() == time2.GetYear() &&
+		time1.GetMinutes() == time2.GetMinutes() &&
+		time1.GetSeconds() == time2.GetSeconds() &&
+		time1.GetHours() > time2.GetHours()) ||
+		(time1.GetHours() == time2.GetHours() &&
+			time1.GetMinutes() > time2.GetMinutes()) ||
+		(time1.GetMinutes() == time2.GetMinutes() &&
+			time1.GetSeconds() > time2.GetSeconds()))
 	{
 		return true;
 	}
